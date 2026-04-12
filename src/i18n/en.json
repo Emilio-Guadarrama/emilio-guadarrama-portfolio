@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "volunteering": "Volunteering",
+    "experience": "Experience",
+    "contact": "Contact",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "title": "Mechatronics Engineering Student",
+    "subtitle": "Electronics & Embedded Systems",
+    "role": "VP & Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey",
+    "description": "Mechatronics Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026.",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download CV"
+  },
+  "stats": [
+    { "value": "FC-2026", "label": "Flight computer in development" },
+    { "value": "1 km", "label": "LASC 2026 target apogee" },
+    { "value": "4+", "label": "Competition achievements" },
+    { "value": "3 yr", "label": "Robotics competition experience" }
+  ],
+  "about": {
+    "title": "About",
+    "bio": "I am a Mechatronics Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design.",
+    "educationLabel": "Education",
+    "degree": "B.S. Mechatronics Engineering",
+    "institution": "Tecnológico de Monterrey",
+    "period": "2025 – 2029",
+    "languagesLabel": "Languages",
+    "languages": [
+      { "code": "ES", "name": "ESPAÑOL", "level": "Native",           "percent": 100 },
+      { "code": "EN", "name": "ENGLISH", "level": "C1 CEFR · TOEFL 98", "percent": 88 },
+      { "code": "DE", "name": "DEUTSCH", "level": "Elementary",       "percent": 18  }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "groups": [
+      { "name": "Hardware", "items": ["PCB Design", "Altium Designer", "Embedded Systems", "ESP32 / ESP32-S3"] },
+      { "name": "Firmware", "items": ["C", "C++", "Arduino", "UART / SPI / I2C", "IoT Systems"] },
+      { "name": "Software", "items": ["Python", "React", "Git"] },
+      { "name": "Tools", "items": ["Altium Designer", "JLCPCB / PCBWay workflow", "Reflow soldering"] }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      { "period": "Aug 2025 – Present", "role": "VP & Electronics Lead", "org": "Ignitia Rocket Lab" },
+      { "period": "Jan 2023 – May 2025", "role": "Mechanical Lead & Mentor", "org": "FIRST Robotics — Team Daedalus" },
+      { "period": "Aug 2024 – Jun 2025", "role": "Under-Secretary-General", "org": "TECMUN GDL" }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "featuredLabel": "Featured",
+    "viewProject": "View Project →",
+    "items": [
+      { "key": "fc2026", "name": "FC-2026 Flight Computer", "tags": ["LASC 2026", "Active"], "desc": "Custom SRAD flight computer for LASC 2026 Rocket Challenge. ESP32-S3, LoRa telemetry, GPS, pyro recovery.", "link": "/projects/fc-2026", "amber": true },
+      { "key": "satellite", "name": "LASC 2026 Satellite Challenge", "tags": ["LASC 2026", "Upcoming"], "desc": "CanSat / PocketQube / CubeSat design for LASC 2026. No propulsion, budget ≤ $1,000 USD.", "link": "/projects/satellite", "amber": true },
+      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Competing at LASC 2026 Rocket Challenge and Satellite Challenge.", "link": "/projects/ignitia", "amber": false },
+      { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robotics"], "desc": "3-year journey from technician to Mechanical Lead. Won Regional Hermosillo 2024, qualified World Championship.", "link": "/projects/frc", "amber": false },
+      { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sustainability"], "desc": "Smart irrigation system for rural communities. Arduino, React web interface, real-time monitoring.", "link": "/projects/wgs", "amber": false },
+      { "key": "techo", "name": "TECHO México", "tags": ["Volunteering"], "desc": "Emergency housing construction for vulnerable communities in Jalisco. Volunteer → Crew Co-Leader → Crew Leader.", "link": "/volunteering/techo", "amber": false }
+    ]
+  },
+  "achievements": {
+    "title": "Achievements",
+    "items": [
+      { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1) + Honorific conduct award" },
+      { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype category" },
+      { "title": "ENMICE 2023–2024", "desc": "Technical Excellence Award (WATAKAME IA)" },
+      { "title": "Spaceport America Cup 2023", "desc": "First Mexican team to complete full mission profile · Rank 79" },
+      { "title": "TOEFL iBT", "desc": "Score 98 · C1 CEFR · ETS · April 2025" },
+      { "title": "Honorific Mention", "desc": "Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "location": "Zapopan, Jalisco, Mexico",
+    "getInTouch": "Get in touch"
+  },
+  "footer": {
+    "role": "Mechatronics Engineering Student",
+    "copyright": "© 2025 Emilio Guadarrama Gutiérrez. All rights reserved."
+  },
+  "fc2026": {
+    "hero": {
+      "title": "FC-2026 Flight Computer",
+      "subtitle": "Ignitia Rocket Lab · LASC 2026 · Avionics",
+      "status": "Schematic Design In Progress",
+      "back": "← Back to Projects"
+    },
+    "overview": {
+      "title": "Project Overview",
+      "what": "Custom SRAD flight computer for the LASC 2026 Rocket Challenge targeting 1 km apogee with solid propulsion.",
+      "role": "Project lead (electronics) — full schematic design and PCB layout in Altium Designer.",
+      "partner": "Aristoteles Prieto (pyro circuit sheet)",
+      "manufacturer": "JLCPCB or PCBWay — team solders components",
+      "reflow": "LPKF ZelFlow R04 · SAC305 lead-free solder",
+      "board": "Rectangular · fits 76mm inner diameter airframe"
+    },
+    "architecture": "System Architecture",
+    "subsystems": "Subsystems",
+    "decisions": {
+      "title": "Key Design Decisions",
+      "headers": ["Decision", "Reason"]
+    },
+    "gallery": "PCB Gallery",
+    "status": {
+      "title": "Development Status",
+      "items": [
+        "Schematic Design",
+        "PCB Layout",
+        "Gerber Review",
+        "Manufacturing",
+        "Assembly & Testing",
+        "LASC 2026 — September 2026 · Iacanga, São Paulo, Brazil"
+      ]
+    },
+    "docs": {
+      "title": "Documents & Resources",
+      "report": "Download Technical Report",
+      "github": "GitHub Repository",
+      "lasc": "LASC 2026"
+    }
+  },
+  "satellite": {
+    "hero": {
+      "title": "LASC 2026 Satellite Challenge",
+      "status": "In Development",
+      "back": "← Back to Projects"
+    },
+    "overview": "Competition Overview",
+    "wip": "Design and development in progress. This page will be updated as the project evolves.",
+    "backToIgnitia": "→ Ignitia Rocket Lab"
+  },
+  "ignitia": {
+    "hero": {
+      "title": "Ignitia Rocket Lab",
+      "subtitle": "Tecnológico de Monterrey · Campus Guadalajara",
+      "tagline": "Pasión con Impacto",
+      "back": "← Home"
+    },
+    "role": "Vice President & Electronics / Avionics Lead",
+    "timeline": { "title": "Mission Timeline" },
+    "achievements": { "title": "Achievements" },
+    "team": { "title": "Team" },
+    "subprojects": { "title": "Subprojects" }
+  },
+  "frc": {
+    "hero": {
+      "title": "FIRST Robotics Competition",
+      "team": "Team Daedalus",
+      "period": "Jan 2023 – May 2025",
+      "location": "Zapopan, Jalisco",
+      "back": "← Home"
+    },
+    "timeline": "Season Timeline",
+    "achievement": "FIRST World Championship Houston 2024 — Qualified by winning Regional Hermosillo"
+  },
+  "wgs": {
+    "hero": {
+      "title": "Smart Irrigation System",
+      "subtitle": "Water Growth Solutions (WGS)",
+      "context": "Sustainable Technology & Renewable Energy Initiative",
+      "back": "← Home"
+    },
+    "overview": "Project Overview",
+    "role": "Electronics, firmware, and web interface",
+    "tech": "Technologies"
+  },
+  "techo": {
+    "hero": {
+      "title": "TECHO México",
+      "role": "Volunteer → Crew Co-Leader → Crew Leader",
+      "period": "Oct 2024 – Present",
+      "location": "Jalisco, Mexico",
+      "back": "← Home"
+    },
+    "history": "Construction History",
+    "description": "Participated in the construction of emergency housing for families in vulnerable communities. Strengthened teamwork, communication, and leadership skills while collaborating with local communities across Jalisco."
+  },
+  "fifawc": {
+    "hero": {
+      "title": "FIFA World Cup 2026™",
+      "role": "Volunteer",
+      "period": "2026",
+      "location": "Guadalajara, Jalisco, Mexico",
+      "back": "← Home"
+    },
+    "overview": {
+      "title": "Overview",
+      "desc": "Selected as a volunteer for the FIFA World Cup 2026™, one of the largest sporting events in the world. Matches in Mexico will be hosted at Estadio Akron in Guadalajara — contributing directly to the operational success of the tournament as part of the local volunteer program."
+    },
+    "responsibilities": {
+      "title": "Responsibilities",
+      "items": [
+        { "title": "Venue Operations", "desc": "Supporting match-day operations at Estadio Akron, including crowd management, wayfinding, and spectator assistance." },
+        { "title": "Visitor Services", "desc": "Assisting international visitors with navigation, translation, and general information at the venue and surrounding areas." },
+        { "title": "Team Coordination", "desc": "Working within a structured volunteer team under FIFA and local organizing committee guidelines." },
+        { "title": "Cultural Ambassador", "desc": "Representing Guadalajara and Mexico to an international audience — promoting local culture and hospitality." }
+      ]
+    },
+    "status": "Volunteer selection confirmed · Awaiting training program · FIFA World Cup 2026"
+  }
+}

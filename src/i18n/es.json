@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "volunteering": "Voluntariado",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "hero": {
+    "title": "Estudiante de Ingeniería Mecatrónica",
+    "subtitle": "Electrónica y Sistemas Embebidos",
+    "role": "VP y Líder de Electrónica en Ignitia Rocket Lab · Tec de Monterrey",
+    "description": "Estudiante de Ingeniería Mecatrónica en el Tecnológico de Monterrey enfocado en electrónica, sistemas embebidos y diseño de PCB. Liderando la división de aviónica de Ignitia Rocket Lab para LASC 2026.",
+    "viewProjects": "Ver Proyectos",
+    "downloadCV": "Descargar CV"
+  },
+  "stats": [
+    { "value": "FC-2026", "label": "Computadora de vuelo en desarrollo" },
+    { "value": "1 km", "label": "Apogeo objetivo LASC 2026" },
+    { "value": "4+", "label": "Logros en competencias" },
+    { "value": "3 años", "label": "Experiencia en robótica" }
+  ],
+  "about": {
+    "title": "Sobre mí",
+    "bio": "Soy estudiante de Ingeniería Mecatrónica en el Tecnológico de Monterrey con enfoque en electrónica, sistemas embebidos y diseño de PCB. Mi experiencia en robótica, cohetería y roles de liderazgo me ha ayudado a desarrollar pensamiento analítico, trabajo en equipo e innovación. Aspiro a contribuir en proyectos multidisciplinarios que integren tecnología, automatización y diseño.",
+    "educationLabel": "Educación",
+    "degree": "Ing. Mecatrónica",
+    "institution": "Tecnológico de Monterrey",
+    "period": "2025 – 2029",
+    "languagesLabel": "Idiomas",
+    "languages": [
+      { "code": "ES", "name": "ESPAÑOL", "level": "Nativo",            "percent": 100 },
+      { "code": "EN", "name": "ENGLISH", "level": "C1 CEFR · TOEFL 98", "percent": 88 },
+      { "code": "DE", "name": "DEUTSCH", "level": "Básico",            "percent": 18  }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "groups": [
+      { "name": "Hardware", "items": ["Diseño de PCB", "Altium Designer", "Sistemas Embebidos", "ESP32 / ESP32-S3"] },
+      { "name": "Firmware", "items": ["C", "C++", "Arduino", "UART / SPI / I2C", "Sistemas IoT"] },
+      { "name": "Software", "items": ["Python", "React", "Git"] },
+      { "name": "Herramientas", "items": ["Altium Designer", "Flujo JLCPCB / PCBWay", "Soldadura por reflujo"] }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": [
+      { "period": "Ago 2025 – Presente", "role": "VP y Líder de Electrónica", "org": "Ignitia Rocket Lab" },
+      { "period": "Ene 2023 – May 2025", "role": "Líder Mecánico y Mentor", "org": "FIRST Robotics — Team Daedalus" },
+      { "period": "Ago 2024 – Jun 2025", "role": "Subsecretario General", "org": "TECMUN GDL" }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "featuredLabel": "Destacado",
+    "viewProject": "Ver Proyecto →",
+    "items": [
+      { "key": "fc2026", "name": "FC-2026 Flight Computer", "tags": ["LASC 2026", "Activo"], "desc": "Computadora de vuelo SRAD personalizada para el LASC 2026. ESP32-S3, telemetría LoRa, GPS, recuperación pirotécnica.", "link": "/projects/fc-2026", "amber": true },
+      { "key": "satellite", "name": "LASC 2026 Satellite Challenge", "tags": ["LASC 2026", "Próximamente"], "desc": "Diseño de CanSat / PocketQube / CubeSat para LASC 2026. Sin propulsión, presupuesto ≤ $1,000 USD.", "link": "/projects/satellite", "amber": true },
+      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Cohetería"], "desc": "Equipo de cohetería estudiantil del Tec de Monterrey. Participando en LASC 2026.", "link": "/projects/ignitia", "amber": false },
+      { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robótica"], "desc": "3 años de trayectoria como técnico y Líder Mecánico. Ganó Regional Hermosillo 2024, clasificó al Campeonato Mundial.", "link": "/projects/frc", "amber": false },
+      { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sostenibilidad"], "desc": "Sistema de riego inteligente para comunidades rurales. Arduino, interfaz web React, monitoreo en tiempo real.", "link": "/projects/wgs", "amber": false },
+      { "key": "techo", "name": "TECHO México", "tags": ["Voluntariado"], "desc": "Construcción de viviendas de emergencia para comunidades vulnerables en Jalisco.", "link": "/volunteering/techo", "amber": false }
+    ]
+  },
+  "achievements": {
+    "title": "Logros",
+    "items": [
+      { "title": "ENMICE 2025", "desc": "2.° lugar presentación de proyecto (WIRIKUTA 1.1) + Reconocimiento de conducta honorífica" },
+      { "title": "Engineering Expo TEC 2025", "desc": "1.er lugar categoría Prototipo Físico" },
+      { "title": "ENMICE 2023–2024", "desc": "Premio a la Excelencia Técnica (WATAKAME IA)" },
+      { "title": "Spaceport America Cup 2023", "desc": "Primer equipo mexicano en completar el perfil de misión completo · Posición 79" },
+      { "title": "TOEFL iBT", "desc": "Puntaje 98 · C1 CEFR · ETS · Abril 2025" },
+      { "title": "Mención Honorífica", "desc": "Prepa Bilingüe · Promedio 96/100 · Tec de Monterrey · Mayo 2025" }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "location": "Zapopan, Jalisco, México",
+    "getInTouch": "Contáctame"
+  },
+  "footer": {
+    "role": "Estudiante de Ingeniería Mecatrónica",
+    "copyright": "© 2025 Emilio Guadarrama Gutiérrez. Todos los derechos reservados."
+  },
+  "fc2026": {
+    "hero": {
+      "title": "FC-2026 Flight Computer",
+      "subtitle": "Ignitia Rocket Lab · LASC 2026 · Aviónica",
+      "status": "Diseño de Esquemático en Progreso",
+      "back": "← Regresar a Proyectos"
+    },
+    "overview": {
+      "title": "Descripción del Proyecto",
+      "what": "Computadora de vuelo SRAD personalizada para el LASC 2026 Rocket Challenge con apogeo objetivo de 1 km y propulsión sólida.",
+      "role": "Líder del proyecto (electrónica) — diseño completo de esquemático y layout de PCB en Altium Designer.",
+      "partner": "Aristoteles Prieto (hoja de circuito pirotécnico)",
+      "manufacturer": "JLCPCB o PCBWay — el equipo suelda los componentes",
+      "reflow": "LPKF ZelFlow R04 · Soldadura sin plomo SAC305",
+      "board": "Rectangular · encaja en airframe de 76mm de diámetro interior"
+    },
+    "architecture": "Arquitectura del Sistema",
+    "subsystems": "Subsistemas",
+    "decisions": {
+      "title": "Decisiones Clave de Diseño",
+      "headers": ["Decisión", "Motivo"]
+    },
+    "gallery": "Galería PCB",
+    "status": {
+      "title": "Estado del Desarrollo",
+      "items": [
+        "Diseño de Esquemático",
+        "Layout de PCB",
+        "Revisión de Gerbers",
+        "Fabricación",
+        "Ensamblaje y Pruebas",
+        "LASC 2026 — Septiembre 2026 · Iacanga, São Paulo, Brasil"
+      ]
+    },
+    "docs": {
+      "title": "Documentos y Recursos",
+      "report": "Descargar Reporte Técnico",
+      "github": "Repositorio GitHub",
+      "lasc": "LASC 2026"
+    }
+  },
+  "satellite": {
+    "hero": {
+      "title": "LASC 2026 Satellite Challenge",
+      "status": "En Desarrollo",
+      "back": "← Regresar a Proyectos"
+    },
+    "overview": "Descripción de la Competencia",
+    "wip": "Diseño y desarrollo en progreso. Esta página se actualizará conforme el proyecto avance.",
+    "backToIgnitia": "→ Ignitia Rocket Lab"
+  },
+  "ignitia": {
+    "hero": {
+      "title": "Ignitia Rocket Lab",
+      "subtitle": "Tecnológico de Monterrey · Campus Guadalajara",
+      "tagline": "Pasión con Impacto",
+      "back": "← Inicio"
+    },
+    "role": "Vicepresidente y Líder de Electrónica / Aviónica",
+    "timeline": { "title": "Línea de Tiempo" },
+    "achievements": { "title": "Logros" },
+    "team": { "title": "Equipo" },
+    "subprojects": { "title": "Subproyectos" }
+  },
+  "frc": {
+    "hero": {
+      "title": "FIRST Robotics Competition",
+      "team": "Team Daedalus",
+      "period": "Ene 2023 – May 2025",
+      "location": "Zapopan, Jalisco",
+      "back": "← Inicio"
+    },
+    "timeline": "Temporadas",
+    "achievement": "FIRST World Championship Houston 2024 — Clasificado al ganar el Regional Hermosillo"
+  },
+  "wgs": {
+    "hero": {
+      "title": "Sistema de Riego Inteligente",
+      "subtitle": "Water Growth Solutions (WGS)",
+      "context": "Iniciativa de Tecnología Sostenible y Energías Renovables",
+      "back": "← Inicio"
+    },
+    "overview": "Descripción del Proyecto",
+    "role": "Electrónica, firmware e interfaz web",
+    "tech": "Tecnologías"
+  },
+  "techo": {
+    "hero": {
+      "title": "TECHO México",
+      "role": "Voluntario → Co-Líder → Líder de Brigada",
+      "period": "Oct 2024 – Presente",
+      "location": "Jalisco, México",
+      "back": "← Inicio"
+    },
+    "history": "Historial de Construcciones",
+    "description": "Participé en la construcción de viviendas de emergencia para familias en comunidades vulnerables. Fortalecí el trabajo en equipo, la comunicación y el liderazgo colaborando con comunidades de Jalisco."
+  },
+  "fifawc": {
+    "hero": {
+      "title": "Copa Mundial FIFA 2026™",
+      "role": "Voluntario",
+      "period": "2026",
+      "location": "Guadalajara, Jalisco, México",
+      "back": "← Inicio"
+    },
+    "overview": {
+      "title": "Descripción",
+      "desc": "Seleccionado como voluntario para la Copa Mundial FIFA 2026™, uno de los eventos deportivos más grandes del mundo. Los partidos en México se disputarán en el Estadio Akron de Guadalajara — contribuyendo directamente al éxito operativo del torneo como parte del programa de voluntarios local."
+    },
+    "responsibilities": {
+      "title": "Responsabilidades",
+      "items": [
+        { "title": "Operaciones en Venue", "desc": "Apoyo en las operaciones durante los partidos en el Estadio Akron, incluyendo gestión de flujo, señalización y asistencia a espectadores." },
+        { "title": "Atención al Visitante", "desc": "Asistencia a visitantes internacionales con orientación, traducción e información general dentro y fuera del estadio." },
+        { "title": "Coordinación de Equipo", "desc": "Trabajo dentro de un equipo de voluntarios estructurado bajo las directrices de FIFA y el comité organizador local." },
+        { "title": "Embajador Cultural", "desc": "Representar a Guadalajara y México ante una audiencia internacional — promoviendo la cultura y hospitalidad local." }
+      ]
+    },
+    "status": "Selección de voluntario confirmada · En espera del programa de capacitación · Copa Mundial FIFA 2026"
+  }
+}

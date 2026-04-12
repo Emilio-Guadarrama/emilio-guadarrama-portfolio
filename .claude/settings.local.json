@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/c/Users/emili/Documents/ClaudeCode-WebDesign/emilio-guadarrama-portfolio/public/brand_assets\")",
+      "Bash(cp \"/c/Users/emili/Documents/ClaudeCode-WebDesign/emilio-guadarrama-portfolio/brand_assets/\"* \"/c/Users/emili/Documents/ClaudeCode-WebDesign/emilio-guadarrama-portfolio/public/brand_assets/\")",
+      "Bash(npm run:*)",
+      "Bash(node screenshot.mjs http://localhost:5173 home)",
+      "Bash(node screenshot.mjs http://localhost:5173/projects/fc-2026 fc2026)",
+      "Bash(node screenshot.mjs http://localhost:5173/projects/ignitia ignitia)",
+      "Bash(node -e ':*)",
+      "Bash(node -e \"const icons = require\\('lucide-react'\\); const matches = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('github'\\)\\); console.log\\(matches\\);\")",
+      "Bash(node -e \"const icons = require\\('lucide-react'\\); const matches = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('git'\\)\\); console.log\\(matches\\);\")",
+      "Bash(node -e \"const icons = require\\('lucide-react'\\); console.log\\(Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('link'\\) || k.toLowerCase\\(\\).includes\\('social'\\) || k.toLowerCase\\(\\).includes\\('linkedin'\\)\\)\\)\")",
+      "Bash(sort echo:*)"
+    ]
+  }
+}
