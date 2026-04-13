@@ -16,10 +16,10 @@
     "downloadCV": "Descargar CV"
   },
   "stats": [
-    { "value": "FC-2026", "label": "Computadora de vuelo en desarrollo" },
-    { "value": "1 km", "label": "Apogeo objetivo LASC 2026" },
-    { "value": "4+", "label": "Logros en competencias" },
-    { "value": "3 años", "label": "Experiencia en robótica" }
+    { "value": "FC-2026", "label": "Computadora de vuelo en desarrollo", "amber": true },
+    { "value": "1 km",   "label": "Apogeo objetivo LASC 2026",          "amber": false },
+    { "value": "4+",     "label": "Logros en competencias",             "amber": false },
+    { "value": "3 años", "label": "Experiencia en robótica",            "amber": false }
   ],
   "about": {
     "title": "Sobre mí",

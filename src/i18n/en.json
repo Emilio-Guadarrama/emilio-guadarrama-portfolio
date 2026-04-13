@@ -16,10 +16,10 @@
     "downloadCV": "Download CV"
   },
   "stats": [
-    { "value": "FC-2026", "label": "Flight computer in development" },
-    { "value": "1 km", "label": "LASC 2026 target apogee" },
-    { "value": "4+", "label": "Competition achievements" },
-    { "value": "3 yr", "label": "Robotics competition experience" }
+    { "value": "FC-2026", "label": "Flight computer in development", "amber": true },
+    { "value": "1 km",   "label": "LASC 2026 target apogee",        "amber": false },
+    { "value": "4+",     "label": "Competition achievements",        "amber": false },
+    { "value": "3 yr",   "label": "Robotics competition experience", "amber": false }
   ],
   "about": {
     "title": "About",

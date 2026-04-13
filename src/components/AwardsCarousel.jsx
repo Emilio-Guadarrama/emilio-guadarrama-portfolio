@@ -244,6 +244,7 @@ function Card({ item, isActive, onToggle }) {
         userSelect:   'none',
         display:      'flex',
         flexDirection:'column',
+        borderRadius: 'var(--radius-sm)',
       }}
       onMouseEnter={(e) => {
         if (!isActive) e.currentTarget.style.borderColor = '#2a2a2a'
@@ -276,6 +277,7 @@ function Card({ item, isActive, onToggle }) {
           background: item.amber ? '#120e06' : 'transparent',
           padding: '1px 5px',
           flexShrink: 0,
+          borderRadius: 2,
         }}>
           {item.category}
         </span>

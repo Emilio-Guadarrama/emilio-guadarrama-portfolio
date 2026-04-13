@@ -1,45 +1,9 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
-function Tag({ children, amber }) {
-  return (
-    <span
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.06em',
-        padding: '3px 8px',
-        border: `1px solid ${amber ? '#28200e' : '#242424'}`,
-        color: amber ? '#b89060' : '#424242',
-        background: amber ? '#120e06' : 'transparent',
-      }}
-    >
-      {children}
-    </span>
-  )
-}
-
-function SectionLabel({ children }) {
-  return (
-    <div
-      style={{
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.12em',
-        textTransform: 'uppercase',
-        color: '#424242',
-        marginBottom: 24,
-      }}
-    >
-      {children}
-    </div>
-  )
-}
+import { motion } from 'framer-motion'
+import { Tag, SectionLabel } from '../components/ui'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const pcbImages = [
   { src: '/brand_assets/photos/fc2026/pcb_3d_top.png',    label: '3D — Top View' },
@@ -129,16 +93,22 @@ const subsystems = [
   },
 ]
 
+// status: 'current' = actively in progress | 'next' = queued | 'pending' = future
 const statusSteps = [
-  { label: 'Schematic Design', done: true },
-  { label: 'PCB Layout', done: false },
-  { label: 'Gerber Review', done: false },
-  { label: 'Manufacturing', done: false },
-  { label: 'Assembly & Testing', done: false },
-  { label: 'LASC 2026 — September 2026 · Iacanga, São Paulo, Brazil', done: false },
+  { label: 'Schematic Design',  status: 'current' },
+  { label: 'PCB Layout',        status: 'next'    },
+  { label: 'Gerber Review',     status: 'pending' },
+  { label: 'Manufacturing',     status: 'pending' },
+  { label: 'Assembly & Testing', status: 'pending' },
+  { label: 'LASC 2026 — September 2026 · Iacanga, São Paulo, Brazil', status: 'pending' },
 ]
 
+const stepColor  = { current: '#b89060', next: '#c8c8c8', pending: '#424242' }
+const stepBorder = { current: '#b89060', next: '#2a2a2a', pending: '#242424' }
+const stepBg     = { current: '#120e06', next: 'transparent', pending: 'transparent' }
+
 export default function FC2026() {
+  usePageTitle('FC-2026 Flight Computer — Emilio Guadarrama')
   const { t } = useTranslation()
   const [activeImg, setActiveImg] = useState(0)
 
@@ -201,6 +171,7 @@ export default function FC2026() {
               border: '1px solid #242424',
               padding: '8px 16px',
               background: '#111111',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             <div
@@ -247,6 +218,7 @@ export default function FC2026() {
                 overflow: 'hidden',
                 background: '#111111',
                 aspectRatio: '16/9',
+                borderRadius: 'var(--radius-sm)',
               }}
             >
               <img
@@ -276,6 +248,7 @@ export default function FC2026() {
                     display: 'block',
                     transition: 'border-color 0.15s ease',
                     textAlign: 'left',
+                    borderRadius: 'var(--radius-sm)',
                   }}
                   onMouseEnter={(e) => {
                     if (activeImg !== i) e.currentTarget.style.borderColor = '#2a2a2a'
@@ -323,11 +296,6 @@ export default function FC2026() {
             {pcbImages[activeImg].label}
           </div>
         </div>
-        <style>{`
-          @media (max-width: 640px) {
-            .gallery-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── PROJECT OVERVIEW ── */}
@@ -335,7 +303,7 @@ export default function FC2026() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('fc2026.overview.title')}</SectionLabel>
           <div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1 }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}
             className="overview-grid"
           >
             {[
@@ -352,12 +320,11 @@ export default function FC2026() {
                   border: '1px solid #242424',
                   padding: '20px',
                   background: '#111111',
-                  marginTop: i > 1 ? -1 : 0,
-                  marginLeft: i % 2 === 1 ? -1 : 0,
                   display: 'grid',
                   gridTemplateColumns: '120px 1fr',
                   gap: 16,
                   alignItems: 'start',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <div
@@ -377,11 +344,6 @@ export default function FC2026() {
             ))}
           </div>
         </div>
-        <style>{`
-          @media (max-width: 600px) {
-            .overview-grid { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── SYSTEM ARCHITECTURE ── */}
@@ -394,6 +356,7 @@ export default function FC2026() {
               background: '#111111',
               padding: '24px 28px',
               overflowX: 'auto',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             <pre
@@ -440,14 +403,15 @@ Redundancy (independent):
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('fc2026.subsystems')}</SectionLabel>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {subsystems.map((sub, i) => (
               <div
                 key={i}
                 style={{
                   border: '1px solid #242424',
                   background: '#111111',
-                  marginTop: i > 0 ? -1 : 0,
+                  borderRadius: 'var(--radius-sm)',
+                  overflow: 'hidden',
                 }}
               >
                 <div
@@ -495,11 +459,6 @@ Redundancy (independent):
             ))}
           </div>
         </div>
-        <style>{`
-          @media (max-width: 600px) {
-            .subsys-row { grid-template-columns: 1fr !important; gap: 4px !important; }
-          }
-        `}</style>
       </section>
 
       {/* ── KEY DESIGN DECISIONS ── */}
@@ -511,6 +470,7 @@ Redundancy (independent):
               border: '1px solid #242424',
               background: '#111111',
               overflow: 'hidden',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             {/* Header */}
@@ -575,12 +535,6 @@ Redundancy (independent):
             ))}
           </div>
         </div>
-        <style>{`
-          @media (max-width: 600px) {
-            .decisions-row { grid-template-columns: 1fr !important; }
-            .decisions-row > div:last-child { border-left: none !important; border-top: 1px solid #1a1a1a; }
-          }
-        `}</style>
       </section>
 
       {/* ── DEVELOPMENT STATUS ── */}
@@ -599,33 +553,35 @@ Redundancy (independent):
                   borderBottom: i < statusSteps.length - 1 ? '1px solid #1a1a1a' : 'none',
                 }}
               >
+                {/* Step indicator box */}
                 <div
                   style={{
-                    width: 20,
-                    height: 20,
-                    border: `1px solid ${step.done ? '#b89060' : '#242424'}`,
-                    background: step.done ? '#120e06' : 'transparent',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
+                    width: 20, height: 20, flexShrink: 0,
+                    border: `1px solid ${stepBorder[step.status]}`,
+                    background: stepBg[step.status],
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    borderRadius: 'var(--radius-sm)',
                   }}
                 >
-                  {step.done && (
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                      <path d="M1 4L4 7L9 1" stroke="#b89060" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  {step.status === 'current' && (
+                    <motion.div
+                      animate={{ opacity: [1, 0.3, 1] }}
+                      transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                      style={{ width: 6, height: 6, borderRadius: '50%', background: '#b89060' }}
+                    />
                   )}
                 </div>
+
+                {/* Step label + badge */}
                 <span
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: 13,
-                    color: step.done ? '#b89060' : i === 1 ? '#c8c8c8' : '#424242',
+                    color: stepColor[step.status],
                   }}
                 >
                   {step.label}
-                  {step.done && (
+                  {step.status === 'current' && (
                     <span
                       style={{
                         marginLeft: 12,
@@ -635,6 +591,7 @@ Redundancy (independent):
                         color: '#b89060',
                         background: '#120e06',
                         letterSpacing: '0.06em',
+                        borderRadius: 2,
                       }}
                     >
                       CURRENT
@@ -673,6 +630,7 @@ Redundancy (independent):
                     fontSize: 13,
                     color: '#424242',
                     cursor: 'not-allowed',
+                    borderRadius: 'var(--radius-sm)',
                   }}
                 >
                   {doc.label}
@@ -702,6 +660,7 @@ Redundancy (independent):
                     color: '#c8c8c8',
                     textDecoration: 'none',
                     transition: 'border-color 0.15s ease, color 0.15s ease',
+                    borderRadius: 'var(--radius-sm)',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = '#2a2a2a'

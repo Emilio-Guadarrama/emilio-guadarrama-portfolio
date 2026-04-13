@@ -1,23 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
-function SectionLabel({ children }) {
-  return (
-    <div
-      style={{
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.12em',
-        textTransform: 'uppercase',
-        color: '#424242',
-        marginBottom: 24,
-      }}
-    >
-      {children}
-    </div>
-  )
-}
+import { SectionLabel } from '../components/ui'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const seasons = [
   {
@@ -39,6 +23,7 @@ const seasons = [
 ]
 
 export default function FRC() {
+  usePageTitle('FIRST Robotics — Team Daedalus — Emilio Guadarrama')
   const { t } = useTranslation()
 
   return (
@@ -82,6 +67,7 @@ export default function FRC() {
                   padding: '3px 8px',
                   border: '1px solid #242424',
                   color: '#424242',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 {tag}
@@ -134,7 +120,6 @@ export default function FRC() {
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 480px) { .frc-meta { grid-template-columns: 1fr !important; gap: 16px !important; } }`}</style>
       </section>
 
       {/* Key Achievement */}
@@ -148,6 +133,7 @@ export default function FRC() {
               border: '1px solid #242424',
               padding: '20px 24px',
               background: '#111111',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             <div
@@ -233,6 +219,7 @@ export default function FRC() {
                         fontSize: 10,
                         color: '#d8d8d8',
                         letterSpacing: '0.06em',
+                        borderRadius: 'var(--radius-sm)',
                       }}
                     >
                       ★ World Championship Qualifier
@@ -244,7 +231,6 @@ export default function FRC() {
             <div style={{ borderTop: '1px solid #242424' }} />
           </div>
         </div>
-        <style>{`@media (max-width: 480px) { .season-row { grid-template-columns: 1fr !important; gap: 8px !important; } }`}</style>
       </section>
 
       {/* Gallery Placeholder */}
@@ -255,7 +241,7 @@ export default function FRC() {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: 1,
+              gap: 8,
             }}
             className="frc-gallery"
           >
@@ -266,10 +252,10 @@ export default function FRC() {
                   border: '1px solid #242424',
                   background: '#111111',
                   aspectRatio: '4/3',
-                  marginLeft: i > 0 ? -1 : 0,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <span
@@ -288,7 +274,6 @@ export default function FRC() {
             Competition photos coming soon.
           </p>
         </div>
-        <style>{`@media (max-width: 768px) { .frc-gallery { grid-template-columns: repeat(2, 1fr) !important; } }`}</style>
       </section>
     </div>
   )
