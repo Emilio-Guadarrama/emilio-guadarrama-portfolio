@@ -1,27 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
-function Tag({ children, amber }) {
-  return (
-    <span
-      style={{
-        display: 'inline-flex',
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.06em',
-        padding: '3px 8px',
-        border: `1px solid ${amber ? '#28200e' : '#242424'}`,
-        color: amber ? '#b89060' : '#424242',
-        background: amber ? '#120e06' : 'transparent',
-      }}
-    >
-      {children}
-    </span>
-  )
-}
+import { Tag } from '../components/ui'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 export default function Satellite() {
+  usePageTitle('LASC 2026 Satellite Challenge — Emilio Guadarrama')
   const { t } = useTranslation()
 
   return (
@@ -73,6 +56,7 @@ export default function Satellite() {
               padding: '8px 16px',
               background: '#111111',
               marginTop: 8,
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             <div style={{ width: 6, height: 6, background: '#424242', flexShrink: 0 }} />
@@ -110,7 +94,7 @@ export default function Satellite() {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: 1,
+              gap: 8,
             }}
             className="sat-grid"
           >
@@ -126,11 +110,10 @@ export default function Satellite() {
                   border: '1px solid #242424',
                   padding: '20px',
                   background: '#111111',
-                  marginTop: i > 1 ? -1 : 0,
-                  marginLeft: i % 2 === 1 ? -1 : 0,
                   display: 'grid',
                   gridTemplateColumns: '120px 1fr',
                   gap: 16,
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <div
@@ -150,7 +133,6 @@ export default function Satellite() {
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 600px) { .sat-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
       {/* WIP Notice */}
@@ -162,6 +144,7 @@ export default function Satellite() {
               padding: '40px',
               background: '#111111',
               maxWidth: 600,
+              borderRadius: 'var(--radius-md)',
             }}
           >
             <div

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const constructions = [
   { num: '1st', role: 'Volunteer', location: 'Comunidad Indígena Sergio Barrios, Tlajomulco, Jalisco' },
@@ -8,6 +9,7 @@ const constructions = [
 ]
 
 export default function TECHO() {
+  usePageTitle('TECHO México — Emilio Guadarrama')
   const { t } = useTranslation()
 
   return (
@@ -44,6 +46,7 @@ export default function TECHO() {
                   padding: '3px 8px',
                   border: '1px solid #242424',
                   color: '#424242',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 {tag}
@@ -95,7 +98,6 @@ export default function TECHO() {
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 480px) { .techo-meta { grid-template-columns: 1fr !important; gap: 16px !important; } }`}</style>
       </section>
 
       {/* Description */}
@@ -130,7 +132,7 @@ export default function TECHO() {
             {t('techo.history')}
           </div>
 
-          <div style={{ border: '1px solid #242424', background: '#111111', overflow: 'hidden' }}>
+          <div style={{ border: '1px solid #242424', background: '#111111', overflow: 'hidden', borderRadius: 'var(--radius-sm)' }}>
             {/* Header */}
             <div
               style={{
@@ -204,13 +206,6 @@ export default function TECHO() {
             ))}
           </div>
         </div>
-        <style>{`
-          @media (max-width: 600px) {
-            .techo-row { grid-template-columns: 1fr !important; }
-            .techo-row > div { border-left: none !important; border-top: 1px solid #1a1a1a; }
-            .techo-row > div:first-child { border-top: none; }
-          }
-        `}</style>
       </section>
 
       {/* Gallery Placeholder */}
@@ -228,7 +223,7 @@ export default function TECHO() {
           >
             Gallery
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 1 }} className="techo-gallery">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }} className="techo-gallery">
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
@@ -236,10 +231,10 @@ export default function TECHO() {
                   border: '1px solid #242424',
                   background: '#111111',
                   aspectRatio: '4/3',
-                  marginLeft: i > 0 ? -1 : 0,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#242424' }}>
@@ -252,7 +247,6 @@ export default function TECHO() {
             Construction photos coming soon.
           </p>
         </div>
-        <style>{`@media (max-width: 600px) { .techo-gallery { grid-template-columns: 1fr !important; } }`}</style>
       </section>
     </div>
   )

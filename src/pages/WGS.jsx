@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 export default function WGS() {
+  usePageTitle('Water Growth Solutions — Emilio Guadarrama')
   const { t } = useTranslation()
 
   const techs = ['Arduino', 'React', 'IoT', 'Bluetooth / Wi-Fi', 'Solar Energy', 'Web Interface']
@@ -160,7 +162,6 @@ export default function WGS() {
             </div>
           </div>
         </div>
-        <style>{`@media (max-width: 768px) { .wgs-overview-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
       {/* Gallery Placeholder */}
@@ -178,7 +179,7 @@ export default function WGS() {
           >
             Media
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 1 }} className="wgs-gallery">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }} className="wgs-gallery">
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
@@ -186,10 +187,10 @@ export default function WGS() {
                   border: '1px solid #242424',
                   background: '#111111',
                   aspectRatio: '16/9',
-                  marginLeft: i > 0 ? -1 : 0,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#242424' }}>
@@ -202,7 +203,6 @@ export default function WGS() {
             Demo screenshots and photos coming soon.
           </p>
         </div>
-        <style>{`@media (max-width: 600px) { .wgs-gallery { grid-template-columns: 1fr !important; } }`}</style>
       </section>
     </div>
   )

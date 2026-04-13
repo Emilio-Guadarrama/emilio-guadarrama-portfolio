@@ -137,6 +137,7 @@ function ProjectCard({ proj, onClick }) {
         background: iconBg,
         border: `1px solid ${iconBorder}`,
         marginTop: 1,
+        borderRadius: 'var(--radius-sm)',
       }}>
         <proj.Icon size={17} color={accent} strokeWidth={1.75} />
       </div>
@@ -330,22 +331,9 @@ export default function Navbar() {
                       border: '1px solid #242424',
                       padding: 6,
                       zIndex: 200,
+                      borderRadius: 'var(--radius-md)',
                     }}
                   >
-                    {/* Notch */}
-                    <div style={{
-                      position: 'absolute', top: -5, left: '50%',
-                      transform: 'translateX(-50%)',
-                      width: 8, height: 5, overflow: 'hidden',
-                    }}>
-                      <div style={{
-                        width: 8, height: 8,
-                        background: '#0d0d0d',
-                        border: '1px solid #242424',
-                        transform: 'rotate(45deg)',
-                        marginTop: 3,
-                      }} />
-                    </div>
 
                     {/* 2-column grid */}
                     <div style={{
@@ -421,22 +409,9 @@ export default function Navbar() {
                       border: '1px solid #242424',
                       padding: 6,
                       zIndex: 200,
+                      borderRadius: 'var(--radius-md)',
                     }}
                   >
-                    {/* Notch */}
-                    <div style={{
-                      position: 'absolute', top: -5, left: '50%',
-                      transform: 'translateX(-50%)',
-                      width: 8, height: 5, overflow: 'hidden',
-                    }}>
-                      <div style={{
-                        width: 8, height: 8,
-                        background: '#0d0d0d',
-                        border: '1px solid #242424',
-                        transform: 'rotate(45deg)',
-                        marginTop: 3,
-                      }} />
-                    </div>
 
                     {/* Single-column list */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -482,6 +457,7 @@ export default function Navbar() {
                 fontSize: 11, fontWeight: 500, letterSpacing: '0.08em',
                 color: '#424242', cursor: 'pointer',
                 transition: 'border-color 0.15s ease, color 0.15s ease',
+                borderRadius: 'var(--radius-sm)',
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3a3a3a'; e.currentTarget.style.color = '#c8c8c8' }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#242424'; e.currentTarget.style.color = '#424242' }}
@@ -506,6 +482,7 @@ export default function Navbar() {
                   letterSpacing: '0.01em',
                   transition: 'border-color 0.15s ease, color 0.15s ease',
                   borderColor: cvDropOpen ? '#f0f0f0' : '#d8d8d8',
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 {t('nav.downloadCV')}
@@ -537,6 +514,7 @@ export default function Navbar() {
                       border: '1px solid #242424',
                       zIndex: 200,
                       overflow: 'hidden',
+                      borderRadius: 'var(--radius-md)',
                     }}
                   >
                     {[
@@ -591,6 +569,7 @@ export default function Navbar() {
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'border-color 0.15s ease',
+              borderRadius: 'var(--radius-sm)',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#3a3a3a')}
             onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#242424')}
@@ -599,12 +578,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        <style>{`
-          @media (max-width: 768px) {
-            .navbar-desktop { display: none !important; }
-            .navbar-mobile-btn { display: flex !important; }
-          }
-        `}</style>
       </header>
 
       {/* ── Portal mobile menu */}
@@ -674,9 +647,10 @@ export default function Navbar() {
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 12, letterSpacing: '0.08em',
               color: '#424242', cursor: 'pointer',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
-            {i18n.language === 'en' ? 'ES' : 'EN'}
+            {i18n.language === 'en' ? 'EN' : 'ES'}
           </button>
           <a
             href="/brand_assets/Resume_English.pdf"
@@ -687,6 +661,7 @@ export default function Navbar() {
               padding: '9px 12px',
               fontSize: 13, fontWeight: 500, color: '#d8d8d8',
               textDecoration: 'none', textAlign: 'center',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             CV EN <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#424242' }}>PDF ↓</span>
@@ -700,6 +675,7 @@ export default function Navbar() {
               padding: '9px 12px',
               fontSize: 13, fontWeight: 500, color: '#d8d8d8',
               textDecoration: 'none', textAlign: 'center',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             CV ES <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#424242' }}>PDF ↓</span>
@@ -777,6 +753,7 @@ function NavPill({ children, onClick, active, trailingIcon }) {
         fontFamily: 'Inter, sans-serif',
         transition: 'background 0.12s ease, border-color 0.12s ease, color 0.12s ease',
         whiteSpace: 'nowrap',
+        borderRadius: 'var(--radius-sm)',
       }}
     >
       {children}

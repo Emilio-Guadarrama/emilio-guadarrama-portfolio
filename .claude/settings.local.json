@@ -11,7 +11,13 @@
       "Bash(node -e \"const icons = require\\('lucide-react'\\); const matches = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('github'\\)\\); console.log\\(matches\\);\")",
       "Bash(node -e \"const icons = require\\('lucide-react'\\); const matches = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('git'\\)\\); console.log\\(matches\\);\")",
       "Bash(node -e \"const icons = require\\('lucide-react'\\); console.log\\(Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\('link'\\) || k.toLowerCase\\(\\).includes\\('social'\\) || k.toLowerCase\\(\\).includes\\('linkedin'\\)\\)\\)\")",
-      "Bash(sort echo:*)"
+      "Bash(sort echo:*)",
+      "Bash(node \"c:\\\\Users\\\\emili\\\\Documents\\\\ClaudeCode-WebDesign\\\\emilio-guadarrama-portfolio\\\\screenshot.mjs\" http://localhost:5173 hero)",
+      "Bash(node \"c:\\\\Users\\\\emili\\\\Documents\\\\ClaudeCode-WebDesign\\\\emilio-guadarrama-portfolio\\\\screenshot.mjs\" http://localhost:5173/ home)",
+      "Bash(npx vite:*)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(Start-Sleep 1)",
+      "Bash(node \"c:\\\\Users\\\\emili\\\\Documents\\\\ClaudeCode-WebDesign\\\\emilio-guadarrama-portfolio\\\\screenshot.mjs\" http://localhost:5173 home2)"
     ]
   }
 }

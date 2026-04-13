@@ -1,43 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
-function Tag({ children, amber }) {
-  return (
-    <span
-      style={{
-        display: 'inline-flex',
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.06em',
-        padding: '3px 8px',
-        border: `1px solid ${amber ? '#28200e' : '#242424'}`,
-        color: amber ? '#b89060' : '#424242',
-        background: amber ? '#120e06' : 'transparent',
-      }}
-    >
-      {children}
-    </span>
-  )
-}
-
-function SectionLabel({ children }) {
-  return (
-    <div
-      style={{
-        fontFamily: "'JetBrains Mono', monospace",
-        fontSize: 11,
-        fontWeight: 500,
-        letterSpacing: '0.12em',
-        textTransform: 'uppercase',
-        color: '#424242',
-        marginBottom: 24,
-      }}
-    >
-      {children}
-    </div>
-  )
-}
+import { Tag, SectionLabel } from '../components/ui'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 const timeline = [
   { year: '2022', event: 'AKIRA II Validation Mission', detail: '1,000m apogee · flight stability, recovery, and onboard electronics validation' },
@@ -71,6 +35,7 @@ const team = [
 ]
 
 export default function Ignitia() {
+  usePageTitle('Ignitia Rocket Lab — Emilio Guadarrama')
   const { t } = useTranslation()
 
   return (
@@ -133,6 +98,7 @@ export default function Ignitia() {
               border: '1px solid #242424',
               padding: '10px 16px',
               background: '#111111',
+              borderRadius: 'var(--radius-sm)',
             }}
           >
             <div>
@@ -192,6 +158,7 @@ export default function Ignitia() {
                         background: '#120e06',
                         letterSpacing: '0.06em',
                         display: 'inline-block',
+                        borderRadius: 2,
                       }}
                     >
                       UPCOMING
@@ -218,14 +185,13 @@ export default function Ignitia() {
             <div style={{ borderTop: '1px solid #242424' }} />
           </div>
         </div>
-        <style>{`@media (max-width: 500px) { .timeline-row { grid-template-columns: 1fr !important; gap: 8px !important; } }`}</style>
       </section>
 
       {/* Achievements */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('ignitia.achievements.title')}</SectionLabel>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1 }} className="ach-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }} className="ach-grid">
             {achievements.map((ach, i) => (
               <div
                 key={i}
@@ -233,8 +199,7 @@ export default function Ignitia() {
                   border: '1px solid #242424',
                   padding: '24px',
                   background: '#111111',
-                  marginTop: i > 1 ? -1 : 0,
-                  marginLeft: i % 2 === 1 ? -1 : 0,
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <div
@@ -253,14 +218,13 @@ export default function Ignitia() {
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 600px) { .ach-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
       {/* Image Carousel Placeholder */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Gallery</SectionLabel>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 1 }} className="gallery-placeholders">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }} className="gallery-placeholders">
             {['ENMICE 2025', 'WATI I Launch', 'WIRIKUTA 1.1', 'Spaceport America Cup 2023'].map((label, i) => (
               <div
                 key={i}
@@ -268,12 +232,12 @@ export default function Ignitia() {
                   border: '1px solid #242424',
                   background: '#111111',
                   aspectRatio: '4/3',
-                  marginLeft: i > 0 ? -1 : 0,
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
                   padding: 16,
+                  borderRadius: 'var(--radius-sm)',
                 }}
               >
                 <img
@@ -299,14 +263,13 @@ export default function Ignitia() {
             Photos coming soon.
           </p>
         </div>
-        <style>{`@media (max-width: 768px) { .gallery-placeholders { grid-template-columns: repeat(2, 1fr) !important; } }`}</style>
       </section>
 
       {/* Team */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('ignitia.team.title')}</SectionLabel>
-          <div style={{ border: '1px solid #242424', background: '#111111', overflow: 'hidden' }}>
+          <div style={{ border: '1px solid #242424', background: '#111111', overflow: 'hidden', borderRadius: 'var(--radius-sm)' }}>
             {team.map((member, i) => (
               <div
                 key={i}
@@ -341,14 +304,13 @@ export default function Ignitia() {
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 480px) { .team-row { grid-template-columns: 1fr !important; gap: 4px; } }`}</style>
       </section>
 
       {/* Subprojects */}
       <section style={{ padding: '64px 0' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('ignitia.subprojects.title')}</SectionLabel>
-          <div style={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
               { name: 'FC-2026 Flight Computer', link: '/projects/fc-2026', amber: true },
               { name: 'LASC 2026 Satellite Challenge', link: '/projects/satellite', amber: true },
@@ -363,6 +325,7 @@ export default function Ignitia() {
                   background: sub.amber ? '#120e06' : '#111111',
                   textDecoration: 'none',
                   transition: 'border-color 0.15s ease',
+                  borderRadius: 'var(--radius-sm)',
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = sub.amber ? '#b89060' : '#2a2a2a')}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = sub.amber ? '#28200e' : '#242424')}

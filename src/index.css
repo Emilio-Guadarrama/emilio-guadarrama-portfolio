@@ -1,3 +1,24 @@
+/* ── Design tokens ─────────────────────────────────────────────────── */
+:root {
+  --bg:             #070707;
+  --card:           #111111;
+  --border:         #242424;
+  --border-hover:   #2a2a2a;
+  --divider:        #1a1a1a;
+  --text-primary:   #f0f0f0;
+  --text-secondary: #c8c8c8;
+  --text-muted:     #424242;
+  --accent-white:   #d8d8d8;
+  --amber:          #b89060;
+  --amber-bg:       #120e06;
+  --amber-border:   #28200e;
+  --font-body:      'Inter', sans-serif;
+  --font-mono:      'JetBrains Mono', monospace;
+  --radius-sm:      4px;
+  --radius-md:      8px;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +30,9 @@ html {
 }
 
 body {
-  background-color: #070707;
-  color: #f0f0f0;
-  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -39,16 +60,161 @@ button {
   font-family: inherit;
 }
 
-/* Scrollbar */
+/* ── Focus visible — keyboard only, no mouse ring ──────────────────── */
+:focus-visible {
+  outline: 1px solid var(--border-hover);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #070707;
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #242424;
+  background: var(--border);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #2a2a2a;
+  background: var(--border-hover);
+}
+
+/* ── Global form styles ────────────────────────────────────────────── */
+input::placeholder,
+textarea::placeholder {
+  color: #2a2a2a;
+  font-family: var(--font-mono);
+}
+
+/* ── Navbar ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar-desktop    { display: none !important; }
+  .navbar-mobile-btn { display: flex !important; }
+}
+
+/* ── Contact form ──────────────────────────────────────────────────── */
+.contact-form-grid { gap: 48px; }
+
+@media (max-width: 768px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── Home — Hero ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-grid       { grid-template-columns: 1fr !important; }
+  .hero-photo-wrap { display: none; }
+}
+
+/* ── Home — Stats ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── Home — About ──────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+}
+
+/* ── Home — Skills ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .skills-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Home — Experience ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .exp-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+}
+
+/* ── Home — Projects ───────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .featured-pcb  { display: none !important; }
+}
+@media (max-width: 500px) {
+  .projects-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Home — Achievements ───────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ach-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── FC-2026 ───────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .gallery-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 600px) {
+  .overview-grid  { grid-template-columns: 1fr !important; }
+  .subsys-row     { grid-template-columns: 1fr !important; gap: 4px !important; }
+  .decisions-row  { grid-template-columns: 1fr !important; }
+  .decisions-row > div:last-child {
+    border-left: none !important;
+    border-top: 1px solid var(--divider);
+  }
+}
+
+/* ── Ignitia ───────────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .timeline-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+}
+@media (max-width: 768px) {
+  .gallery-placeholders { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 480px) {
+  .team-row { grid-template-columns: 1fr !important; gap: 4px; }
+}
+
+/* ── Satellite ─────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .sat-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── FRC ───────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .frc-meta   { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .season-row { grid-template-columns: 1fr !important; gap: 8px !important; }
+}
+@media (max-width: 768px) {
+  .frc-gallery { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── WGS ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .wgs-overview-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 600px) {
+  .wgs-gallery { grid-template-columns: 1fr !important; }
+}
+
+/* ── TECHO ─────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .techo-meta { grid-template-columns: 1fr !important; gap: 16px !important; }
+}
+@media (max-width: 600px) {
+  .techo-row { grid-template-columns: 1fr !important; }
+  .techo-row > div {
+    border-left: none !important;
+    border-top: 1px solid var(--divider);
+  }
+  .techo-row > div:first-child { border-top: none; }
+  .techo-gallery { grid-template-columns: 1fr !important; }
+}
+
+/* ── FIFA WC ───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .fifawc-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+}
+@media (max-width: 600px) {
+  .fifawc-resp-grid { grid-template-columns: 1fr !important; }
 }

@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Reveal, Stagger, staggerItem } from '../components/Reveal'
 import { motion } from 'framer-motion'
+import { usePageTitle } from '../hooks/usePageTitle'
 
 export default function FIFAWC() {
+  usePageTitle('FIFA World Cup 2026 — Emilio Guadarrama')
   const { t } = useTranslation()
   const lang = t('fifawc', { returnObjects: true })
 
@@ -73,7 +75,7 @@ export default function FIFAWC() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div style={{ border: '1px solid #242424', background: '#111111' }}>
+              <div style={{ border: '1px solid #242424', background: '#111111', borderRadius: 'var(--radius-sm)', overflow: 'hidden' }}>
                 {[
                   { label: 'Event', value: 'FIFA World Cup 2026™' },
                   { label: 'Hosts', value: 'USA · Canada · Mexico' },
@@ -101,7 +103,6 @@ export default function FIFAWC() {
             </Reveal>
           </div>
         </div>
-        <style>{`@media (max-width: 768px) { .fifawc-grid { grid-template-columns: 1fr !important; gap: 40px !important; } }`}</style>
       </section>
 
       {/* Responsibilities */}
@@ -117,7 +118,7 @@ export default function FIFAWC() {
             </div>
           </Reveal>
           <Stagger
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 1 }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}
             className="fifawc-resp-grid"
             stagger={0.07}
           >
@@ -126,8 +127,7 @@ export default function FIFAWC() {
                 style={{
                   border: '1px solid #242424', padding: '20px 24px',
                   background: '#111111',
-                  marginTop: i > 1 ? -1 : 0,
-                  marginLeft: i % 2 === 1 ? -1 : 0,
+                  borderRadius: 'var(--radius-sm)',
                 }}>
                 <div style={{
                   fontFamily: "'JetBrains Mono', monospace",
@@ -143,7 +143,6 @@ export default function FIFAWC() {
             ))}
           </Stagger>
         </div>
-        <style>{`@media (max-width: 600px) { .fifawc-resp-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
       {/* Status banner */}
@@ -155,6 +154,7 @@ export default function FIFAWC() {
               padding: '24px 28px',
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               flexWrap: 'wrap', gap: 16,
+              borderRadius: 'var(--radius-sm)',
             }}>
               <div>
                 <div style={{
@@ -173,6 +173,7 @@ export default function FIFAWC() {
                 fontSize: 11, letterSpacing: '0.08em',
                 border: '1px solid #242424', color: '#d8d8d8',
                 padding: '4px 10px', background: '#111111',
+                borderRadius: 'var(--radius-sm)',
               }}>
                 In Progress
               </span>
