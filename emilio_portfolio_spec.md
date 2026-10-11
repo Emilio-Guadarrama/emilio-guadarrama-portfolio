@@ -252,6 +252,13 @@ Hardware (from the IGNIS v5 repo):
 - Firmware requirements defined by Emilio (C++), validated through bench and flight testing: 8-state flight state machine, barometric apogee detection, safety interlocks, LoRa telemetry, SD logging.
 - Ground station: Python/PySide6 with live charts, CSV logging and dual-antenna diversity receivers.
 
+#### Key design decisions
+| Decision | Reason |
+|---|---|
+| ESP32-S3 as MCU | Native USB (no USB-UART bridge), dual-core LX7 at 240 MHz, octal PSRAM for flight logging |
+| Dual AMS1117 instead of XL4005 buck | XL4005 not available in Mexico; thermal analysis: 0.95 W on the 5 V stage, 0.68 W on 3.3 V — acceptable for a short flight |
+| LoRa 915 MHz | Long range, low power, license-free band in Latin America |
+
 #### Tools
 Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · JLCPCB / LCSC
 

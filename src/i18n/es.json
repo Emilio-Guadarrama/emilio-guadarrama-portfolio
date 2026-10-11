@@ -87,45 +87,147 @@
     "role": "Estudiante de Ingeniería en Electrónica y Semiconductores",
     "copyright": "© 2026 Emilio Guadarrama Gutiérrez. Todos los derechos reservados."
   },
-  "fc2026": {
+  "ignis": {
     "hero": {
-      "title": "FC-2026 Flight Computer",
-      "subtitle": "Ignitia Rocket Lab · LASC 2026 · Aviónica",
-      "status": "Diseño de Esquemático en Progreso",
-      "back": "← Regresar a Proyectos"
+      "title": "IGNIS Flight Computer",
+      "subtitle": "Computadora de vuelo de código abierto para cohetes · Ignitia Rocket Lab · 2025 – Presente",
+      "status": "v2.2 voló en LASC 2026 · v5 rediseñada para ensamble llave en mano",
+      "intro": "Computadora de vuelo propia para cohetería estudiantil: mide el vuelo, detecta el apogeo en tiempo real, dispara las cargas de recuperación, transmite telemetría LoRa y registra cada muestra. Cada revisión nació de lo que encontramos en la anterior.",
+      "back": "← Regresar a Proyectos",
+      "roleLabel": "Rol",
+      "role": "Diseñador principal de hardware — arquitectura, esquemáticos, layout de PCB de 4 capas en Altium Designer, diseño de RF y potencia, abastecimiento, puesta en marcha y depuración en laboratorio.",
+      "partnerLabel": "Circuito pirotécnico",
+      "partner": "Javier Aristóteles Prieto Flores"
     },
-    "overview": {
-      "title": "Descripción del Proyecto",
-      "what": "Computadora de vuelo SRAD personalizada para el LASC 2026 Rocket Challenge con apogeo objetivo de 1 km y propulsión sólida.",
-      "role": "Líder del proyecto (electrónica) — diseño completo de esquemático y layout de PCB en Altium Designer.",
-      "partner": "Aristoteles Prieto (hoja de circuito pirotécnico)",
-      "manufacturer": "JLCPCB o PCBWay — el equipo suelda los componentes",
-      "reflow": "LPKF ZelFlow R04 · Soldadura sin plomo SAC305",
-      "board": "Rectangular · encaja en airframe de 76mm de diámetro interior"
-    },
-    "architecture": "Arquitectura del Sistema",
-    "subsystems": "Subsistemas",
-    "decisions": {
-      "title": "Decisiones Clave de Diseño",
-      "headers": ["Decisión", "Motivo"]
-    },
-    "gallery": "Galería PCB",
-    "status": {
-      "title": "Estado del Desarrollo",
+    "revisions": {
+      "title": "Revisiones",
       "items": [
-        "Diseño de Esquemático",
-        "Layout de PCB",
-        "Revisión de Gerbers",
-        "Fabricación",
-        "Ensamblaje y Pruebas",
-        "LASC 2026 — Septiembre 2026 · Iacanga, São Paulo, Brasil"
+        { "rev": "v1", "text": "Fabricada; demasiado grande para el cohete, rediseñada antes de ensamblarse." },
+        { "rev": "v2", "text": "Primera ensamblada; la puesta en marcha encontró errores de esquemático." },
+        { "rev": "v2.2", "text": "Revisión corregida; computadora de vuelo principal en LASC 2026." },
+        { "rev": "v3", "text": "Actualización incremental; nunca se fabricó." },
+        { "rev": "v4", "text": "Dos unidades construidas; detenida por disponibilidad de componentes y un error en la red de USB-C." },
+        { "rev": "v5", "text": "Abastecimiento primero, todo SMD, llave en mano; tarjeta de Ø75 mm. Planeada para 2027." }
+      ],
+      "jump": "Ver detalles"
+    },
+    "v2": {
+      "title": "v2 / v2.2 — Hardware de vuelo",
+      "lead": "La primera PCB de computadora de vuelo que diseñé desde cero, basada en un ESP32-S3 con telemetría LoRa, GPS, sensores inerciales y barométricos, registro de datos a bordo y dos canales de recuperación. Diseñarla en Altium fue solo la primera parte: al ensamblar la v2 y probar el hardware real aparecieron problemas que no eran evidentes en el esquemático ni en el layout.",
+      "hardware": "Hardware",
+      "changesTitle": "Qué cambió en la v2.2",
+      "changes": [
+        "Quitamos el SHT40. La humedad no era útil para la aviónica y la temperatura ya la da el barómetro.",
+        "Corregimos la configuración del barómetro en el bus I²C tras encontrar cómo se había manejado uno de sus pines de interfaz en la v2.",
+        "Corregimos el footprint de los LEDs RGB direccionables, que no coincidía con el componente real.",
+        "Agregamos LEDs de continuidad por hardware en ambos canales de recuperación, para verificar directamente en la tarjeta sin depender del firmware."
+      ],
+      "changesNote": "Ninguno de estos cambios obligó a replantear la arquitectura. Son los detalles que solo aparecen cuando una PCB deja de ser un diseño en pantalla y se vuelve hardware en el banco de pruebas.",
+      "buildTitle": "Ensamble y pruebas en banco",
+      "buildLead": "Ensamblada en casa con esténcil cortado con láser, horno de reflujo y retrabajo con aire caliente, y probada en banco antes de volar.",
+      "designTitle": "Archivos de diseño"
+    },
+    "flight": {
+      "title": "Vuelo en LASC 2026",
+      "lead": "IGNIS v2.2 voló como computadora de vuelo principal en el Latin American Space Challenge 2026 en Brasil. Analicé los registros de vuelo de prueba y de competencia con Python y pandas.",
+      "latency": "Latencia de detección de apogeo barométrica, medida en los registros de vuelo",
+      "loss": "Pérdida de paquetes de telemetría, rastreada y resuelta con una estación terrena de doble antena"
+    },
+    "failures": {
+      "title": "Análisis de fallas",
+      "lead": "Tres problemas encontrados en los registros de banco y de vuelo, y cómo cada uno cambió el hardware o el firmware.",
+      "symptom": "Síntoma",
+      "cause": "Causa raíz",
+      "fix": "Solución",
+      "items": [
+        { "title": "Lecturas de presión erróneas", "symptom": "El barómetro marcaba 497 hPa en lugar de ~830 hPa.", "cause": "Pin de chip-select flotante.", "fix": "Corregido en la v2.2; la v5 define cada pin de configuración." },
+        { "title": "IMU perdida tras el impacto", "symptom": "Datos de la IMU inválidos durante 12,970 filas del registro mientras el barómetro en el mismo bus I²C seguía funcionando.", "cause": "Pin de dirección flotante.", "fix": "Pin de dirección definido en el diseño de la v5." },
+        { "title": "Falso despegue en pruebas", "symptom": "Un debounce de 40 ms permitió que el movimiento de la mano activara \"boost\".", "cause": "Debounce demasiado corto para el manejo real.", "fix": "Debounce de 250 ms más un bloqueo de altitud mínima de 30 m antes de cualquier despliegue." }
       ]
     },
+    "v5": {
+      "title": "v5 — Diseñada para manufactura",
+      "lead": "Después de que la disponibilidad de componentes detuvo la v4, rediseñé la v5 empezando por el abastecimiento: revisé existencias y ciclo de vida antes del layout y preparé la tarjeta para ensamble SMT llave en mano en JLCPCB, de modo que pueda producirse de nuevo sin depender de su diseñador original.",
+      "hardware": "Hardware",
+      "stats": [
+        { "value": "109", "label": "Colocaciones SMT, ensambladas por JLCPCB" },
+        { "value": "40", "label": "Líneas de BOM, pasivos estandarizados 0603/0805" },
+        { "value": "37 / 40", "label": "Líneas de BOM también disponibles con un distribuidor mexicano para reparación local" },
+        { "value": "Ø75 mm", "label": "Tarjeta circular montada a lo ancho del fuselaje" }
+      ],
+      "points": [
+        "Componentes alternos seleccionados para la IMU y el barómetro.",
+        "Montar la tarjeta a lo ancho del fuselaje en lugar de a lo largo acorta la bahía de aviónica lo suficiente para el cohete más pequeño del equipo.",
+        "Un paquete de manufactura completo para producción repetible."
+      ]
+    },
+    "platform": {
+      "title": "En todas las revisiones",
+      "hardwareTitle": "Hardware",
+      "hardware": [
+        "Stackup de 4 capas con referencia de tierra dedicada para la microcinta de RF",
+        "Zona de RF protegida con cerca de vías",
+        "Vías en el pad térmico del MCU",
+        "Drivers pirotécnicos MOSFET optoaislados con detección de continuidad",
+        "USB-C con protección ESD"
+      ],
+      "firmwareTitle": "Firmware y segmento terreno",
+      "firmware": [
+        "Definí los requisitos del firmware (C++) y validé cada cambio del software de vuelo con pruebas en banco y en vuelo.",
+        "Máquina de estados de vuelo de 8 estados, detección barométrica de apogeo, bloqueos de seguridad, telemetría LoRa y registro en SD.",
+        "Estación terrena en Python/PySide6 con gráficas en vivo, registro CSV y receptores de diversidad con doble antena."
+      ]
+    },
+    "decisions": {
+      "title": "Decisiones clave de diseño",
+      "headers": ["Decisión", "Motivo"]
+    },
     "docs": {
-      "title": "Documentos y Recursos",
-      "report": "Descargar Reporte Técnico",
-      "github": "Repositorio GitHub",
+      "title": "Archivos fuente",
+      "v2": "IGNIS v2 en GitHub",
+      "v5": "IGNIS v5 en GitHub",
       "lasc": "LASC 2026"
+    }
+  },
+  "gallery": {
+    "open": "Abrir foto",
+    "close": "Cerrar",
+    "prev": "Foto anterior",
+    "next": "Foto siguiente",
+    "video": "Video"
+  },
+  "captions": {
+    "ignis": {
+      "board": "IGNIS v2 con sus módulos de GPS e IMU montados.",
+      "silkscreen": "Serigrafía de IGNIS v2: Ignitia Rocket Lab, Pasión con Impacto.",
+      "v1": "v1 en Altium. Demasiado grande para el cohete, así que se rediseñó antes de ensamblarse.",
+      "v4": "v4 en el banco. Se construyeron dos unidades antes de que la disponibilidad de componentes la detuviera.",
+      "bareBoard": "v2 después del reflujo, antes de montar los módulos.",
+      "assembled": "v2 completamente ensamblada.",
+      "bench": "Puesta en marcha en el banco.",
+      "reflow": "Tarjetas v2 en el horno de reflujo.",
+      "pyroBench": "Prueba en banco de los canales pirotécnicos con la IMU y el barómetro.",
+      "pyroCommand": "Prueba por comando del sistema pirotécnico.",
+      "top3d": "Vista 3D, superior.",
+      "side3d": "Vista 3D, en ángulo.",
+      "bottom3d": "Vista 3D, inferior.",
+      "schematic": "Hoja principal del esquemático: conexiones jerárquicas al ESP32-S3.",
+      "layerTop": "Capa de cobre superior.",
+      "layerGnd": "Capa del plano de tierra.",
+      "layerPwr": "Capa del plano de potencia.",
+      "layerBottom": "Capa de cobre inferior."
+    },
+    "lasc": {
+      "avionicsBay": "Integración final de la bahía de aviónica antes del vuelo.",
+      "onRail": "IGNIS 1 en el riel en LASC 2026, Brasil, con IGNIS v2.2 como computadora de vuelo principal.",
+      "launchControl": "Panel de control remoto de lanzamiento en LASC 2026.",
+      "recovery": "Caminando a recuperar el cohete.",
+      "railVideo": "IGNIS 1 en el riel de lanzamiento.",
+      "rbf": "Retirando los pines remove-before-flight.",
+      "integration": "Integración en la carpa del equipo.",
+      "integrationCheck": "Revisiones previas al vuelo.",
+      "launchTeam": "Equipo de lanzamiento con el cohete.",
+      "railTeam": "En el riel de lanzamiento."
     }
   },
   "satellite": {

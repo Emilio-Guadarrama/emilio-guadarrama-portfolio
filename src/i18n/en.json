@@ -87,45 +87,147 @@
     "role": "Electronics and Semiconductor Engineering Student",
     "copyright": "© 2026 Emilio Guadarrama Gutiérrez. All rights reserved."
   },
-  "fc2026": {
+  "ignis": {
     "hero": {
-      "title": "FC-2026 Flight Computer",
-      "subtitle": "Ignitia Rocket Lab · LASC 2026 · Avionics",
-      "status": "Schematic Design In Progress",
-      "back": "← Back to Projects"
+      "title": "IGNIS Flight Computer",
+      "subtitle": "Open-source rocket flight computer · Ignitia Rocket Lab · 2025 – Present",
+      "status": "v2.2 flown at LASC 2026 · v5 redesigned for turnkey assembly",
+      "intro": "Custom flight computer for student rocketry: it senses the flight, detects apogee in real time, fires the recovery charges, streams LoRa telemetry and logs every sample. Each revision was driven by findings from the one before it.",
+      "back": "← Back to Projects",
+      "roleLabel": "Role",
+      "role": "Lead hardware designer — architecture, schematics, 4-layer PCB layout in Altium Designer, RF and power design, sourcing, bring-up and lab debugging.",
+      "partnerLabel": "Pyro circuit",
+      "partner": "Javier Aristóteles Prieto Flores"
     },
-    "overview": {
-      "title": "Project Overview",
-      "what": "Custom SRAD flight computer for the LASC 2026 Rocket Challenge targeting 1 km apogee with solid propulsion.",
-      "role": "Project lead (electronics) — full schematic design and PCB layout in Altium Designer.",
-      "partner": "Aristoteles Prieto (pyro circuit sheet)",
-      "manufacturer": "JLCPCB or PCBWay — team solders components",
-      "reflow": "LPKF ZelFlow R04 · SAC305 lead-free solder",
-      "board": "Rectangular · fits 76mm inner diameter airframe"
-    },
-    "architecture": "System Architecture",
-    "subsystems": "Subsystems",
-    "decisions": {
-      "title": "Key Design Decisions",
-      "headers": ["Decision", "Reason"]
-    },
-    "gallery": "PCB Gallery",
-    "status": {
-      "title": "Development Status",
+    "revisions": {
+      "title": "Revisions",
       "items": [
-        "Schematic Design",
-        "PCB Layout",
-        "Gerber Review",
-        "Manufacturing",
-        "Assembly & Testing",
-        "LASC 2026 — September 2026 · Iacanga, São Paulo, Brazil"
+        { "rev": "v1", "text": "Fabricated; too large for the rocket, redesigned before assembly." },
+        { "rev": "v2", "text": "First assembled; bring-up found schematic errors." },
+        { "rev": "v2.2", "text": "Corrected revision; primary flight computer at LASC 2026." },
+        { "rev": "v3", "text": "Incremental update; never fabricated." },
+        { "rev": "v4", "text": "Two units built; halted by part availability and a USB-C net error." },
+        { "rev": "v5", "text": "Sourcing-first, all-SMD, turnkey; Ø75 mm board. Planned for 2027." }
+      ],
+      "jump": "See details"
+    },
+    "v2": {
+      "title": "v2 / v2.2 — Flight hardware",
+      "lead": "The first flight computer PCB I designed from scratch, built around an ESP32-S3 with LoRa telemetry, GPS, inertial and barometric sensing, onboard logging and two recovery channels. Designing it in Altium was only the first part: once v2 was assembled, testing the real hardware showed problems that weren't obvious on the schematic or layout.",
+      "hardware": "Hardware",
+      "changesTitle": "What changed in v2.2",
+      "changes": [
+        "Removed the SHT40. Humidity wasn't useful for the avionics, and temperature already comes from the barometer.",
+        "Corrected the barometer's configuration on the I²C bus after finding how one of its interface pins had been handled in v2.",
+        "Fixed the footprint of the addressable RGB LEDs, which didn't match the real part.",
+        "Added hardware continuity LEDs to both recovery channels, giving an immediate visual check on the board without relying on firmware output."
+      ],
+      "changesNote": "None of these changes required rethinking the architecture. They are the details that only show up once a PCB stops being a design on a screen and becomes hardware on the bench.",
+      "buildTitle": "Build and bench testing",
+      "buildLead": "Assembled in-house with a laser-cut stencil, reflow oven and hot-air rework, then bench-tested before flight.",
+      "designTitle": "Design files"
+    },
+    "flight": {
+      "title": "Flight at LASC 2026",
+      "lead": "IGNIS v2.2 flew as the primary flight computer at the Latin American Space Challenge 2026 in Brazil. I analyzed the test and competition flight logs with Python and pandas.",
+      "latency": "Barometric apogee-detection latency, measured from flight logs",
+      "loss": "Telemetry packet loss, traced and fixed with a dual-antenna ground station"
+    },
+    "failures": {
+      "title": "Failure analysis",
+      "lead": "Three problems found in bench and flight logs, and how each one changed the hardware or firmware.",
+      "symptom": "Symptom",
+      "cause": "Root cause",
+      "fix": "Fix",
+      "items": [
+        { "title": "Wrong pressure readings", "symptom": "Barometer read 497 hPa instead of ~830 hPa.", "cause": "Floating chip-select pin.", "fix": "Fixed in v2.2; v5 defines every strap pin." },
+        { "title": "IMU lost after impact", "symptom": "IMU data invalid for 12,970 log rows while the barometer on the same I²C bus kept working.", "cause": "Floating address pin.", "fix": "Address pin defined in the v5 design." },
+        { "title": "False liftoff in testing", "symptom": "A 40 ms debounce let hand movement trigger \"boost\".", "cause": "Debounce too short for real handling.", "fix": "250 ms debounce plus a 30 m minimum-altitude interlock before any deployment." }
       ]
     },
+    "v5": {
+      "title": "v5 — Designed for manufacturing",
+      "lead": "After component-availability problems stopped v4, I redesigned v5 around sourcing first: stock and lifecycle were checked before layout, and the board was prepared for turnkey SMT assembly at JLCPCB so it can be produced again without depending on its original designer.",
+      "hardware": "Hardware",
+      "stats": [
+        { "value": "109", "label": "SMT placements, assembled by JLCPCB" },
+        { "value": "40", "label": "BOM lines, standardized 0603/0805 passives" },
+        { "value": "37 / 40", "label": "BOM lines also stocked by a Mexican distributor for local repair" },
+        { "value": "Ø75 mm", "label": "Circular board mounted across the airframe" }
+      ],
+      "points": [
+        "Alternate parts selected for the IMU and barometer.",
+        "Mounting the board across the airframe instead of along it shortens the avionics bay enough to fit the team's smallest rocket.",
+        "A complete manufacturing package for repeatable production."
+      ]
+    },
+    "platform": {
+      "title": "Across every revision",
+      "hardwareTitle": "Hardware",
+      "hardware": [
+        "4-layer stackup with a dedicated ground reference for the RF microstrip",
+        "Via-fenced RF keepout",
+        "Via-in-pad thermal pad under the MCU",
+        "Opto-isolated MOSFET pyro drivers with continuity sensing",
+        "USB-C with ESD protection"
+      ],
+      "firmwareTitle": "Firmware and ground segment",
+      "firmware": [
+        "I defined the firmware requirements (C++) and validated each flight-software change through bench and flight testing.",
+        "8-state flight state machine, barometric apogee detection, safety interlocks, LoRa telemetry and SD logging.",
+        "Python/PySide6 ground station with live charts, CSV logging and dual-antenna diversity receivers."
+      ]
+    },
+    "decisions": {
+      "title": "Key design decisions",
+      "headers": ["Decision", "Reason"]
+    },
     "docs": {
-      "title": "Documents & Resources",
-      "report": "Download Technical Report",
-      "github": "GitHub Repository",
+      "title": "Source files",
+      "v2": "IGNIS v2 on GitHub",
+      "v5": "IGNIS v5 on GitHub",
       "lasc": "LASC 2026"
+    }
+  },
+  "gallery": {
+    "open": "Open photo",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "video": "Video"
+  },
+  "captions": {
+    "ignis": {
+      "board": "IGNIS v2 with its GPS and IMU modules mounted.",
+      "silkscreen": "IGNIS v2 silkscreen: Ignitia Rocket Lab, Pasión con Impacto.",
+      "v1": "v1 in Altium. Too large for the rocket, so it was redesigned before assembly.",
+      "v4": "v4 on the bench. Two units were built before part availability halted it.",
+      "bareBoard": "v2 after reflow, before the modules were mounted.",
+      "assembled": "v2 fully assembled.",
+      "bench": "Bring-up on the bench.",
+      "reflow": "v2 boards in the reflow oven.",
+      "pyroBench": "Bench-testing the pyro channels with the IMU and barometer.",
+      "pyroCommand": "Command-testing the pyro system.",
+      "top3d": "3D view, top.",
+      "side3d": "3D view, angled.",
+      "bottom3d": "3D view, bottom.",
+      "schematic": "Main schematic sheet: hierarchical connections to the ESP32-S3.",
+      "layerTop": "Top copper layer.",
+      "layerGnd": "Ground plane layer.",
+      "layerPwr": "Power plane layer.",
+      "layerBottom": "Bottom copper layer."
+    },
+    "lasc": {
+      "avionicsBay": "Final integration of the avionics bay before flight.",
+      "onRail": "IGNIS 1 on the rail at LASC 2026, Brazil, with IGNIS v2.2 as its primary flight computer.",
+      "launchControl": "Remote launch control panel at LASC 2026.",
+      "recovery": "Walking out to recover the rocket.",
+      "railVideo": "IGNIS 1 on the launch rail.",
+      "rbf": "Pulling the remove-before-flight pins.",
+      "integration": "Integration at the team tent.",
+      "integrationCheck": "Pre-flight checks.",
+      "launchTeam": "Launch team with the rocket.",
+      "railTeam": "At the launch rail."
     }
   },
   "satellite": {
