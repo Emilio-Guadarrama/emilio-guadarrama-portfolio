@@ -19,7 +19,7 @@ const projectLinks = [
   },
   {
     name: 'LASC 2026 CanSat',
-    desc: 'Mission Leader · 10th of 100 teams',
+    desc: 'Mission Leader · 9th of 50 teams',
     link: '/projects/satellite',
     amber: true,
     Icon: Radio,
