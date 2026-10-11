@@ -6,33 +6,19 @@ export default function WGS() {
   usePageTitle('Water Growth Solutions — Emilio Guadarrama')
   const { t } = useTranslation()
 
-  const techs = ['Arduino', 'React', 'IoT', 'Bluetooth / Wi-Fi', 'Solar Energy', 'Web Interface']
+  const techs = ['Arduino', 'Sensors', 'Bluetooth / Wi-Fi', 'Web interface', 'Solar power']
 
   return (
     <div style={{ paddingTop: 60 }}>
       {/* Hero */}
       <section style={{ padding: '64px 0 48px', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <Link
-            to="/"
-            style={{
-              display: 'inline-flex',
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              color: '#424242',
-              textDecoration: 'none',
-              marginBottom: 32,
-              letterSpacing: '0.06em',
-              transition: 'color 0.15s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
-          >
+          <Link to="/" className="back-link">
             {t('wgs.hero.back')}
           </Link>
 
           <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
-            {['IoT', 'Sustainability', 'Arduino', 'React'].map((tag) => (
+            {['IoT', 'Sustainability', 'Arduino'].map((tag) => (
               <span
                 key={tag}
                 style={{
@@ -97,9 +83,8 @@ export default function WGS() {
           >
             <div>
               {[
-                { k: 'What', v: 'Sustainable irrigation and vertical garden system for rural communities.' },
-                { k: 'Goal', v: 'Improve irrigation efficiency and food security through sustainable automation.' },
-                { k: 'Emilio\'s Role', v: t('wgs.role') },
+                { k: t('wgs.whatLabel'), v: t('wgs.what') },
+                { k: t('wgs.roleLabel'), v: t('wgs.role') },
               ].map((row, i) => (
                 <div
                   key={i}
@@ -177,7 +162,7 @@ export default function WGS() {
               marginBottom: 24,
             }}
           >
-            Media
+            {t('wgs.media')}
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }} className="wgs-gallery">
             {Array.from({ length: 3 }).map((_, i) => (
@@ -200,7 +185,7 @@ export default function WGS() {
             ))}
           </div>
           <p style={{ fontSize: 12, color: '#424242', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
-            Demo screenshots and photos coming soon.
+            {t('wgs.mediaSoon')}
           </p>
         </div>
       </section>

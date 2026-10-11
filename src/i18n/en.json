@@ -369,12 +369,17 @@
     "hero": {
       "title": "Smart Irrigation System",
       "subtitle": "Water Growth Solutions (WGS)",
-      "context": "Sustainable Technology & Renewable Energy Initiative",
+      "context": "Team project · Sustainable Technology & Renewable Energy",
       "back": "← Home"
     },
     "overview": "Project Overview",
-    "role": "Electronics, firmware, and web interface",
-    "tech": "Technologies"
+    "role": "Arduino code, electronic control system and web interface for real-time monitoring and automation.",
+    "tech": "Technologies",
+    "whatLabel": "What",
+    "what": "Automated vertical irrigation system with Arduino, sensors, pumps and solar power, aligned with six UN Sustainable Development Goals.",
+    "roleLabel": "Emilio's role",
+    "media": "Media",
+    "mediaSoon": "Demo screenshots and photos coming soon."
   },
   "techo": {
     "hero": {

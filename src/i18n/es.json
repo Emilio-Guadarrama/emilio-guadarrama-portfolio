@@ -369,12 +369,17 @@
     "hero": {
       "title": "Sistema de Riego Inteligente",
       "subtitle": "Water Growth Solutions (WGS)",
-      "context": "Iniciativa de Tecnología Sostenible y Energías Renovables",
+      "context": "Proyecto en equipo · Tecnología Sostenible y Energías Renovables",
       "back": "← Inicio"
     },
     "overview": "Descripción del Proyecto",
-    "role": "Electrónica, firmware e interfaz web",
-    "tech": "Tecnologías"
+    "role": "Código Arduino, sistema electrónico de control e interfaz web para monitoreo y automatización en tiempo real.",
+    "tech": "Tecnologías",
+    "whatLabel": "Qué es",
+    "what": "Sistema de riego vertical automatizado con Arduino, sensores, bombas y energía solar, alineado con seis Objetivos de Desarrollo Sostenible de la ONU.",
+    "roleLabel": "Rol de Emilio",
+    "media": "Multimedia",
+    "mediaSoon": "Capturas y fotos del proyecto próximamente."
   },
   "techo": {
     "hero": {
