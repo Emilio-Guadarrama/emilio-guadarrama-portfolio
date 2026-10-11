@@ -103,7 +103,7 @@ Technical font:   JetBrains Mono
 ### 6.1 Home `/`
 
 #### Hero
-- **Name:** Emilio Guadarrama Gutiérrez — the main heading (largest text on the page)
+- **Name:** Emilio Guadarrama — the main heading (largest text on the page). Use "Emilio Guadarrama" everywhere on the site (no second surname).
 - **Title:** Electronics and Semiconductor Engineering Student
 - **Subtitle:** Embedded Hardware & PCB Design
 - **Role line:** Vice President & Electronics & Avionics Lead at Ignitia Rocket Lab · Tec de Monterrey
