@@ -197,6 +197,12 @@
     "video": "Video"
   },
   "captions": {
+    "fifa": {
+      "stadium": "At Guadalajara Stadium.",
+      "ceremony": "Pre-match ceremony at Guadalajara Stadium.",
+      "ceremonyVideo": "The ceremony cast on the field.",
+      "stadiumDay": "Guadalajara Stadium before a match."
+    },
     "techo": {
       "hero": "Building with TECHO.",
       "group2024": "Volunteers and families at the first build.",
@@ -444,24 +450,27 @@
   "fifawc": {
     "hero": {
       "title": "FIFA World Cup 2026™",
-      "role": "Volunteer",
-      "period": "2026",
-      "location": "Guadalajara, Jalisco, Mexico",
+      "role": "Pre-Match Ceremony Cast Volunteer",
       "back": "← Home"
     },
-    "overview": {
-      "title": "Overview",
-      "desc": "Selected as a volunteer for the FIFA World Cup 2026™, one of the largest sporting events in the world. Matches in Mexico will be hosted at Estadio Akron in Guadalajara — contributing directly to the operational success of the tournament as part of the local volunteer program."
-    },
-    "responsibilities": {
-      "title": "Responsibilities",
-      "items": [
-        { "title": "Venue Operations", "desc": "Supporting match-day operations at Estadio Akron, including crowd management, wayfinding, and spectator assistance." },
-        { "title": "Visitor Services", "desc": "Assisting international visitors with navigation, translation, and general information at the venue and surrounding areas." },
-        { "title": "Team Coordination", "desc": "Working within a structured volunteer team under FIFA and local organizing committee guidelines." },
-        { "title": "Cultural Ambassador", "desc": "Representing Guadalajara and Mexico to an international audience — promoting local culture and hospitality." }
-      ]
-    },
-    "status": "Volunteer selection confirmed · Awaiting training program · FIFA World Cup 2026"
+    "desc": "Part of the FIFA World Cup 2026™ Volunteer program, the first 48-team World Cup, as a cast volunteer in the pre-match ceremonies at Guadalajara Stadium.",
+    "facts": [
+      {
+        "k": "Functional area",
+        "v": "Ceremonies"
+      },
+      {
+        "k": "Role",
+        "v": "Pre-Match Ceremony Cast Volunteer"
+      },
+      {
+        "k": "Venue",
+        "v": "Guadalajara Stadium (Estadio Akron), Guadalajara"
+      },
+      {
+        "k": "Tournament",
+        "v": "June 11 – July 19, 2026 · Canada, Mexico and the United States"
+      }
+    ]
   }
 }

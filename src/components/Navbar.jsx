@@ -58,7 +58,7 @@ const volunteeringLinks = [
   },
   {
     name: 'FIFA World Cup 2026™',
-    desc: 'Volunteer · Estadio Akron · Guadalajara',
+    desc: 'Ceremonies volunteer · Guadalajara',
     link: '/volunteering/fifa-wc',
     amber: false,
     Icon: Trophy,

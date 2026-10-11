@@ -197,6 +197,12 @@
     "video": "Video"
   },
   "captions": {
+    "fifa": {
+      "stadium": "En el Estadio Guadalajara.",
+      "ceremony": "Ceremonia previa al partido en el Estadio Guadalajara.",
+      "ceremonyVideo": "El elenco de la ceremonia en la cancha.",
+      "stadiumDay": "El Estadio Guadalajara antes de un partido."
+    },
     "techo": {
       "hero": "Construyendo con TECHO.",
       "group2024": "Voluntarios y familias en la primera construcción.",
@@ -443,25 +449,28 @@
   },
   "fifawc": {
     "hero": {
-      "title": "Copa Mundial FIFA 2026™",
-      "role": "Voluntario",
-      "period": "2026",
-      "location": "Guadalajara, Jalisco, México",
+      "title": "Copa Mundial de la FIFA 2026™",
+      "role": "Voluntario del elenco de la ceremonia previa al partido",
       "back": "← Inicio"
     },
-    "overview": {
-      "title": "Descripción",
-      "desc": "Seleccionado como voluntario para la Copa Mundial FIFA 2026™, uno de los eventos deportivos más grandes del mundo. Los partidos en México se disputarán en el Estadio Akron de Guadalajara — contribuyendo directamente al éxito operativo del torneo como parte del programa de voluntarios local."
-    },
-    "responsibilities": {
-      "title": "Responsabilidades",
-      "items": [
-        { "title": "Operaciones en Venue", "desc": "Apoyo en las operaciones durante los partidos en el Estadio Akron, incluyendo gestión de flujo, señalización y asistencia a espectadores." },
-        { "title": "Atención al Visitante", "desc": "Asistencia a visitantes internacionales con orientación, traducción e información general dentro y fuera del estadio." },
-        { "title": "Coordinación de Equipo", "desc": "Trabajo dentro de un equipo de voluntarios estructurado bajo las directrices de FIFA y el comité organizador local." },
-        { "title": "Embajador Cultural", "desc": "Representar a Guadalajara y México ante una audiencia internacional — promoviendo la cultura y hospitalidad local." }
-      ]
-    },
-    "status": "Selección de voluntario confirmada · En espera del programa de capacitación · Copa Mundial FIFA 2026"
+    "desc": "Formé parte del Programa de Voluntarios de la Copa Mundial de la FIFA 2026™, la primera con 48 equipos, como voluntario del elenco de las ceremonias previas a los partidos en el Estadio Guadalajara.",
+    "facts": [
+      {
+        "k": "Área funcional",
+        "v": "Ceremonias"
+      },
+      {
+        "k": "Rol",
+        "v": "Pre-Match Ceremony Cast Volunteer"
+      },
+      {
+        "k": "Sede",
+        "v": "Estadio Guadalajara (Estadio Akron), Guadalajara"
+      },
+      {
+        "k": "Torneo",
+        "v": "11 de junio – 19 de julio de 2026 · Canadá, México y Estados Unidos"
+      }
+    ]
   }
 }
