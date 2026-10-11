@@ -37,7 +37,7 @@ const contactInfo = [
   },
   {
     Icon: MapPin,
-    label: 'Zapopan, Jalisco, México',
+    label: 'Monterrey, Nuevo León, México',
     href: null,
   },
 ]

@@ -9,46 +9,47 @@
   },
   "hero": {
     "title": "Electronics and Semiconductor Engineering Student",
-    "subtitle": "Electronics & Embedded Systems",
-    "role": "VP & Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey",
-    "description": "Electronics and Semiconductor Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026.",
+    "subtitle": "Embedded Hardware & PCB Design",
+    "role": "Vice President & Avionics/Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey",
+    "description": "Lead designer of IGNIS, an open-source rocket flight computer flown at LASC 2026, with hands-on work in schematic capture, multilayer layout, bring-up, flight-data analysis and design for manufacturing.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV"
   },
   "stats": [
-    { "value": "FC-2026", "label": "Flight computer in development", "amber": true },
-    { "value": "1 km",   "label": "LASC 2026 target apogee",        "amber": false },
-    { "value": "4+",     "label": "Competition achievements",        "amber": false },
-    { "value": "3 yr",   "label": "Robotics competition experience", "amber": false }
+    { "value": "IGNIS",      "label": "Flight computer flown at LASC 2026", "amber": true },
+    { "value": "10th / 100", "label": "LASC 2026 Satellite Challenge",      "amber": false },
+    { "value": "v1 → v5",    "label": "IGNIS hardware revisions",           "amber": false },
+    { "value": "3 yr",       "label": "FIRST Robotics experience",          "amber": false }
   ],
   "about": {
     "title": "About",
-    "bio": "I am a Electronics and Semiconductor Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design.",
+    "bio": "I'm an Electronics and Semiconductor Engineering student at Tecnológico de Monterrey. I design, build and fly rocket flight computers, from multilayer PCB design to lab bring-up, flight testing and failure analysis. Before university I spent three seasons in FIRST Robotics, going from technician to Mechanical Lead.",
     "educationLabel": "Education",
     "degree": "B.S. Electronics and Semiconductor Engineering",
-    "institution": "Tecnológico de Monterrey",
-    "period": "2025 – 2029",
+    "institution": "Tecnológico de Monterrey, Campus Guadalajara",
+    "period": "Aug 2025 – Jun 2029 (expected)",
     "languagesLabel": "Languages",
     "languages": [
-      { "code": "ES", "name": "ESPAÑOL", "level": "Native",           "percent": 100 },
-      { "code": "EN", "name": "ENGLISH", "level": "C1 CEFR · TOEFL 98", "percent": 88 },
-      { "code": "DE", "name": "DEUTSCH", "level": "Elementary",       "percent": 18  }
+      { "code": "ES", "name": "ESPAÑOL", "level": "Native",             "percent": 100 },
+      { "code": "EN", "name": "ENGLISH", "level": "C1 CEFR · TOEFL 99", "percent": 88 },
+      { "code": "DE", "name": "DEUTSCH", "level": "Elementary",         "percent": 18  }
     ]
   },
   "skills": {
     "title": "Technical Skills",
     "groups": [
-      { "name": "Hardware", "items": ["PCB Design", "Altium Designer", "Embedded Systems", "ESP32 / ESP32-S3"] },
-      { "name": "Firmware", "items": ["C", "C++", "Arduino", "UART / SPI / I2C", "IoT Systems"] },
-      { "name": "Software", "items": ["Python", "React", "Git"] },
-      { "name": "Tools", "items": ["Altium Designer", "JLCPCB / PCBWay workflow", "Reflow soldering"] }
+      { "name": "Hardware & PCB", "items": ["Altium Designer", "Schematic capture", "4-layer PCB layout", "RF layout", "Power distribution", "BOM management"] },
+      { "name": "Embedded", "items": ["ESP32-S3", "C / C++ · Arduino", "SPI · I2C · UART · USB", "LoRa (RFM95W / SX1276)", "GNSS", "Sensor integration"] },
+      { "name": "Lab & Test", "items": ["Oscilloscope", "Signal generator", "Bench power supply", "Multimeter", "Board bring-up", "Failure analysis"] },
+      { "name": "Assembly & Manufacturing", "items": ["DFM for turnkey SMT (JLCPCB / LCSC)", "Stencil printing", "Reflow oven", "Soldering & hot-air rework"] },
+      { "name": "Software & Tools", "items": ["KiCad", "LTspice", "NI Multisim", "Verilog", "Python (pandas, PySide6)", "Git / GitHub"] }
     ]
   },
   "experience": {
     "title": "Experience",
     "items": [
-      { "period": "Aug 2025 – Present", "role": "VP & Electronics Lead", "org": "Ignitia Rocket Lab" },
-      { "period": "Jan 2023 – May 2025", "role": "Mechanical Lead & Mentor", "org": "FIRST Robotics — Team Daedalus" },
+      { "period": "Aug 2025 – Present", "role": "Vice President & Avionics/Electronics Lead", "org": "Ignitia Rocket Lab", "desc": "Lead hardware designer of IGNIS. Vice President of a 30-member team; lead the 9-member electronics area and train new members on flight-computer design and assembly." },
+      { "period": "Jan 2023 – May 2025", "role": "Mechanical Lead & Mentor", "org": "FIRST Robotics — Team Daedalus", "desc": "Led manufacturing and served on the drive team; won the Hermosillo Regional and qualified for the FIRST World Championship in Houston (2024)." },
       { "period": "Aug 2024 – Jun 2025", "role": "Under-Secretary-General", "org": "TECMUN GDL" }
     ]
   },
@@ -57,33 +58,34 @@
     "featuredLabel": "Featured",
     "viewProject": "View Project →",
     "items": [
-      { "key": "fc2026", "name": "FC-2026 Flight Computer", "tags": ["LASC 2026", "Active"], "desc": "Custom SRAD flight computer for LASC 2026 Rocket Challenge. ESP32-S3, LoRa telemetry, GPS, pyro recovery.", "link": "/projects/fc-2026", "amber": true },
-      { "key": "satellite", "name": "LASC 2026 Satellite Challenge", "tags": ["LASC 2026", "Upcoming"], "desc": "CanSat / PocketQube / CubeSat design for LASC 2026. No propulsion, budget ≤ $1,000 USD.", "link": "/projects/satellite", "amber": true },
-      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Competing at LASC 2026 Rocket Challenge and Satellite Challenge.", "link": "/projects/ignitia", "amber": false },
+      { "key": "ignis", "name": "IGNIS Flight Computer", "tags": ["LASC 2026", "Flown"], "desc": "Open-source rocket flight computer, v1 to v5. ESP32-S3, LoRa telemetry, GNSS, IMU, barometer and two opto-isolated pyro channels. v2.2 flew at LASC 2026 as the primary flight computer.", "link": "/projects/ignis", "amber": true },
+      { "key": "satellite", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "10th of 100"], "desc": "Mission Leader. IGNIS-derived CanSat with vibration sensing, LoRa telemetry and independent parachute recovery.", "link": "/projects/satellite", "amber": true },
+      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Vice President and lead of the 9-member electronics area.", "link": "/projects/ignitia", "amber": false },
       { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robotics"], "desc": "3-year journey from technician to Mechanical Lead. Won Regional Hermosillo 2024, qualified World Championship.", "link": "/projects/frc", "amber": false },
-      { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sustainability"], "desc": "Smart irrigation system for rural communities. Arduino, React web interface, real-time monitoring.", "link": "/projects/wgs", "amber": false },
-      { "key": "techo", "name": "TECHO México", "tags": ["Volunteering"], "desc": "Emergency housing construction for vulnerable communities in Jalisco. Volunteer → Crew Co-Leader → Crew Leader.", "link": "/volunteering/techo", "amber": false }
+      { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sustainability"], "desc": "Automated vertical irrigation with Arduino, sensors, pumps and solar power. Electronics, firmware and web interface.", "link": "/projects/wgs", "amber": false },
+      { "key": "techo", "name": "TECHO México", "tags": ["Volunteering"], "desc": "Emergency housing builds in Jalisco. Volunteer → Crew Co-Leader → Crew Leader → Area Monitor.", "link": "/volunteering/techo", "amber": false }
     ]
   },
   "achievements": {
     "title": "Achievements",
     "items": [
-      { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1) + Honorific conduct award" },
-      { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype category" },
-      { "title": "ENMICE 2023–2024", "desc": "Technical Excellence Award (WATAKAME IA)" },
-      { "title": "Spaceport America Cup 2023", "desc": "First Mexican team to complete full mission profile · Rank 79" },
-      { "title": "TOEFL iBT", "desc": "Score 98 · C1 CEFR · ETS · April 2025" },
-      { "title": "Honorific Mention", "desc": "Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025" }
+      { "title": "LASC 2026", "desc": "10th of 100 teams · Satellite Challenge (CanSat Mission Leader)" },
+      { "title": "FIRST World Championship 2024", "desc": "Qualified as Hermosillo Regional winner · Team Daedalus" },
+      { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct" },
+      { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype · Ignitia Rocket Lab" },
+      { "title": "TOEFL iBT", "desc": "Score 99 · C1 CEFR · ETS · April 2025" },
+      { "title": "Advanced Robotics Course", "desc": "Asociación de Robótica Aplicada y Ciencias de la Tecnología (UNAM) · July 2024 · 45 h · Final grade 10/10" },
+      { "title": "Honorable Mention", "desc": "Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025" }
     ]
   },
   "contact": {
     "title": "Contact",
-    "location": "Zapopan, Jalisco, Mexico",
+    "location": "Monterrey, Nuevo León, Mexico",
     "getInTouch": "Get in touch"
   },
   "footer": {
     "role": "Electronics and Semiconductor Engineering Student",
-    "copyright": "© 2025 Emilio Guadarrama Gutiérrez. All rights reserved."
+    "copyright": "© 2026 Emilio Guadarrama Gutiérrez. All rights reserved."
   },
   "fc2026": {
     "hero": {
