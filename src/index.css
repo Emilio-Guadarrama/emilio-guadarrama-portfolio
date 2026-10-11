@@ -579,8 +579,22 @@ textarea::placeholder {
 
 @media (max-width: 600px) {
   .carousel-thumbs { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
+  .carousel-stage { aspect-ratio: var(--mobile-aspect) !important; }
   .carousel-prev, .carousel-next { width: 34px; height: 34px; }
   .carousel-prev { left: 8px; }
   .carousel-next { right: 8px; }
   .carousel-caption { flex-direction: column; gap: 4px; }
 }
+
+/* ── Ignitia ───────────────────────────────────────────────────────── */
+.result-grid { --cols: 2; max-width: 760px; justify-content: flex-start; }
+.patch-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; }
+.patch-row figure { width: min(280px, 100%); }
+.patch-img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; }
+@media (max-width: 560px) {
+  .result-grid { --cols: 1; }
+  .patch-row { gap: 32px; }
+}
+
+/* Keep anchored sections clear of the fixed 60px navbar */
+section[id] { scroll-margin-top: 60px; }

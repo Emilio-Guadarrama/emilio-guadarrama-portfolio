@@ -229,7 +229,7 @@ export default function IGNIS() {
           </div>
 
           <h3 style={h3}>{t('ignis.v2.designTitle')}</h3>
-          <Gallery items={designFiles} variant="carousel" stageAspect="16 / 8" />
+          <Gallery items={designFiles} variant="carousel" stageAspect="16 / 8" mobileAspect="16 / 9" />
         </div>
       </section>
 
@@ -359,7 +359,7 @@ export default function IGNIS() {
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
             <ExternalLink href="https://github.com/IgnitiaRocketLab/IGNIS-v2-FlightComputer"><GitHubIcon /> {t('ignis.docs.v2')} ↗</ExternalLink>
             <ExternalLink href="https://github.com/Emilio-Guadarrama/IGNIS-v5-FlightComputer"><GitHubIcon /> {t('ignis.docs.v5')} ↗</ExternalLink>
-            <ExternalLink href="https://latinamericanspacechallenge.com">{t('ignis.docs.lasc')} ↗</ExternalLink>
+            <ExternalLink href="https://www.lasc.space/">{t('ignis.docs.lasc')} ↗</ExternalLink>
           </div>
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
             {['Altium Designer', 'ESP32-S3', 'RFM95W LoRa', 'u-blox GNSS', 'C/C++', 'Python', 'JLCPCB / LCSC'].map((tool) => (

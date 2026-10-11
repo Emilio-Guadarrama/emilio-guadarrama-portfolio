@@ -26,7 +26,7 @@ export default function ScrollManager() {
         clearInterval(timer)
         // Jump (not smooth): arriving from another page, a smooth scroll gets
         // interrupted while the new page's images load
-        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY, behavior: 'instant' })
+        el?.scrollIntoView({ behavior: 'instant' })
       }
     }, 50)
     return () => clearInterval(timer)

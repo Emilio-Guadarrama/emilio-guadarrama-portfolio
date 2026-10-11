@@ -310,45 +310,120 @@
     },
     "roleLabel": "Rol de Emilio",
     "role": "Vicepresidente y Líder de Aviónica/Electrónica · equipo de 30 integrantes · lidera el área de electrónica de 9 personas y capacita a nuevos integrantes en diseño y ensamble de computadoras de vuelo",
+    "sectionsLabel": "Secciones",
+    "lasc": {
+      "title": "LASC 2026 · Brasil",
+      "lead": "En el Latin American Space Challenge 2026 el equipo voló IGNIS 1 en la categoría de 1 km del Rocket Challenge, con IGNIS v2.2 como computadora de vuelo principal, y participó con un CanSat en el Satellite Challenge.",
+      "results": [
+        {
+          "value": "9.º / 25",
+          "label": "Rocket Challenge · categoría 1 km · IGNIS 1"
+        },
+        {
+          "value": "9.º / 50",
+          "label": "Satellite Challenge · CanSat"
+        }
+      ],
+      "patchesTitle": "Parches de misión",
+      "patchRocket": "Parche de la misión IGNIS-1 · Rocket Challenge",
+      "patchCansat": "Parche de la misión CanSat · Satellite Challenge",
+      "toIgnis": "IGNIS Flight Computer",
+      "toCansat": "LASC 2026 CanSat"
+    },
+    "enmice": {
+      "title": "ENMICE 2025",
+      "lead": "En el 4.º Encuentro Mexicano de Ingeniería en Cohetería Experimental el equipo lanzó WATI I a 129 m y presentó el banco de pruebas WIRIKUTA 1.1.",
+      "results": [
+        {
+          "value": "2.º",
+          "label": "Presentación de proyecto · banco de pruebas WIRIKUTA 1.1"
+        },
+        {
+          "value": "★",
+          "label": "Reconocimiento Honorífico por Conducta del Equipo"
+        }
+      ]
+    },
+    "flights": {
+      "title": "Vuelos de prueba y días de lanzamiento",
+      "lead": "Lanzamientos de calificación y de prueba fuera de competencia, donde el equipo valida aviónica, ignición y recuperación antes de volar por un resultado.",
+      "items": [
+        {
+          "year": "Oct 2025",
+          "event": "Misión de calificación WATI I",
+          "detail": "Primer lanzamiento exitoso · apogeo de 124 m · aviónica, ignición y recuperación validadas"
+        }
+      ]
+    },
+    "other": {
+      "title": "Otras actividades",
+      "items": [
+        {
+          "year": "2025",
+          "title": "Engineering Expo TEC",
+          "desc": "1.er lugar, categoría Prototipo Físico"
+        },
+        {
+          "year": "2025",
+          "title": "FIL Guadalajara",
+          "desc": "Exhibición de divulgación científica"
+        }
+      ]
+    },
+    "history": {
+      "title": "Historia del equipo",
+      "lead": "Misiones y resultados desde la fundación del equipo, incluidos los de antes de que Emilio se uniera en agosto de 2025."
+    },
     "timeline": {
-      "title": "Línea de Tiempo",
-      "latest": "MÁS RECIENTE",
       "items": [
-        { "year": "2022", "event": "Misión de validación AKIRA II", "detail": "Apogeo de 1,000 m · validación de estabilidad de vuelo, recuperación y electrónica a bordo" },
-        { "year": "2023", "event": "Lanzamiento de Watakame I", "detail": "Hito del equipo" },
-        { "year": "2023", "event": "Spaceport America Cup", "detail": "WATAKAME I · Primer equipo mexicano en completar el perfil de misión completo · Posición 79" },
-        { "year": "2023–2024", "event": "ENMICE", "detail": "WATAKAME IA · diseño para 5,000 m de apogeo · Premio a la Excelencia Técnica" },
-        { "year": "Oct 2025", "event": "Misión de calificación WATI I", "detail": "Primer lanzamiento exitoso · apogeo de 124 m · aviónica, ignición y recuperación validadas" },
-        { "year": "2025", "event": "ENMICE 2025", "detail": "Lanzamiento de WATI I (129 m) · banco de pruebas WIRIKUTA 1.1 · 2.º lugar en presentación · Reconocimiento Honorífico por Conducta del Equipo" },
-        { "year": "2025", "event": "Engineering Expo TEC", "detail": "1.er lugar Prototipo Físico" },
-        { "year": "2025", "event": "FIL Guadalajara", "detail": "Exhibición de divulgación científica" },
-        { "year": "Sep 2026", "event": "LASC 2026 · Brasil", "detail": "IGNIS v2.2 voló como computadora de vuelo principal · Rocket Challenge, 1 km: 9.º de 25 · Satellite Challenge, CanSat: 9.º de 50", "highlight": true }
+        {
+          "year": "2022",
+          "event": "Misión de validación AKIRA II",
+          "detail": "Apogeo de 1,000 m · validación de estabilidad de vuelo, recuperación y electrónica a bordo"
+        },
+        {
+          "year": "2023",
+          "event": "Lanzamiento de Watakame I",
+          "detail": "Hito del equipo"
+        },
+        {
+          "year": "2023",
+          "event": "Spaceport America Cup",
+          "detail": "WATAKAME I · Primer equipo mexicano en completar el perfil de misión completo · Posición 79"
+        },
+        {
+          "year": "2023–2024",
+          "event": "ENMICE",
+          "detail": "WATAKAME IA · diseño para 5,000 m de apogeo · Premio a la Excelencia Técnica"
+        },
+        {
+          "year": "Oct 2025",
+          "event": "Misión de calificación WATI I",
+          "detail": "Primer lanzamiento exitoso · apogeo de 124 m · aviónica, ignición y recuperación validadas"
+        },
+        {
+          "year": "2025",
+          "event": "ENMICE 2025",
+          "detail": "Lanzamiento de WATI I (129 m) · banco de pruebas WIRIKUTA 1.1 · 2.º lugar en presentación · Reconocimiento Honorífico por Conducta del Equipo"
+        },
+        {
+          "year": "2025",
+          "event": "Engineering Expo TEC",
+          "detail": "1.er lugar Prototipo Físico"
+        },
+        {
+          "year": "2025",
+          "event": "FIL Guadalajara",
+          "detail": "Exhibición de divulgación científica"
+        },
+        {
+          "year": "Sep 2026",
+          "event": "LASC 2026 · Brasil",
+          "detail": "IGNIS v2.2 voló como computadora de vuelo principal · Rocket Challenge, 1 km: 9.º de 25 · Satellite Challenge, CanSat: 9.º de 50",
+          "highlight": true
+        }
       ]
-    },
-    "achievements": {
-      "title": "Logros",
-      "items": [
-        { "title": "LASC 2026", "desc": "9.º de 25 · Rocket Challenge, categoría 1 km · 9.º de 50 · Satellite Challenge, CanSat" },
-        { "title": "ENMICE 2025", "desc": "2.º lugar en presentación (WIRIKUTA 1.1) + Reconocimiento Honorífico por Conducta del Equipo" },
-        { "title": "Engineering Expo TEC 2025", "desc": "1.er lugar Prototipo Físico" },
-        { "title": "ENMICE 2023–2024", "desc": "Premio a la Excelencia Técnica (WATAKAME IA)" },
-        { "title": "Spaceport America Cup 2023", "desc": "Primer equipo mexicano en completar el perfil de misión completo" }
-      ]
-    },
-    "photosTitle": "Fotos",
-    "team": {
-      "title": "Equipo",
-      "roles": {
-        "president": "Presidente",
-        "vpAvionics": "Vicepresidente · Líder de Aviónica",
-        "avionicsSub": "Sublíder de Aviónica",
-        "physical": "Líder de Modelado Físico",
-        "structural": "Líder de Estructuras",
-        "propulsion": "Líder de Propulsión",
-        "advisor": "Asesor Académico"
-      }
-    },
-    "subprojects": { "title": "Subproyectos" }
+    }
   },
   "frc": {
     "hero": {
