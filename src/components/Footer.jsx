@@ -34,7 +34,7 @@ export default function Footer() {
               marginBottom: 4,
             }}
           >
-            Emilio Guadarrama Gutiérrez
+            Emilio Guadarrama
           </div>
           <div
             style={{

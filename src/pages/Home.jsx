@@ -46,7 +46,7 @@ export default function Home() {
             <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0}
               style={{ fontSize: 'clamp(42px, 6.4vw, 76px)', fontWeight: 700, color: '#f0f0f0',
                 letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 20 }}>
-              Emilio Guadarrama<br />Gutiérrez
+              Emilio Guadarrama
             </motion.h1>
 
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1}
