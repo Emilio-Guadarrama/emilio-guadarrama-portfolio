@@ -445,3 +445,10 @@ textarea::placeholder {
 @media (max-width: 600px) {
   .season-head { grid-template-columns: 1fr; gap: 12px; }
 }
+
+/* ── TECHO hero ────────────────────────────────────────────────────── */
+.techo-hero { display: grid; grid-template-columns: 1fr 360px; gap: 56px; align-items: start; }
+@media (max-width: 900px) {
+  .techo-hero { grid-template-columns: 1fr; gap: 40px; }
+  .techo-hero > :last-child { max-width: 420px; }
+}

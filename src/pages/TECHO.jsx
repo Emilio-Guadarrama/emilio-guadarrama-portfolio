@@ -1,253 +1,99 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Tag } from '../components/ui'
+import Gallery from '../components/Gallery'
 import { usePageTitle } from '../hooks/usePageTitle'
 
-const constructions = [
-  { num: '1st', role: 'Volunteer', location: 'Comunidad Indígena Sergio Barrios, Tlajomulco, Jalisco' },
-  { num: '2nd', role: 'Crew Co-Leader', location: 'Comunidad Indígena Sergio Barrios, Tlajomulco, Jalisco' },
-  { num: '3rd', role: 'Crew Leader', location: 'Comunidad de Jauja, Tonalá, Jalisco' },
+const P = '/photos/techo'
+const wrap = { maxWidth: 1100, margin: '0 auto', padding: '0 24px' }
+const mono = { fontFamily: 'var(--font-mono)' }
+
+// Photos per build (same order as techo.builds in i18n); captions under captions.techo
+const buildPhotos = [
+  [
+    { src: `${P}/2024-group.jpg`, key: 'group2024' },
+    { src: `${P}/2024-welcome.jpg`, key: 'welcome2024' },
+    { src: `${P}/2024-floor.jpg`, key: 'floor2024' },
+  ],
+  [
+    { src: `${P}/2025-sep-walls.jpg`, key: 'walls2025' },
+    { src: `${P}/2025-sep-handover.jpg`, key: 'handover2025' },
+  ],
+  [],
+  [
+    { src: `${P}/2025-dec-crew.jpg`, key: 'crewDec2025' },
+    { src: `${P}/2025-dec-house.jpg`, key: 'houseDec2025', focus: 'center 70%' },
+  ],
+  [
+    { src: `${P}/2026-framing.jpg`, key: 'framing2026' },
+    { src: `${P}/2026-handover.jpg`, key: 'handover2026' },
+    { src: `${P}/2026-walls.jpg`, key: 'walls2026' },
+  ],
 ]
 
 export default function TECHO() {
   usePageTitle('TECHO México — Emilio Guadarrama')
   const { t } = useTranslation()
+  const builds = t('techo.builds', { returnObjects: true })
 
   return (
     <div style={{ paddingTop: 60 }}>
-      {/* Hero */}
-      <section style={{ padding: '64px 0 48px', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <Link
-            to="/"
-            style={{
-              display: 'inline-flex',
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              color: '#424242',
-              textDecoration: 'none',
-              marginBottom: 32,
-              letterSpacing: '0.06em',
-              transition: 'color 0.15s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
-          >
-            {t('techo.hero.back')}
-          </Link>
-
-          <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
-            {['Volunteering', 'TECHO', 'Jalisco'].map((tag) => (
-              <span
-                key={tag}
-                style={{
-                  display: 'inline-flex',
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 11,
-                  padding: '3px 8px',
-                  border: '1px solid #242424',
-                  color: '#424242',
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <h1
-            style={{
-              fontSize: 'clamp(28px, 4vw, 44px)',
-              fontWeight: 700,
-              color: '#f0f0f0',
-              letterSpacing: '-0.03em',
-              marginBottom: 12,
-            }}
-          >
-            {t('techo.hero.title')}
-          </h1>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, auto)',
-              gap: '0 32px',
-              width: 'fit-content',
-            }}
-            className="techo-meta"
-          >
-            {[
-              { k: 'Role', v: t('techo.hero.role') },
-              { k: 'Period', v: t('techo.hero.period') },
-              { k: 'Location', v: t('techo.hero.location') },
-            ].map((item) => (
-              <div key={item.k}>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 9,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: '#424242',
-                    marginBottom: 4,
-                  }}
-                >
-                  {item.k}
-                </div>
-                <div style={{ fontSize: 13, color: '#c8c8c8' }}>{item.v}</div>
+      {/* ── HERO ── */}
+      <section style={{ padding: '64px 0', borderBottom: '1px solid var(--divider)' }}>
+        <div style={wrap}>
+          <Link to="/" className="back-link">{t('techo.hero.back')}</Link>
+          <div className="techo-hero">
+            <div>
+              <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
+                {['Volunteering', 'TECHO', 'Jalisco'].map((tag) => <Tag key={tag}>{tag}</Tag>)}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Description */}
-      <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <p
-            style={{
-              fontSize: 16,
-              color: '#c8c8c8',
-              lineHeight: 1.8,
-              maxWidth: 640,
-            }}
-          >
-            {t('techo.description')}
-          </p>
-        </div>
-      </section>
-
-      {/* Construction History */}
-      <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <div
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#424242',
-              marginBottom: 24,
-            }}
-          >
-            {t('techo.history')}
-          </div>
-
-          <div style={{ border: '1px solid #242424', background: '#111111', overflow: 'hidden', borderRadius: 'var(--radius-sm)' }}>
-            {/* Header */}
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '80px 200px 1fr',
-                borderBottom: '1px solid #242424',
-              }}
-              className="techo-row"
-            >
-              {['#', 'Role', 'Location'].map((h, i) => (
-                <div
-                  key={i}
-                  style={{
-                    padding: '10px 20px',
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 10,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: '#424242',
-                    borderLeft: i > 0 ? '1px solid #1a1a1a' : 'none',
-                  }}
-                >
-                  {h}
-                </div>
-              ))}
+              <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 20 }}>
+                {t('techo.hero.title')}
+              </h1>
+              <p style={{ fontSize: 17, color: 'var(--text-primary)', lineHeight: 1.7, maxWidth: '56ch', marginBottom: 32 }}>
+                {t('techo.description')}
+              </p>
+              <dl style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '10px 16px' }}>
+                {[
+                  [t('techo.hero.roleLabel'), t('techo.hero.role')],
+                  [t('techo.hero.periodLabel'), t('techo.hero.period')],
+                  [t('techo.hero.locationLabel'), t('techo.hero.location')],
+                ].map(([k, v]) => (
+                  <div key={k} style={{ display: 'contents' }}>
+                    <dt style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', paddingTop: 3 }}>{k}</dt>
+                    <dd style={{ fontSize: 15, color: 'var(--text-primary)', lineHeight: 1.5 }}>{v}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
-
-            {constructions.map((c, i) => (
-              <div
-                key={i}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '80px 200px 1fr',
-                  borderBottom: i < constructions.length - 1 ? '1px solid #1a1a1a' : 'none',
-                }}
-                className="techo-row"
-              >
-                <div
-                  style={{
-                    padding: '16px 20px',
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 12,
-                    color: '#424242',
-                  }}
-                >
-                  {c.num}
-                </div>
-                <div
-                  style={{
-                    padding: '16px 20px',
-                    fontSize: 13,
-                    color: '#c8c8c8',
-                    fontWeight: 500,
-                    borderLeft: '1px solid #1a1a1a',
-                  }}
-                >
-                  {c.role}
-                </div>
-                <div
-                  style={{
-                    padding: '16px 20px',
-                    fontSize: 13,
-                    color: '#c8c8c8',
-                    lineHeight: 1.5,
-                    borderLeft: '1px solid #1a1a1a',
-                  }}
-                >
-                  {c.location}
-                </div>
-              </div>
-            ))}
+            <Gallery items={[{ src: `${P}/hero.jpg`, caption: t('captions.techo.hero') }]} columns={1} aspect="4 / 5" />
           </div>
         </div>
       </section>
 
-      {/* Gallery Placeholder */}
-      <section style={{ padding: '64px 0' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <div
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#424242',
-              marginBottom: 24,
-            }}
-          >
-            Gallery
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }} className="techo-gallery">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  border: '1px solid #242424',
-                  background: '#111111',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#242424' }}>
-                  Photo {i + 1}
-                </span>
+      {/* ── BUILDS ── */}
+      {builds.map((b, i) => (
+        <section key={i} style={{ padding: '64px 0', borderBottom: i < builds.length - 1 ? '1px solid var(--divider)' : 'none' }}>
+          <div style={wrap}>
+            <div className="season-head">
+              <div>
+                <div style={{ ...mono, fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: 600, color: 'var(--text-secondary)', letterSpacing: '-0.03em', lineHeight: 1 }}>{b.num}</div>
+                <div style={{ ...mono, fontSize: 12, color: 'var(--text-secondary)', marginTop: 8 }}>{b.date}</div>
               </div>
-            ))}
+              <div>
+                {b.role && <div style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', marginBottom: 6 }}>{b.role}</div>}
+                <h2 style={{ fontSize: 22, fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em', marginBottom: 8 }}>{b.place}</h2>
+                {b.note && <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.7, maxWidth: '64ch' }}>{b.note}</p>}
+              </div>
+            </div>
+            {buildPhotos[i].length > 0 ? (
+              <Gallery items={buildPhotos[i].map((p) => ({ ...p, caption: t(`captions.techo.${p.key}`) }))} columns={3} />
+            ) : (
+              <p style={{ ...mono, fontSize: 12, color: 'var(--text-secondary)' }}>{t('techo.photosSoon')}</p>
+            )}
           </div>
-          <p style={{ fontSize: 12, color: '#424242', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
-            Construction photos coming soon.
-          </p>
-        </div>
-      </section>
+        </section>
+      ))}
     </div>
   )
 }
