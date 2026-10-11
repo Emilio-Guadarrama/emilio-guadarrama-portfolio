@@ -210,6 +210,11 @@
       "welcome2024": "Dando la bienvenida a una familia a su nuevo hogar.",
       "floor2024": "Trazando la estructura del piso.",
       "walls2025": "Levantando los paneles de muro.",
+      "floorOct2025": "Colocando los paneles del piso en Jauja.",
+      "wallsOct2025": "Los muros levantados y los vanos de las ventanas armados.",
+      "interiorOct2025": "Fijando los paneles interiores.",
+      "roofOct2025": "Arriba en el techo.",
+      "handoverOct2025": "Entrega con la familia en Jauja.",
       "handover2025": "Entrega con la familia.",
       "crewDec2025": "La cuadrilla sobre Lomas del Refugio.",
       "houseDec2025": "Terminando el techo.",
@@ -505,7 +510,7 @@
       },
       {
         "num": "03",
-        "date": "",
+        "date": "Oct 2025",
         "role": "Líder de Cuadrilla",
         "place": "Comunidad de Jauja, Tonalá"
       },

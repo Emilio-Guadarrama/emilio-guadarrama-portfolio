@@ -19,7 +19,13 @@ const buildPhotos = [
     { src: `${P}/2025-sep-walls.jpg`, key: 'walls2025' },
     { src: `${P}/2025-sep-handover.jpg`, key: 'handover2025' },
   ],
-  [],
+  [
+    { src: `${P}/2025-oct-floor.jpg`, key: 'floorOct2025' },
+    { src: `${P}/2025-oct-walls.jpg`, key: 'wallsOct2025' },
+    { src: `${P}/2025-oct-interior.jpg`, key: 'interiorOct2025', focus: 'center 35%' },
+    { src: `${P}/2025-oct-roof.jpg`, key: 'roofOct2025', focus: 'center 60%' },
+    { src: `${P}/2025-oct-handover.jpg`, key: 'handoverOct2025' },
+  ],
   [
     { src: `${P}/2025-dec-crew.jpg`, key: 'crewDec2025' },
     { src: `${P}/2025-dec-house.jpg`, key: 'houseDec2025', focus: 'center 70%' },
@@ -87,7 +93,11 @@ export default function TECHO() {
               </div>
             </div>
             {buildPhotos[i].length > 0 ? (
-              <Gallery items={buildPhotos[i].map((p) => ({ ...p, caption: t(`captions.techo.${p.key}`) }))} columns={3} />
+              <Gallery
+                items={buildPhotos[i].map((p) => ({ ...p, caption: t(`captions.techo.${p.key}`) }))}
+                columns={3}
+                variant={buildPhotos[i].length > 3 ? 'carousel' : 'grid'}
+              />
             ) : (
               <p style={{ ...mono, fontSize: 12, color: 'var(--text-secondary)' }}>{t('techo.photosSoon')}</p>
             )}

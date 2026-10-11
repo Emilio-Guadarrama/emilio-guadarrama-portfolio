@@ -390,7 +390,7 @@ Arduino · Sensors · Bluetooth/Wi-Fi · Web interface · Solar power
 |---|---|---|
 | Aug 2024 | Volunteer | Comunidad Indígena Sergio Barrios, Tlajomulco |
 | Sep 2025 | Crew Co-Leader | Comunidad Indígena Sergio Barrios, Tlajomulco |
-| — | Crew Leader | Comunidad de Jauja, Tonalá (photos pending) |
+| Oct 2025 | Crew Leader | Comunidad de Jauja, Tonalá |
 | Dec 2025 | — | Lomas del Refugio |
 | Sep 2026 | Area Monitor — supervised the crews in the area | Lomas del Refugio |
 
@@ -448,7 +448,6 @@ Originals live in `brand_assets/photos/`. The site serves resized copies from
 
 - [ ] Spanish CV with the new degree (Emilio will replace it manually)
 - [ ] IGNIS v5 render or photo
-- [ ] TECHO Jauja build photos
 - [ ] WGS project photos / demo
 - [ ] Ignitia Rocket Lab LinkedIn URL
 

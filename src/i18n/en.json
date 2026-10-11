@@ -210,6 +210,11 @@
       "welcome2024": "Welcoming a family to their new home.",
       "floor2024": "Laying out the floor frame.",
       "walls2025": "Wall panels going up.",
+      "floorOct2025": "Setting the floor panels in Jauja.",
+      "wallsOct2025": "The walls up and the window openings framed.",
+      "interiorOct2025": "Fixing the interior wall panels.",
+      "roofOct2025": "Up on the roof.",
+      "handoverOct2025": "Handover with the family in Jauja.",
       "handover2025": "Handover with the family.",
       "crewDec2025": "The crew above Lomas del Refugio.",
       "houseDec2025": "Finishing the roof.",
@@ -505,7 +510,7 @@
       },
       {
         "num": "03",
-        "date": "",
+        "date": "Oct 2025",
         "role": "Crew Leader",
         "place": "Comunidad de Jauja, Tonalá"
       },
