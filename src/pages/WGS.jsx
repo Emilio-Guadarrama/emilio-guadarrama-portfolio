@@ -62,7 +62,7 @@ export default function WGS() {
       </section>
 
       {/* Overview */}
-      <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
+      <section style={{ padding: '64px 0' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <div
             style={{
@@ -146,47 +146,6 @@ export default function WGS() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Gallery Placeholder */}
-      <section style={{ padding: '64px 0' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <div
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              letterSpacing: '0.12em',
-              textTransform: 'uppercase',
-              color: '#8a8a8a',
-              marginBottom: 24,
-            }}
-          >
-            {t('wgs.media')}
-          </div>
-          <div className="cgrid wgs-gallery">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  border: '1px solid #242424',
-                  background: '#111111',
-                  aspectRatio: '16/9',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, color: '#242424' }}>
-                  Demo {i + 1}
-                </span>
-              </div>
-            ))}
-          </div>
-          <p style={{ fontSize: 12, color: '#8a8a8a', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
-            {t('wgs.mediaSoon')}
-          </p>
         </div>
       </section>
     </div>
