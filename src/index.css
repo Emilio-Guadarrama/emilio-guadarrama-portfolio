@@ -485,7 +485,25 @@ textarea::placeholder {
 .nav-logo:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
 
 /* ── Carousel ──────────────────────────────────────────────────────── */
+/* Slide on the left, thumbnails in a column on the right that scrolls
+   within the slide's height, so the whole carousel fits on screen. */
+.carousel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 236px;
+  gap: 16px;
+  align-items: start;
+}
+.carousel.is-single { grid-template-columns: minmax(0, 1fr); }
+.carousel-side { position: relative; align-self: stretch; min-height: 160px; }
+.carousel-side .carousel-thumbs {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  align-content: start;
+  padding-right: 4px;
+}
 .carousel-stage {
+  max-height: min(60vh, 540px);
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -536,9 +554,8 @@ textarea::placeholder {
 .carousel-caption .lightbox-count { flex-shrink: 0; }
 .carousel-thumbs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
-  margin-top: 12px;
 }
 .carousel-thumb {
   display: flex;
@@ -577,6 +594,12 @@ textarea::placeholder {
 .carousel-thumb:focus-visible { outline: none; }
 .carousel-thumb:focus-visible .carousel-thumb-img { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
 
+@media (max-width: 760px) {
+  .carousel { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .carousel-side { position: static; min-height: 0; }
+  .carousel-side .carousel-thumbs { position: static; overflow: visible; padding-right: 0; }
+  .carousel-thumbs { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); }
+}
 @media (max-width: 600px) {
   .carousel-thumbs { grid-template-columns: repeat(auto-fill, minmax(72px, 1fr)); }
   .carousel-stage { aspect-ratio: var(--mobile-aspect) !important; }

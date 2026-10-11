@@ -98,9 +98,9 @@ export default function IGNIS() {
     { src: `${P}/ignis/v4-board.jpg`, caption: c('ignis.v4'), focus: 'center 85%' },
   ]
   const buildPhotos = [
+    { src: `${P}/ignis/v2-bench.jpg`, caption: c('ignis.bench') },
     { src: `${P}/ignis/v2-reflow.jpg`, caption: c('ignis.reflow') },
     { src: `${P}/ignis/v2-bare-board.jpg`, caption: c('ignis.bareBoard') },
-    { src: `${P}/ignis/v2-bench.jpg`, caption: c('ignis.bench') },
     { video: `${P}/ignis/v2-pyro-bench-test.mp4`, poster: `${P}/ignis/v2-pyro-bench-test-poster.jpg`, caption: c('ignis.pyroBench') },
     { video: `${P}/ignis/v2-pyro-command-test.mp4`, poster: `${P}/ignis/v2-pyro-command-test-poster.jpg`, caption: c('ignis.pyroCommand') },
     { src: `${P}/ignis/v2-assembled.jpg`, caption: c('ignis.assembled') },
@@ -189,9 +189,6 @@ export default function IGNIS() {
               )
             })}
           </ol>
-          <div style={{ maxWidth: 560, marginTop: 32 }}>
-            <Gallery items={earlierRevs} columns={2} />
-          </div>
         </div>
       </section>
 
@@ -199,7 +196,12 @@ export default function IGNIS() {
       <section id="v2" style={section}>
         <div style={wrap}>
           <h2 style={h2}>{t('ignis.v2.title')}</h2>
-          <p style={lead}>{t('ignis.v2.lead')}</p>
+          <p style={{ ...lead, marginBottom: 16 }}>{t('ignis.v2.lead')}</p>
+          <p style={lead}>{t('ignis.v2.buildLead')}</p>
+
+          <div style={{ marginBottom: 64 }}>
+            <Gallery items={buildPhotos} variant="carousel" />
+          </div>
 
           <div className="split-2" style={{ marginBottom: 64 }}>
             <div>
@@ -220,12 +222,6 @@ export default function IGNIS() {
                 {t('ignis.v2.changesNote')}
               </p>
             </div>
-          </div>
-
-          <h3 style={h3}>{t('ignis.v2.buildTitle')}</h3>
-          <p style={{ ...lead, fontSize: 14, marginBottom: 24 }}>{t('ignis.v2.buildLead')}</p>
-          <div style={{ marginBottom: 64 }}>
-            <Gallery items={buildPhotos} variant="carousel" />
           </div>
 
           <h3 style={h3}>{t('ignis.v2.designTitle')}</h3>
@@ -348,6 +344,17 @@ export default function IGNIS() {
                 <div style={{ padding: '14px 20px', fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.6, borderLeft: '1px solid var(--border)' }}>{row.reason}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EARLIER REVISIONS ── */}
+      <section style={section}>
+        <div style={wrap}>
+          <h2 style={{ ...h2, fontSize: 'clamp(22px, 2.6vw, 26px)' }}>{t('ignis.revisions.earlier')}</h2>
+          <p style={lead}>{t('ignis.revisions.earlierLead')}</p>
+          <div style={{ maxWidth: 720 }}>
+            <Gallery items={earlierRevs} columns={2} />
           </div>
         </div>
       </section>
