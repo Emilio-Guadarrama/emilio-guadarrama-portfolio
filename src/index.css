@@ -709,3 +709,39 @@ section[id] { scroll-margin-top: 60px; }
   .sat-hero { grid-template-columns: 1fr; gap: 40px; }
   .sat-hero > figure { max-width: 260px; margin: 0 auto !important; }
 }
+
+/* ── Home — mobile avatar (the desktop photo column is hidden on phones) */
+.hero-avatar { display: none; }
+@media (max-width: 768px) {
+  .hero-avatar {
+    display: block;
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    object-fit: cover; object-position: center 12%;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+}
+
+/* ── Home hero: direct link to the flagship project ────────────────── */
+.hero-btn-ignis {
+  display: inline-flex; align-items: center;
+  padding: 10px 20px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-primary);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.hero-btn-ignis:hover { border-color: var(--text-muted); }
+.hero-btn-ignis:active { border-color: var(--text-secondary); }
+
+/* ── Home — project card thumbnails ────────────────────────────────── */
+.project-thumb {
+  width: 64px; height: 64px; flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.project-thumb.is-contain { object-fit: contain; border: 0; }
