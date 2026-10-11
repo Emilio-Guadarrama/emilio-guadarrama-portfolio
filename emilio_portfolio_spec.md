@@ -103,7 +103,7 @@ Technical font:   JetBrains Mono
 ### 6.1 Home `/`
 
 #### Hero
-- **Name:** Emilio Guadarrama Gutiérrez
+- **Name:** Emilio Guadarrama Gutiérrez — the main heading (largest text on the page)
 - **Title:** Electronics and Semiconductor Engineering Student
 - **Subtitle:** Embedded Hardware & PCB Design
 - **Role line:** Vice President & Electronics & Avionics Lead at Ignitia Rocket Lab · Tec de Monterrey
@@ -287,6 +287,7 @@ Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · 
 - **Title:** LASC 2026 CanSat — Satellite Challenge
 - **Role:** Mission Leader · Ignitia Rocket Lab · 2026
 - **Result:** 9th of 50 teams (CanSat category)
+- **Image:** CanSat mission patch
 - **Tag:** LASC 2026
 
 #### Overview
@@ -308,6 +309,7 @@ Divided into clear sections, with jump links under the hero.
 - **Subtitle:** Tecnológico de Monterrey · Campus Guadalajara
 - **Tagline:** Pasión con Impacto
 - **Emilio's role:** Vice President & Electronics & Avionics Lead — 30-member team; leads the 9-member electronics area and trains new members on flight-computer design and assembly
+- **Image:** IGNIS v2 silkscreen (Ignitia Rocket Lab · Pasión con Impacto)
 - **Links:** Website https://ignitia.space · Instagram https://www.instagram.com/ignitia.rocketlab
 
 #### LASC 2026 · Brazil
