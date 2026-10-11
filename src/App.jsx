@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import BootScreen from './components/BootScreen'
@@ -16,15 +16,18 @@ import FIFAWC from './pages/FIFAWC'
 import './App.css'
 
 export default function App() {
-  const [booted, setBooted] = useState(() => {
-    // Only show boot screen once per session
-    if (sessionStorage.getItem('booted')) return true
-    return false
-  })
+  const { pathname } = useLocation()
+  // Boot screen: only on the IGNIS page, once per session, and never for
+  // visitors who ask the system to reduce motion
+  const [seen, setSeen] = useState(() =>
+    !!sessionStorage.getItem('booted') ||
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  )
+  const booted = seen || pathname !== '/projects/ignis'
 
   function handleBootDone() {
     sessionStorage.setItem('booted', '1')
-    setBooted(true)
+    setSeen(true)
   }
 
   return (
