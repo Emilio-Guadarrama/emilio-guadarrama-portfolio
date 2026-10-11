@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 /* ── Boot sequence lines ──────────────────────────────────────────────
@@ -55,17 +55,20 @@ export default function BootScreen({ onDone }) {
     return () => cancelAnimationFrame(raf)
   }, [])
 
+  const dismiss = useCallback(() => setExiting(true), [])
+
   /* Auto-dismiss */
   useEffect(() => {
     const t = setTimeout(dismiss, AUTO_EXIT)
     return () => clearTimeout(t)
-  }, [])
+  }, [dismiss])
 
-  function dismiss() {
-    if (exiting) return
-    setExiting(true)
-    setTimeout(onDone, 300)
-  }
+  /* Hand control back once the fade-out has played */
+  useEffect(() => {
+    if (!exiting) return
+    const t = setTimeout(onDone, 300)
+    return () => clearTimeout(t)
+  }, [exiting, onDone])
 
   return (
     <AnimatePresence>

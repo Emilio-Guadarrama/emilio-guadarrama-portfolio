@@ -33,7 +33,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant 
   return (
     <>
       {variant === 'carousel' ? (
-        <Carousel items={items} stageAspect={stageAspect} mobileAspect={mobileAspect} onOpen={setOpen} triggers={triggers} />
+        <Carousel items={items} stageAspect={stageAspect} mobileAspect={mobileAspect} onOpen={setOpen} registerTrigger={(i, el) => { triggers.current[i] = el }} />
       ) : (
         <div className={`cgrid gallery gallery-cols-${columns}`}>
           {items.map((item, i) => (
@@ -79,7 +79,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant 
 }
 
 /* ── Carousel: large slide + thumbnail grid ────────────────────────── */
-function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
+function Carousel({ items, stageAspect, mobileAspect, onOpen, registerTrigger }) {
   const { t } = useTranslation()
   const [index, setIndex] = useState(0)
   const touchX = useRef(null)
@@ -117,7 +117,7 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
                 <video src={item.video} poster={item.poster} controls playsInline preload="none" />
               ) : (
                 <button
-                  ref={(el) => (triggers.current[index] = el)}
+                  ref={(el) => registerTrigger(index, el)}
                   type="button"
                   className="carousel-open"
                   onClick={() => onOpen(index)}
