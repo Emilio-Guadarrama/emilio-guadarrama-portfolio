@@ -69,13 +69,13 @@
   "achievements": {
     "title": "Achievements",
     "items": [
-      { "title": "LASC 2026", "desc": "9th of 25 · Rocket Challenge, 1 km category · 9th of 50 · Satellite Challenge (CanSat Mission Leader)" },
-      { "title": "FIRST World Championship 2024", "desc": "Qualified as Hermosillo Regional winner · Team Daedalus" },
-      { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct" },
-      { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype · Ignitia Rocket Lab" },
-      { "title": "TOEFL iBT", "desc": "Score 99 · C1 CEFR · ETS · April 2025" },
-      { "title": "Advanced Robotics Course", "desc": "Asociación de Robótica Aplicada y Ciencias de la Tecnología (UNAM) · July 2024 · 45 h · Final grade 10/10" },
-      { "title": "Honorable Mention", "desc": "Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025" }
+      { "title": "LASC 2026", "desc": "9th of 25 · Rocket Challenge, 1 km category · 9th of 50 · Satellite Challenge (CanSat Mission Leader)", "logo": "lasc", "org": "LASC" },
+      { "title": "FIRST World Championship 2024", "desc": "Qualified as Hermosillo Regional winner · Team Daedalus", "logo": "first", "org": "FIRST" },
+      { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct", "logo": "enmice", "org": "ENMICE" },
+      { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype · Ignitia Rocket Lab", "logo": "tec", "org": "Tecnológico de Monterrey" },
+      { "title": "TOEFL iBT", "desc": "Score 99 · C1 CEFR · ETS · April 2025", "logo": "ets", "org": "ETS" },
+      { "title": "Advanced Robotics Course", "desc": "Asociación de Robótica Aplicada y Ciencias de la Tecnología (UNAM) · July 2024 · 45 h · Final grade 10/10", "logo": "unam", "org": "UNAM" },
+      { "title": "Honorable Mention", "desc": "Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025", "logo": "tec", "org": "Tecnológico de Monterrey" }
     ]
   },
   "contact": {

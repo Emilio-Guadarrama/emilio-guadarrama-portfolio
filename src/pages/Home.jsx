@@ -378,14 +378,19 @@ export default function Home() {
             stagger={0.08}
           >
             {Array.isArray(achievements) && achievements.map((ach, i) => (
-              <motion.div key={i} variants={staggerItem}
+              <motion.div key={i} variants={staggerItem} className="ach-card"
                 style={{ border: '1px solid #242424', padding: '24px', background: '#111111',
                   borderRadius: 'var(--radius-sm)' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, fontWeight: 600,
-                  color: '#f0f0f0', marginBottom: 8 }}>
-                  {ach.title}
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, fontWeight: 600,
+                    color: '#f0f0f0', marginBottom: 8 }}>
+                    {ach.title}
+                  </div>
+                  <div style={{ fontSize: 13, color: '#c8c8c8', lineHeight: 1.6 }}>{ach.desc}</div>
                 </div>
-                <div style={{ fontSize: 13, color: '#c8c8c8', lineHeight: 1.6 }}>{ach.desc}</div>
+                {ach.logo && (
+                  <img src={`/logos/${ach.logo}.png`} alt={ach.org} className="ach-logo" />
+                )}
               </motion.div>
             ))}
           </Stagger>
