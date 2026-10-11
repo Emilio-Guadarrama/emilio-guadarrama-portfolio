@@ -109,7 +109,9 @@
         { "rev": "v4", "text": "Dos unidades construidas; detenida por disponibilidad de componentes y un error en la red de USB-C." },
         { "rev": "v5", "text": "Abastecimiento primero, todo SMD, llave en mano; tarjeta de Ø75 mm. Planeada para 2027." }
       ],
-      "jump": "Ver detalles"
+      "jump": "Ver detalles",
+      "earlier": "Revisiones anteriores",
+      "earlierLead": "La v1 y la v4 nunca volaron. Ambas se detuvieron por problemas encontrados antes del vuelo, y lo que enseñaron dio forma a la v2 y la v5."
     },
     "v2": {
       "title": "v2 / v2.2 — Hardware de vuelo",
@@ -124,7 +126,7 @@
       ],
       "changesNote": "Ninguno de estos cambios obligó a replantear la arquitectura. Son los detalles que solo aparecen cuando una PCB deja de ser un diseño en pantalla y se vuelve hardware en el banco de pruebas.",
       "buildTitle": "Ensamble y pruebas en banco",
-      "buildLead": "Ensamblada en casa con esténcil cortado con láser, horno de reflujo y retrabajo con aire caliente, y probada en banco antes de volar.",
+      "buildLead": "La ensamblamos en casa con esténcil cortado con láser, horno de reflujo y retrabajo con aire caliente, y la probamos en banco antes de volar.",
       "designTitle": "Visor de PCB"
     },
     "flight": {
@@ -253,7 +255,7 @@
       "v4": "v4 en el banco. Se construyeron dos unidades antes de que la disponibilidad de componentes la detuviera.",
       "bareBoard": "v2 después del reflujo, antes de montar los módulos.",
       "assembled": "v2 completamente ensamblada.",
-      "bench": "Puesta en marcha en el banco.",
+      "bench": "Puesta en marcha de la computadora de vuelo en el banco.",
       "reflow": "Tarjetas v2 en el horno de reflujo.",
       "pyroBench": "Prueba en banco de los canales pirotécnicos con la IMU y el barómetro.",
       "pyroCommand": "Prueba por comando del sistema pirotécnico.",

@@ -109,7 +109,9 @@
         { "rev": "v4", "text": "Two units built; halted by part availability and a USB-C net error." },
         { "rev": "v5", "text": "Sourcing-first, all-SMD, turnkey; Ø75 mm board. Planned for 2027." }
       ],
-      "jump": "See details"
+      "jump": "See details",
+      "earlier": "Earlier revisions",
+      "earlierLead": "v1 and v4 never flew. Both were stopped by problems found before flight, and what they taught shaped v2 and v5."
     },
     "v2": {
       "title": "v2 / v2.2 — Flight hardware",
@@ -124,7 +126,7 @@
       ],
       "changesNote": "None of these changes required rethinking the architecture. They are the details that only show up once a PCB stops being a design on a screen and becomes hardware on the bench.",
       "buildTitle": "Build and bench testing",
-      "buildLead": "Assembled in-house with a laser-cut stencil, reflow oven and hot-air rework, then bench-tested before flight.",
+      "buildLead": "We assembled it in-house with a laser-cut stencil, reflow oven and hot-air rework, then bench-tested it before flight.",
       "designTitle": "PCB viewer"
     },
     "flight": {
@@ -253,7 +255,7 @@
       "v4": "v4 on the bench. Two units were built before part availability halted it.",
       "bareBoard": "v2 after reflow, before the modules were mounted.",
       "assembled": "v2 fully assembled.",
-      "bench": "Bring-up on the bench.",
+      "bench": "Flight computer bring-up on the bench.",
       "reflow": "v2 boards in the reflow oven.",
       "pyroBench": "Bench-testing the pyro channels with the IMU and barometer.",
       "pyroCommand": "Command-testing the pyro system.",

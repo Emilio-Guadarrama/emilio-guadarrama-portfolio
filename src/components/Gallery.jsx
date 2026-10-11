@@ -5,8 +5,8 @@
  *   - focus: CSS object-position for the cropped thumbnail (e.g. 'center 80%')
  *   - label: short tag shown under the thumbnail in the carousel (e.g. "3D top")
  * variant: 'grid' (default) — captioned thumbnails, click opens the lightbox
- *          'carousel' — one large slide with arrows/swipe, plus a thumbnail
- *                       grid underneath to jump to any photo
+ *          'carousel' — one slide with arrows/swipe, plus a thumbnail column
+ *                       on the right (below on phones) to jump to any photo
  * columns: grid columns on desktop (collapses to 2, then 1 on mobile)
  * aspect:  thumbnail aspect ratio in grid mode (photos are cropped to fill it)
  * stageAspect / mobileAspect: slide aspect ratio in carousel mode on desktop / phones
@@ -101,7 +101,7 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
   }
 
   return (
-    <div className="carousel" onKeyDown={onKeyDown}>
+    <div className={`carousel${many ? '' : ' is-single'}`} onKeyDown={onKeyDown}>
       <figure style={{ margin: 0 }}>
         <div className="carousel-stage" style={{ aspectRatio: stageAspect, '--mobile-aspect': mobileAspect }} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <AnimatePresence mode="wait" initial={false}>
@@ -152,6 +152,7 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
       </figure>
 
       {many && (
+        <div className="carousel-side">
         <div className="carousel-thumbs" role="group" aria-label={t('gallery.all')}>
           {items.map((it, i) => (
             <button
@@ -175,6 +176,7 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
               {it.label && <span className="carousel-thumb-label">{it.label}</span>}
             </button>
           ))}
+        </div>
         </div>
       )}
     </div>
