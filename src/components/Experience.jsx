@@ -4,13 +4,34 @@
  * Data: experience.items in i18n →
  *   { org, sub, period, location, logo, roles: [{ title, period, bullets, image, imageAlt }] }
  *   compact: true → one summary line and the roles as single rows (no bullets or photos)
+ *   bullets may mark resume keywords with **double asterisks** (rendered bold)
+ *   links: [{ label, to }] on a role (or on a compact org) → related project pages
  * ─────────────────────────────────────────────────────────────────── */
 
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Stagger } from './Reveal'
 import { staggerItem } from './variants'
 
 const mono = { fontFamily: 'var(--font-mono)' }
+
+// "**Lead hardware designer** of IGNIS" → bold keyword spans
+function Rich({ text }) {
+  return text.split(/(\*\*[^*]+\*\*)/).map((part, i) =>
+    part.startsWith('**')
+      ? <strong key={i} style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{part.slice(2, -2)}</strong>
+      : part,
+  )
+}
+
+function ProjectLinks({ links }) {
+  if (!links?.length) return null
+  return (
+    <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginTop: 14 }}>
+      {links.map((l) => <Link key={l.to} to={l.to} className="text-link">{l.label} →</Link>)}
+    </div>
+  )
+}
 
 export default function Experience({ items }) {
   if (!Array.isArray(items)) return null
@@ -44,6 +65,7 @@ export default function Experience({ items }) {
                   </li>
                 ))}
               </ul>
+              <ProjectLinks links={org.links} />
             </div>
           ) : (
           <ol className="exp-roles">
@@ -57,10 +79,11 @@ export default function Experience({ items }) {
                     {r.bullets.map((b, i) => (
                       <li key={i} style={{ display: 'grid', gridTemplateColumns: '16px 1fr', fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.65, maxWidth: '68ch' }}>
                         <span aria-hidden="true" style={{ color: 'var(--text-muted)' }}>–</span>
-                        <span>{b}</span>
+                        <span><Rich text={b} /></span>
                       </li>
                     ))}
                   </ul>
+                  <ProjectLinks links={r.links} />
                 </div>
                 {r.image && <img src={r.image} alt={r.imageAlt || ''} loading="lazy" className="exp-role-img" />}
               </li>
