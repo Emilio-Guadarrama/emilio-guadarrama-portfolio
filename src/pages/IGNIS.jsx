@@ -76,8 +76,8 @@ function ExternalLink({ href, children }) {
 }
 
 export default function IGNIS() {
-  usePageTitle('IGNIS Flight Computer — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.ignis'))
   const c = (k) => t(`captions.${k}`)
   const list = (k) => t(k, { returnObjects: true })
 

@@ -9,8 +9,8 @@ const wrap = { maxWidth: 1100, margin: '0 auto', padding: '0 24px' }
 const mono = { fontFamily: 'var(--font-mono)' }
 
 export default function FIFAWC() {
-  usePageTitle('FIFA World Cup 2026 — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.fifawc'))
   const facts = t('fifawc.facts', { returnObjects: true })
   const c = (k) => t(`captions.fifa.${k}`)
 

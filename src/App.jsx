@@ -13,6 +13,7 @@ import FRC from './pages/FRC'
 import WGS from './pages/WGS'
 import TECHO from './pages/TECHO'
 import FIFAWC from './pages/FIFAWC'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 export default function App() {
@@ -54,6 +55,7 @@ export default function App() {
             <Route path="/projects/wgs"        element={<WGS />} />
             <Route path="/volunteering/techo"    element={<TECHO />} />
             <Route path="/volunteering/fifa-wc"  element={<FIFAWC />} />
+            <Route path="*"                      element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { usePageTitle } from '../hooks/usePageTitle'
 
 export default function WGS() {
-  usePageTitle('Water Growth Solutions — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.wgs'))
 
   const techs = ['Arduino', 'Sensors', 'Bluetooth / Wi-Fi', 'Web interface', 'Solar power']
 

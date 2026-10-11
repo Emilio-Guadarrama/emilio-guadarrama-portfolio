@@ -31,8 +31,8 @@ function ResultBoxes({ items }) {
 }
 
 export default function Ignitia() {
-  usePageTitle('Ignitia Rocket Lab — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.ignitia'))
   const list = (k) => t(k, { returnObjects: true })
   const c = (k) => t(`captions.${k}`)
 

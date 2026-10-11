@@ -22,8 +22,8 @@ const fadeUp = {
 
 
 export default function Home() {
-  usePageTitle('Emilio Guadarrama — Electronics and Semiconductor Engineering')
   const { t } = useTranslation()
+  usePageTitle(t('titles.home'))
   const stats        = t('stats',              { returnObjects: true })
   const skillGroups  = t('skills.groups',      { returnObjects: true })
   const expItems     = t('experience.items',   { returnObjects: true })
