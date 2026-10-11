@@ -197,6 +197,18 @@
     "video": "Video"
   },
   "captions": {
+    "ignitia": {
+      "enmiceTeam": "Ignitia en el 4.º Encuentro Mexicano de Ingeniería en Cohetería Experimental (ENMICE 2025).",
+      "enmiceBooth": "Nuestro stand en ENMICE 2025.",
+      "enmiceElectronics": "Equipo de electrónica en ENMICE 2025.",
+      "enmiceRail": "Preparando el riel de lanzamiento en ENMICE 2025.",
+      "enmiceWati": "Con el cohete WATI I en ENMICE 2025.",
+      "launchDayTeam": "El equipo en un día de lanzamiento.",
+      "launchDayIntegration": "Integración previa al vuelo en la carpa del equipo.",
+      "launchDayElectronics": "Equipo de electrónica en un día de lanzamiento.",
+      "watiII": "Con un cohete pequeño de prueba en un día de lanzamiento.",
+      "ignis1Test": "IGNIS 1 después de un vuelo de prueba con recuperación fallida."
+    },
     "ignis": {
       "board": "IGNIS v2 con sus módulos de GPS e IMU montados.",
       "silkscreen": "Serigrafía de IGNIS v2: Ignitia Rocket Lab, Pasión con Impacto.",
@@ -232,13 +244,29 @@
   },
   "satellite": {
     "hero": {
-      "title": "LASC 2026 Satellite Challenge",
-      "status": "En Desarrollo",
+      "title": "LASC 2026 CanSat",
+      "role": "Satellite Challenge · Líder de misión · Ignitia Rocket Lab",
+      "ordinal": "º",
+      "result": "de 100 equipos en el Latin American Space Challenge 2026 en Brasil.",
       "back": "← Regresar a Proyectos"
     },
-    "overview": "Descripción de la Competencia",
-    "wip": "Diseño y desarrollo en progreso. Esta página se actualizará conforme el proyecto avance.",
-    "backToIgnitia": "→ Ignitia Rocket Lab"
+    "missionTitle": "Misión",
+    "points": [
+      "Lideré la misión CanSat del equipo, dando dirección técnica y supervisión.",
+      "La aviónica es una versión simplificada de IGNIS, con sensores adicionales que miden el entorno de vibraciones que afecta el vuelo del cohete.",
+      "Transmite telemetría por LoRa y tiene su propia recuperación con paracaídas, independiente del cohete."
+    ],
+    "facts": [
+      { "k": "Competencia", "v": "LASC 2026 · Latin American Space Challenge · Brasil · Septiembre 2026" },
+      { "k": "Resultado", "v": "10.º de 100 equipos" },
+      { "k": "Rol", "v": "Líder de misión" },
+      { "k": "Masa", "v": "~300 g" },
+      { "k": "Presupuesto", "v": "~$800 USD" },
+      { "k": "Herramientas", "v": "ESP32 · RFM95W LoRa · sensores ambientales y de vibración · Python" }
+    ],
+    "photosTitle": "En LASC 2026",
+    "toIgnis": "IGNIS Flight Computer →",
+    "toIgnitia": "Ignitia Rocket Lab →"
   },
   "ignitia": {
     "hero": {
@@ -247,10 +275,46 @@
       "tagline": "Pasión con Impacto",
       "back": "← Inicio"
     },
-    "role": "Vicepresidente y Líder de Electrónica / Aviónica",
-    "timeline": { "title": "Línea de Tiempo" },
-    "achievements": { "title": "Logros" },
-    "team": { "title": "Equipo" },
+    "roleLabel": "Rol de Emilio",
+    "role": "Vicepresidente y Líder de Aviónica/Electrónica · equipo de 30 integrantes · lidera el área de electrónica de 9 personas y capacita a nuevos integrantes en diseño y ensamble de computadoras de vuelo",
+    "timeline": {
+      "title": "Línea de Tiempo",
+      "latest": "MÁS RECIENTE",
+      "items": [
+        { "year": "2022", "event": "Misión de validación AKIRA II", "detail": "Apogeo de 1,000 m · validación de estabilidad de vuelo, recuperación y electrónica a bordo" },
+        { "year": "2023", "event": "Lanzamiento de Watakame I", "detail": "Hito del equipo" },
+        { "year": "2023", "event": "Spaceport America Cup", "detail": "WATAKAME I · Primer equipo mexicano en completar el perfil de misión completo · Posición 79" },
+        { "year": "2023–2024", "event": "ENMICE", "detail": "WATAKAME IA · diseño para 5,000 m de apogeo · Premio a la Excelencia Técnica" },
+        { "year": "Oct 2025", "event": "Misión de calificación WATI I", "detail": "Primer lanzamiento exitoso · apogeo de 124 m · aviónica, ignición y recuperación validadas" },
+        { "year": "2025", "event": "ENMICE 2025", "detail": "Lanzamiento de WATI I (129 m) · banco de pruebas WIRIKUTA 1.1 · 2.º lugar en presentación · Reconocimiento Honorífico por Conducta del Equipo" },
+        { "year": "2025", "event": "Engineering Expo TEC", "detail": "1.er lugar Prototipo Físico" },
+        { "year": "2025", "event": "FIL Guadalajara", "detail": "Exhibición de divulgación científica" },
+        { "year": "Sep 2026", "event": "LASC 2026 · Brasil", "detail": "IGNIS v2.2 voló como computadora de vuelo principal · Satellite Challenge: 10.º de 100 equipos", "highlight": true }
+      ]
+    },
+    "achievements": {
+      "title": "Logros",
+      "items": [
+        { "title": "LASC 2026", "desc": "10.º de 100 equipos · Satellite Challenge" },
+        { "title": "ENMICE 2025", "desc": "2.º lugar en presentación (WIRIKUTA 1.1) + Reconocimiento Honorífico por Conducta del Equipo" },
+        { "title": "Engineering Expo TEC 2025", "desc": "1.er lugar Prototipo Físico" },
+        { "title": "ENMICE 2023–2024", "desc": "Premio a la Excelencia Técnica (WATAKAME IA)" },
+        { "title": "Spaceport America Cup 2023", "desc": "Primer equipo mexicano en completar el perfil de misión completo" }
+      ]
+    },
+    "photosTitle": "Fotos",
+    "team": {
+      "title": "Equipo",
+      "roles": {
+        "president": "Presidente",
+        "vpAvionics": "Vicepresidente · Líder de Aviónica",
+        "avionicsSub": "Sublíder de Aviónica",
+        "physical": "Líder de Modelado Físico",
+        "structural": "Líder de Estructuras",
+        "propulsion": "Líder de Propulsión",
+        "advisor": "Asesor Académico"
+      }
+    },
     "subprojects": { "title": "Subproyectos" }
   },
   "frc": {

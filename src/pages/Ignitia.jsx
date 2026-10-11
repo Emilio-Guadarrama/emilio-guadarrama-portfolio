@@ -1,63 +1,50 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Tag, SectionLabel } from '../components/ui'
+import Gallery from '../components/Gallery'
 import { usePageTitle } from '../hooks/usePageTitle'
 
-const timeline = [
-  { year: '2022', event: 'AKIRA II Validation Mission', detail: '1,000m apogee · flight stability, recovery, and onboard electronics validation' },
-  { year: '2023', event: 'Watakame I Launch', detail: 'Team milestone' },
-  { year: '2023', event: 'Spaceport America Cup', detail: 'WATAKAME I · First Mexican team to complete full mission profile · Rank 79' },
-  { year: '2023–2024', event: 'ENMICE', detail: 'WATAKAME IA · 5,000m apogee design · Technical Excellence Award' },
-  { year: 'Oct 2025', event: 'WATI I Qualification Mission', detail: 'First successful launch · 124m apogee · avionics, ignition, recovery validated' },
-  { year: '2025', event: 'ENMICE 2025', detail: 'WATI I launch (129m) · WIRIKUTA 1.1 test bench · 2nd place presentation · Honorific conduct award' },
-  { year: '2025', event: 'Engineering Expo TEC', detail: '1st place Physical Prototype' },
-  { year: '2025', event: 'FIL Guadalajara', detail: 'Scientific outreach exhibition' },
-  { year: 'Sep 2026', event: 'LASC 2026', detail: 'Upcoming · Iacanga, São Paulo, Brazil', upcoming: true },
-]
-
-const achievements = [
-  { title: 'ENMICE 2025', desc: '2nd place project presentation (WIRIKUTA 1.1) + Honorific conduct award' },
-  { title: 'Engineering Expo TEC 2025', desc: '1st place Physical Prototype' },
-  { title: 'ENMICE 2023–2024', desc: 'Technical Excellence Award (WATAKAME IA)' },
-  { title: 'Spaceport America Cup 2023', desc: 'First Mexican team to complete full mission' },
-]
-
+// Roles are translated; names stay as written
 const team = [
-  { role: 'President', name: 'Maximiliano Funoy Serrano' },
-  { role: 'Vice President', name: 'Emilio Guadarrama Gutiérrez' },
-  { role: 'Avionics Lead', name: 'Braulio García Rayas' },
-  { role: 'Avionics Sub-Lead', name: 'Julia Blanco Sánchez' },
-  { role: 'Physical Modelling Lead', name: 'Fernanda Ivet Acevedo Ávalos' },
-  { role: 'Structural Lead', name: 'Luis Humberto Mota Reyes' },
-  { role: 'Propulsion Lead', name: 'José David Lagunes Higareda' },
-  { role: 'Faculty Advisor', name: 'José Luis Henríquez Mercado' },
-  { role: 'Faculty Advisor', name: 'Luis Manuel Rico Gutiérrez' },
+  { role: 'president', name: 'Maximiliano Funoy Serrano' },
+  { role: 'vpAvionics', name: 'Emilio Guadarrama Gutiérrez' },
+  { role: 'avionicsSub', name: 'Damaris Mariscal' },
+  { role: 'physical', name: 'Fernanda Ivet Acevedo Ávalos' },
+  { role: 'structural', name: 'Luis Humberto Mota Reyes' },
+  { role: 'propulsion', name: 'José David Lagunes Higareda' },
+  { role: 'advisor', name: 'José Luis Henríquez Mercado' },
+  { role: 'advisor', name: 'Luis Manuel Rico Gutiérrez' },
 ]
+
+const P = '/photos'
 
 export default function Ignitia() {
   usePageTitle('Ignitia Rocket Lab — Emilio Guadarrama')
   const { t } = useTranslation()
+  const timeline = t('ignitia.timeline.items', { returnObjects: true })
+  const achievements = t('ignitia.achievements.items', { returnObjects: true })
+  const c = (k) => t(`captions.ignitia.${k}`)
+  const photos = [
+    { src: `${P}/lasc/launch-team.jpg`, caption: t('captions.lasc.launchTeam') },
+    { src: `${P}/lasc/rail-team.jpg`, caption: t('captions.lasc.railTeam'), focus: 'center 70%' },
+    { src: `${P}/ignitia/enmice-team.jpg`, caption: c('enmiceTeam') },
+    { src: `${P}/ignitia/enmice-booth.jpg`, caption: c('enmiceBooth') },
+    { src: `${P}/ignitia/enmice-electronics.jpg`, caption: c('enmiceElectronics') },
+    { src: `${P}/ignitia/enmice-launch-rail.jpg`, caption: c('enmiceRail') },
+    { src: `${P}/ignitia/launch-day-team.jpg`, caption: c('launchDayTeam') },
+    { src: `${P}/ignitia/launch-day-integration.jpg`, caption: c('launchDayIntegration') },
+    { src: `${P}/ignitia/launch-day-electronics.jpg`, caption: c('launchDayElectronics') },
+    { src: `${P}/ignitia/wati-ii.jpg`, caption: c('watiII') },
+    { src: `${P}/ignitia/ignis1-after-test-flight.jpg`, caption: c('ignis1Test') },
+    { src: `${P}/ignitia/enmice-wati.jpg`, caption: c('enmiceWati') },
+  ]
 
   return (
     <div style={{ paddingTop: 60 }}>
       {/* Hero */}
       <section style={{ padding: '64px 0 48px', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <Link
-            to="/"
-            style={{
-              display: 'inline-flex',
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              color: '#424242',
-              textDecoration: 'none',
-              marginBottom: 32,
-              letterSpacing: '0.06em',
-              transition: 'color 0.15s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
-          >
+          <Link to="/" className="back-link">
             {t('ignitia.hero.back')}
           </Link>
 
@@ -112,7 +99,7 @@ export default function Ignitia() {
                   marginBottom: 4,
                 }}
               >
-                Emilio's Role
+                {t('ignitia.roleLabel')}
               </div>
               <div style={{ fontSize: 13, color: '#c8c8c8' }}>{t('ignitia.role')}</div>
             </div>
@@ -142,12 +129,12 @@ export default function Ignitia() {
                   style={{
                     fontFamily: "'JetBrains Mono', monospace",
                     fontSize: 11,
-                    color: item.upcoming ? '#b89060' : '#424242',
+                    color: item.highlight ? '#b89060' : '#424242',
                     paddingTop: 2,
                   }}
                 >
                   {item.year}
-                  {item.upcoming && (
+                  {item.highlight && (
                     <div
                       style={{
                         marginTop: 4,
@@ -157,11 +144,12 @@ export default function Ignitia() {
                         color: '#b89060',
                         background: '#120e06',
                         letterSpacing: '0.06em',
-                        display: 'inline-block',
+                        display: 'block',
+                        width: 'fit-content',
                         borderRadius: 2,
                       }}
                     >
-                      UPCOMING
+                      {t('ignitia.timeline.latest')}
                     </div>
                   )}
                 </div>
@@ -170,7 +158,7 @@ export default function Ignitia() {
                     style={{
                       fontSize: 15,
                       fontWeight: 600,
-                      color: item.upcoming ? '#b89060' : '#f0f0f0',
+                      color: item.highlight ? '#b89060' : '#f0f0f0',
                       marginBottom: 4,
                     }}
                   >
@@ -220,48 +208,11 @@ export default function Ignitia() {
         </div>
       </section>
 
-      {/* Image Carousel Placeholder */}
+      {/* Photos */}
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel>Gallery</SectionLabel>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }} className="gallery-placeholders">
-            {['ENMICE 2025', 'WATI I Launch', 'WIRIKUTA 1.1', 'Spaceport America Cup 2023'].map((label, i) => (
-              <div
-                key={i}
-                style={{
-                  border: '1px solid #242424',
-                  background: '#111111',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: 16,
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                <img
-                  src={`https://placehold.co/300x225/111111/242424`}
-                  alt={label}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', opacity: 0 }}
-                />
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 10,
-                    color: '#242424',
-                    textAlign: 'center',
-                    letterSpacing: '0.06em',
-                  }}
-                >
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p style={{ fontSize: 12, color: '#424242', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
-            Photos coming soon.
-          </p>
+          <SectionLabel>{t('ignitia.photosTitle')}</SectionLabel>
+          <Gallery items={photos} columns={3} />
         </div>
       </section>
 
@@ -289,7 +240,7 @@ export default function Ignitia() {
                     ...(member.name.includes('Emilio') ? { color: '#b89060' } : {}),
                   }}
                 >
-                  {member.role}
+                  {t(`ignitia.team.roles.${member.role}`)}
                 </div>
                 <div
                   style={{
@@ -313,7 +264,7 @@ export default function Ignitia() {
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
               { name: 'IGNIS Flight Computer', link: '/projects/ignis', amber: true },
-              { name: 'LASC 2026 Satellite Challenge', link: '/projects/satellite', amber: true },
+              { name: 'LASC 2026 CanSat', link: '/projects/satellite', amber: true },
             ].map((sub) => (
               <Link
                 key={sub.link}

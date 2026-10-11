@@ -436,3 +436,6 @@ textarea::placeholder {
 }
 .ext-link:hover { color: var(--text-primary); border-color: var(--text-muted); }
 .ext-link:active { border-color: var(--text-secondary); }
+
+/* ── Satellite ─────────────────────────────────────────────────────── */
+.sat-result { display: flex; align-items: flex-end; gap: 24px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--border); }
