@@ -8,10 +8,10 @@
     "downloadCV": "Download CV"
   },
   "hero": {
-    "title": "Mechatronics Engineering Student",
+    "title": "Electronics and Semiconductor Engineering Student",
     "subtitle": "Electronics & Embedded Systems",
     "role": "VP & Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey",
-    "description": "Mechatronics Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026.",
+    "description": "Electronics and Semiconductor Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV"
   },
@@ -23,9 +23,9 @@
   ],
   "about": {
     "title": "About",
-    "bio": "I am a Mechatronics Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design.",
+    "bio": "I am a Electronics and Semiconductor Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design.",
     "educationLabel": "Education",
-    "degree": "B.S. Mechatronics Engineering",
+    "degree": "B.S. Electronics and Semiconductor Engineering",
     "institution": "Tecnológico de Monterrey",
     "period": "2025 – 2029",
     "languagesLabel": "Languages",
@@ -82,7 +82,7 @@
     "getInTouch": "Get in touch"
   },
   "footer": {
-    "role": "Mechatronics Engineering Student",
+    "role": "Electronics and Semiconductor Engineering Student",
     "copyright": "© 2025 Emilio Guadarrama Gutiérrez. All rights reserved."
   },
   "fc2026": {

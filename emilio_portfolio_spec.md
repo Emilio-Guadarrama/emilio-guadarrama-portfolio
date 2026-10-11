@@ -97,9 +97,9 @@ Technical font:   JetBrains Mono
 
 #### Hero
 - **Name:** Emilio Guadarrama Gutiérrez
-- **Title:** Mechatronics Engineering Student — Electronics & Embedded Systems
+- **Title:** Electronics and Semiconductor Engineering Student — Electronics & Embedded Systems
 - **Subtitle:** VP & Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey
-- **Description:** "Mechatronics Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026."
+- **Description:** "Electronics and Semiconductor Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026."
 - **Photo:** `Foto_ID_-_copia.png` (high-res formal headshot)
 - **Buttons:** View Projects · GitHub · LinkedIn · Download CV
 
@@ -112,8 +112,8 @@ Technical font:   JetBrains Mono
 | 3 yr | Robotics competition experience |
 
 #### About
-- **Bio:** "I am a Mechatronics Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design."
-- **Education:** Tecnológico de Monterrey · B.S. Mechatronics Engineering · 2025–2029
+- **Bio:** "I am a Electronics and Semiconductor Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design."
+- **Education:** Tecnológico de Monterrey · B.S. Electronics and Semiconductor Engineering · Aug 2025 – Jun 2029 (expected)
 - **Languages:** Spanish (Native) · English (C1 — TOEFL iBT 98) · German (Elementary)
 
 #### Technical Skills
