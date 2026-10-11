@@ -57,6 +57,7 @@ export default function Satellite() {
               <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
                 <Link to="/projects/ignis" className="text-link">{t('satellite.toIgnis')}</Link>
                 <Link to="/projects/ignitia" className="text-link">{t('satellite.toIgnitia')}</Link>
+                <a href="https://www.lasc.space/" target="_blank" rel="noopener noreferrer" className="text-link">lasc.space ↗</a>
               </div>
             </div>
 

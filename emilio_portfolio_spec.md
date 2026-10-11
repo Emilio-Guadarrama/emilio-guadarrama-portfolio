@@ -291,14 +291,35 @@ Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · 
 
 ### 6.4 Ignitia Rocket Lab `/projects/ignitia`
 
+Divided into clear sections, with jump links under the hero.
+
 #### Hero
 - **Title:** Ignitia Rocket Lab
 - **Subtitle:** Tecnológico de Monterrey · Campus Guadalajara
 - **Tagline:** Pasión con Impacto
 - **Emilio's role:** Vice President & Avionics/Electronics Lead — 30-member team; leads the 9-member electronics area and trains new members on flight-computer design and assembly
-- **Contact:** ignitia.rocketlab@gmail.com · @ignitia.rocketlab
+- **Links:** Website https://ignitia.space · Instagram https://www.instagram.com/ignitia.rocketlab
 
-#### Mission Timeline
+#### LASC 2026 · Brazil
+- Rocket Challenge, 1 km category: **9th of 25** (IGNIS 1, IGNIS v2.2 as primary flight computer)
+- Satellite Challenge, CanSat: **9th of 50**
+- Main media: the ignition and launch video, then Emilio's final avionics-bay integration photo
+- Mission patches: IGNIS-1 (Rocket Challenge) and CanSat (Satellite Challenge)
+- Links: IGNIS page · CanSat page · LASC website https://www.lasc.space/
+
+#### ENMICE 2025
+- WATI I launch (129 m) · WIRIKUTA 1.1 test bench
+- 2nd place project presentation · Honorary Recognition for Team Conduct
+
+#### Test flights and launch days
+- WATI I Qualification Mission · Oct 2025 · first successful launch · 124 m apogee
+- Launch-day photos, including IGNIS 1 after a test flight with a failed recovery
+
+#### Other activities
+- Engineering Expo TEC 2025 — 1st place Physical Prototype
+- FIL Guadalajara 2025 — scientific outreach exhibition
+
+#### Team history (timeline)
 | Year | Event | Details |
 |---|---|---|
 | 2022 | AKIRA II Validation Mission | 1,000m apogee · flight stability, recovery, and onboard electronics validation |
@@ -311,31 +332,7 @@ Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · 
 | 2025 | FIL Guadalajara | Scientific outreach exhibition |
 | Sep 2026 | LASC 2026 · Brazil | IGNIS v2.2 flown as primary flight computer · Rocket Challenge 1 km: 9th of 25 · Satellite Challenge CanSat: 9th of 50 |
 
-#### Achievements Cards
-- LASC 2026: 9th of 25, Rocket Challenge (1 km) · 9th of 50, Satellite Challenge (CanSat)
-- ENMICE 2025: 2nd place presentation (WIRIKUTA 1.1) + Honorary Recognition for Team Conduct
-- Engineering Expo TEC 2025: 1st place Physical Prototype
-- ENMICE 2023–2024: Technical Excellence Award (WATAKAME IA)
-- Spaceport America Cup 2023: First Mexican team to complete full mission
-
-#### Photo gallery
-LASC 2026, ENMICE 2025 and team launch-day photos (see §8).
-
-#### Team Composition
-| Role | Name |
-|---|---|
-| President | Maximiliano Funoy Serrano |
-| Vice President · Avionics Lead | Emilio Guadarrama Gutiérrez |
-| Avionics Sub-Lead | Damaris Mariscal |
-| Physical Modelling Lead | Fernanda Ivet Acevedo Ávalos |
-| Structural Lead | Luis Humberto Mota Reyes |
-| Propulsion Lead | José David Lagunes Higareda |
-| Faculty Advisor | José Luis Henríquez Mercado |
-| Faculty Advisor | Luis Manuel Rico Gutiérrez |
-
-#### Subproject Links
-- → IGNIS Flight Computer (`/projects/ignis`)
-- → LASC 2026 CanSat (`/projects/satellite`)
+> No team roster: other members are not listed on the site.
 
 ---
 

@@ -9,7 +9,7 @@
  *                       grid underneath to jump to any photo
  * columns: grid columns on desktop (collapses to 2, then 1 on mobile)
  * aspect:  thumbnail aspect ratio in grid mode (photos are cropped to fill it)
- * stageAspect: slide aspect ratio in carousel mode (photos are letterboxed)
+ * stageAspect / mobileAspect: slide aspect ratio in carousel mode on desktop / phones
  * ─────────────────────────────────────────────────────────────────── */
 
 import { useState, useEffect, useRef, useCallback } from 'react'
@@ -18,7 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { X, ChevronLeft, ChevronRight, Play, Maximize2 } from 'lucide-react'
 
-export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant = 'grid', stageAspect = '16 / 10' }) {
+export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant = 'grid', stageAspect = '16 / 10', mobileAspect = '1 / 1' }) {
   const [open, setOpen] = useState(null)
   const triggers = useRef([])
   const { t } = useTranslation()
@@ -33,7 +33,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant 
   return (
     <>
       {variant === 'carousel' ? (
-        <Carousel items={items} stageAspect={stageAspect} onOpen={setOpen} triggers={triggers} />
+        <Carousel items={items} stageAspect={stageAspect} mobileAspect={mobileAspect} onOpen={setOpen} triggers={triggers} />
       ) : (
         <div className={`cgrid gallery gallery-cols-${columns}`}>
           {items.map((item, i) => (
@@ -79,7 +79,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant 
 }
 
 /* ── Carousel: large slide + thumbnail grid ────────────────────────── */
-function Carousel({ items, stageAspect, onOpen, triggers }) {
+function Carousel({ items, stageAspect, mobileAspect, onOpen, triggers }) {
   const { t } = useTranslation()
   const [index, setIndex] = useState(0)
   const touchX = useRef(null)
@@ -103,7 +103,7 @@ function Carousel({ items, stageAspect, onOpen, triggers }) {
   return (
     <div className="carousel" onKeyDown={onKeyDown}>
       <figure style={{ margin: 0 }}>
-        <div className="carousel-stage" style={{ aspectRatio: stageAspect }} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+        <div className="carousel-stage" style={{ aspectRatio: stageAspect, '--mobile-aspect': mobileAspect }} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={item.video || item.src}
