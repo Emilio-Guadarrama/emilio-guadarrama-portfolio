@@ -90,6 +90,7 @@ export default function FRC() {
             <Gallery
               items={seasonPhotos[s.year].map((p) => ({ ...p, caption: t(`captions.frc.${p.key}`) }))}
               columns={4}
+              variant={seasonPhotos[s.year].length > 2 ? 'carousel' : 'grid'}
             />
           </div>
         </section>

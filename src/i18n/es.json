@@ -125,7 +125,7 @@
       "changesNote": "Ninguno de estos cambios obligó a replantear la arquitectura. Son los detalles que solo aparecen cuando una PCB deja de ser un diseño en pantalla y se vuelve hardware en el banco de pruebas.",
       "buildTitle": "Ensamble y pruebas en banco",
       "buildLead": "Ensamblada en casa con esténcil cortado con láser, horno de reflujo y retrabajo con aire caliente, y probada en banco antes de volar.",
-      "designTitle": "Archivos de diseño"
+      "designTitle": "Visor de PCB"
     },
     "flight": {
       "title": "Vuelo en LASC 2026",
@@ -194,7 +194,8 @@
     "close": "Cerrar",
     "prev": "Foto anterior",
     "next": "Foto siguiente",
-    "video": "Video"
+    "video": "Video",
+    "all": "Todas las fotos"
   },
   "captions": {
     "fifa": {
@@ -261,6 +262,7 @@
       "layerBottom": "Capa de cobre inferior."
     },
     "lasc": {
+      "ignition": "Presionando la ignición de IGNIS 1 en LASC 2026, y el lanzamiento.",
       "avionicsBay": "Integración final de la bahía de aviónica antes del vuelo.",
       "onRail": "IGNIS 1 en el riel en LASC 2026, Brasil, con IGNIS v2.2 como computadora de vuelo principal.",
       "launchControl": "Panel de control remoto de lanzamiento en LASC 2026.",

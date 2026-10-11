@@ -1,19 +1,24 @@
 /* ── Photo gallery + lightbox ─────────────────────────────────────────
- * items: [{ src, caption, video?, poster?, focus? }]
- *   - focus: CSS object-position for the cropped thumbnail (e.g. 'center 80%')
+ * items: [{ src, caption, video?, poster?, focus?, label? }]
  *   - images: `src` is the photo
  *   - videos: `video` is the mp4, `poster` the still shown in the grid
+ *   - focus: CSS object-position for the cropped thumbnail (e.g. 'center 80%')
+ *   - label: short tag shown under the thumbnail in the carousel (e.g. "3D top")
+ * variant: 'grid' (default) — captioned thumbnails, click opens the lightbox
+ *          'carousel' — one large slide with arrows/swipe, plus a thumbnail
+ *                       grid underneath to jump to any photo
  * columns: grid columns on desktop (collapses to 2, then 1 on mobile)
- * aspect:  thumbnail aspect ratio (photos are cropped to fill it)
+ * aspect:  thumbnail aspect ratio in grid mode (photos are cropped to fill it)
+ * stageAspect: slide aspect ratio in carousel mode (photos are letterboxed)
  * ─────────────────────────────────────────────────────────────────── */
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { X, ChevronLeft, ChevronRight, Play } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight, Play, Maximize2 } from 'lucide-react'
 
-export default function Gallery({ items, columns = 3, aspect = '4 / 3' }) {
+export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant = 'grid', stageAspect = '16 / 10' }) {
   const [open, setOpen] = useState(null)
   const triggers = useRef([])
   const { t } = useTranslation()
@@ -27,35 +32,39 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3' }) {
 
   return (
     <>
-      <div className={`cgrid gallery gallery-cols-${columns}`}>
-        {items.map((item, i) => (
-          <figure key={item.video || item.src} style={{ margin: 0 }}>
-            <button
-              ref={(el) => (triggers.current[i] = el)}
-              type="button"
-              className="gallery-thumb"
-              onClick={() => setOpen(i)}
-              aria-label={`${t('gallery.open')}: ${item.caption}`}
-              style={{ aspectRatio: aspect }}
-            >
-              <img
-                src={item.video ? item.poster : item.src}
-                alt=""
-                loading="lazy"
-                style={item.focus ? { objectPosition: item.focus } : undefined}
-                decoding="async"
-              />
-              {item.video && (
-                <span className="gallery-video-badge">
-                  <Play size={11} strokeWidth={2.5} aria-hidden="true" />
-                  {t('gallery.video')}
-                </span>
-              )}
-            </button>
-            <figcaption className="gallery-caption">{item.caption}</figcaption>
-          </figure>
-        ))}
-      </div>
+      {variant === 'carousel' ? (
+        <Carousel items={items} stageAspect={stageAspect} onOpen={setOpen} triggers={triggers} />
+      ) : (
+        <div className={`cgrid gallery gallery-cols-${columns}`}>
+          {items.map((item, i) => (
+            <figure key={item.video || item.src} style={{ margin: 0 }}>
+              <button
+                ref={(el) => (triggers.current[i] = el)}
+                type="button"
+                className="gallery-thumb"
+                onClick={() => setOpen(i)}
+                aria-label={`${t('gallery.open')}: ${item.caption}`}
+                style={{ aspectRatio: aspect }}
+              >
+                <img
+                  src={item.video ? item.poster : item.src}
+                  alt=""
+                  loading="lazy"
+                  style={item.focus ? { objectPosition: item.focus } : undefined}
+                  decoding="async"
+                />
+                {item.video && (
+                  <span className="gallery-video-badge">
+                    <Play size={11} strokeWidth={2.5} aria-hidden="true" />
+                    {t('gallery.video')}
+                  </span>
+                )}
+              </button>
+              <figcaption className="gallery-caption">{item.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      )}
 
       {createPortal(
         <AnimatePresence>
@@ -66,6 +75,109 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3' }) {
         document.body,
       )}
     </>
+  )
+}
+
+/* ── Carousel: large slide + thumbnail grid ────────────────────────── */
+function Carousel({ items, stageAspect, onOpen, triggers }) {
+  const { t } = useTranslation()
+  const [index, setIndex] = useState(0)
+  const touchX = useRef(null)
+  const item = items[index]
+  const many = items.length > 1
+  const go = (d) => setIndex((i) => (i + d + items.length) % items.length)
+
+  const onKeyDown = (e) => {
+    if (e.target.tagName === 'VIDEO') return
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1) }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1) }
+  }
+  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX }
+  const onTouchEnd = (e) => {
+    if (touchX.current === null) return
+    const dx = e.changedTouches[0].clientX - touchX.current
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1)
+    touchX.current = null
+  }
+
+  return (
+    <div className="carousel" onKeyDown={onKeyDown}>
+      <figure style={{ margin: 0 }}>
+        <div className="carousel-stage" style={{ aspectRatio: stageAspect }} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={item.video || item.src}
+              className="carousel-slide"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+            >
+              {item.video ? (
+                <video src={item.video} poster={item.poster} controls playsInline preload="none" />
+              ) : (
+                <button
+                  ref={(el) => (triggers.current[index] = el)}
+                  type="button"
+                  className="carousel-open"
+                  onClick={() => onOpen(index)}
+                  aria-label={`${t('gallery.open')}: ${item.caption}`}
+                >
+                  <img src={item.src} alt={item.caption} decoding="async" />
+                  <span className="carousel-expand" aria-hidden="true"><Maximize2 size={14} /></span>
+                </button>
+              )}
+            </motion.div>
+          </AnimatePresence>
+
+          {many && (
+            <>
+              <button type="button" className="lightbox-btn carousel-prev" onClick={() => go(-1)} aria-label={t('gallery.prev')}>
+                <ChevronLeft size={18} aria-hidden="true" />
+              </button>
+              <button type="button" className="lightbox-btn carousel-next" onClick={() => go(1)} aria-label={t('gallery.next')}>
+                <ChevronRight size={18} aria-hidden="true" />
+              </button>
+            </>
+          )}
+        </div>
+        <figcaption className="carousel-caption">
+          {many && (
+            <span className="lightbox-count">
+              {String(index + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}
+            </span>
+          )}
+          <span aria-live="polite">{item.caption}</span>
+        </figcaption>
+      </figure>
+
+      {many && (
+        <div className="carousel-thumbs" role="group" aria-label={t('gallery.all')}>
+          {items.map((it, i) => (
+            <button
+              key={it.video || it.src}
+              type="button"
+              aria-pressed={i === index}
+              aria-label={it.label || it.caption}
+              className={`carousel-thumb${i === index ? ' is-active' : ''}`}
+              onClick={() => setIndex(i)}
+            >
+              <span className="carousel-thumb-img">
+                <img
+                  src={it.video ? it.poster : it.src}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  style={it.focus ? { objectPosition: it.focus } : undefined}
+                />
+                {it.video && <Play size={12} strokeWidth={2.5} className="carousel-thumb-play" aria-hidden="true" />}
+              </span>
+              {it.label && <span className="carousel-thumb-label">{it.label}</span>}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 

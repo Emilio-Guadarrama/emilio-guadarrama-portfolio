@@ -125,7 +125,7 @@
       "changesNote": "None of these changes required rethinking the architecture. They are the details that only show up once a PCB stops being a design on a screen and becomes hardware on the bench.",
       "buildTitle": "Build and bench testing",
       "buildLead": "Assembled in-house with a laser-cut stencil, reflow oven and hot-air rework, then bench-tested before flight.",
-      "designTitle": "Design files"
+      "designTitle": "PCB viewer"
     },
     "flight": {
       "title": "Flight at LASC 2026",
@@ -194,7 +194,8 @@
     "close": "Close",
     "prev": "Previous photo",
     "next": "Next photo",
-    "video": "Video"
+    "video": "Video",
+    "all": "All photos"
   },
   "captions": {
     "fifa": {
@@ -261,6 +262,7 @@
       "layerBottom": "Bottom copper layer."
     },
     "lasc": {
+      "ignition": "Pressing the ignition for IGNIS 1 at LASC 2026, then the launch.",
       "avionicsBay": "Final integration of the avionics bay before flight.",
       "onRail": "IGNIS 1 on the rail at LASC 2026, Brazil, with IGNIS v2.2 as its primary flight computer.",
       "launchControl": "Remote launch control panel at LASC 2026.",
