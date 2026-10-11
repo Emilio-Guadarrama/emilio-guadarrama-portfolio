@@ -205,7 +205,8 @@ export default function AwardsCarousel() {
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerUp}
-        style={{ position: 'relative', cursor: 'grab', userSelect: 'none' }}
+        // pan-y: horizontal swipes drive the carousel on touch screens, vertical ones still scroll the page
+        style={{ position: 'relative', cursor: 'grab', userSelect: 'none', touchAction: 'pan-y' }}
       >
         <div
           ref={trackRef}
