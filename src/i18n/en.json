@@ -48,9 +48,72 @@
   "experience": {
     "title": "Experience",
     "items": [
-      { "period": "Aug 2025 – Present", "role": "Vice President & Avionics/Electronics Lead", "org": "Ignitia Rocket Lab", "desc": "Lead hardware designer of IGNIS. Vice President of a 30-member team; lead the 9-member electronics area and train new members on flight-computer design and assembly." },
-      { "period": "Jan 2023 – May 2025", "role": "Mechanical Lead & Mentor", "org": "FIRST Robotics — Team Daedalus", "desc": "Led manufacturing and served on the drive team; won the Hermosillo Regional and qualified for the FIRST World Championship in Houston (2024)." },
-      { "period": "Aug 2024 – Jun 2025", "role": "Under-Secretary-General", "org": "TECMUN GDL" }
+      {
+        "org": "Ignitia Rocket Lab",
+        "sub": "Tecnológico de Monterrey · Competitive rocketry team",
+        "mark": "IRL",
+        "period": "Aug 2025 – Feb 2027",
+        "location": "Zapopan, Jalisco",
+        "roles": [
+          {
+            "title": "Vice President & Electronics/Avionics Lead",
+            "period": "Jan 2026 – Feb 2027",
+            "bullets": [
+              "Vice President of a 30-member team; lead the 9-member electronics area and train new members on flight-computer design and assembly.",
+              "Lead hardware designer of IGNIS, an open-source rocket flight computer: architecture, schematics, 4-layer PCB layout in Altium Designer, RF and power design, sourcing, bring-up and lab debugging.",
+              "Flew IGNIS v2.2 as the primary flight computer at LASC 2026 in Brazil: 9th of 25 in the Rocket Challenge 1 km category.",
+              "Mission Leader of the team's CanSat: 9th of 50 in the Satellite Challenge.",
+              "Redesigned v5 for turnkey SMT assembly at JLCPCB (109 placements, 40 BOM lines)."
+            ],
+            "image": "/photos/lasc/avionics-bay.jpg",
+            "imageAlt": "Final integration of the avionics bay at LASC 2026"
+          },
+          {
+            "title": "Electronics & Avionics Division Member",
+            "period": "Aug 2025 – Dec 2025",
+            "bullets": [
+              "Contributed to the electronics and avionics division of the team.",
+              "Competed at ENMICE 2025: 2nd place project presentation and Honorary Recognition for Team Conduct."
+            ],
+            "image": "/photos/ignitia/enmice-electronics.jpg",
+            "imageAlt": "Electronics team at ENMICE 2025"
+          }
+        ]
+      },
+      {
+        "org": "FIRST Robotics Competition",
+        "sub": "Team Daedalus 7102",
+        "logo": "/logos/first.png",
+        "period": "Jan 2023 – May 2025",
+        "location": "Zapopan, Jalisco",
+        "roles": [
+          {
+            "title": "Mechanical Lead & Mentor",
+            "period": "2025 · Reefscape",
+            "bullets": [
+              "Led the team's manufacturing and mentored new members through the Monterrey and León Regionals."
+            ],
+            "image": "/photos/frc/2025-pits.jpg",
+            "imageAlt": "Working in the pits, 2025"
+          },
+          {
+            "title": "Mechanical Lead",
+            "period": "2024 · Crescendo",
+            "bullets": [
+              "Led manufacturing and was a member of the drive team. Won the Hermosillo Regional and qualified for the FIRST World Championship in Houston."
+            ],
+            "image": "/photos/frc/2024-hermosillo-winners.jpg",
+            "imageAlt": "Hermosillo Regional 2024 winners"
+          },
+          {
+            "title": "Robotics Technician",
+            "period": "2023 · Charged Up",
+            "bullets": [
+              "Drive team, scouting and mechanical maintenance."
+            ]
+          }
+        ]
+      }
     ]
   },
   "projects": {
