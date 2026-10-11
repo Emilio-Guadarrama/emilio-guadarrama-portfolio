@@ -43,6 +43,8 @@ export default function Home() {
           className="hero-grid"
         >
           <div>
+            {/* Mobile only: the large photo column is hidden below 768px */}
+            <img src="/photos/hero.jpg" alt="Emilio Guadarrama" className="hero-avatar" width={88} height={88} />
             <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0}
               style={{ fontSize: 'clamp(42px, 6.4vw, 76px)', fontWeight: 700, color: '#f0f0f0',
                 letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 20 }}>
@@ -83,6 +85,9 @@ export default function Home() {
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#d8d8d8'; e.currentTarget.style.color = '#d8d8d8' }}>
                 {t('hero.viewProjects')}
               </Link>
+              <Link to="/projects/ignis" className="hero-btn-ignis">
+                {t('hero.ignis')} →
+              </Link>
               <a href="https://github.com/Emilio-Guadarrama" target="_blank" rel="noopener noreferrer"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: 8, border: '1px solid #242424',
                   padding: '10px 20px', fontSize: 14, color: '#c8c8c8', textDecoration: 'none',
@@ -107,7 +112,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="hero-photo-wrap" style={{ flexShrink: 0 }}>
             <div style={{ width: 240, height: 300, border: '1px solid #242424', overflow: 'hidden', borderRadius: 'var(--radius-md)' }}>
-              <img src="/brand_assets/photos/hero/photo.png" alt="Emilio Guadarrama"
+              <img src="/photos/hero.jpg" alt="Emilio Guadarrama" width={240} height={300} fetchPriority="high"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }} />
             </div>
           </motion.div>
@@ -317,8 +322,13 @@ export default function Home() {
                         transition: 'border-color 0.15s ease', height: '100%', borderRadius: 'var(--radius-sm)' }}
                       onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#2a2a2a')}
                       onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#242424')}>
-                      <div style={{ display: 'flex', gap: 6, marginBottom: 14, flexWrap: 'wrap' }}>
-                        {project.tags.map((tag, j) => <Tag key={j} amber={project.amber}>{tag}</Tag>)}
+                      <div style={{ display: 'flex', gap: 12, justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 14, minHeight: 64 }}>
+                        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                          {project.tags.map((tag, j) => <Tag key={j} amber={project.amber}>{tag}</Tag>)}
+                        </div>
+                        {project.image && (
+                          <img src={project.image} alt="" loading="lazy" className={`project-thumb${project.imageFit === 'contain' ? ' is-contain' : ''}`} />
+                        )}
                       </div>
                       <div style={{ fontSize: 15, fontWeight: 600, color: '#f0f0f0', marginBottom: 10,
                         letterSpacing: '-0.01em', lineHeight: 1.3 }}>

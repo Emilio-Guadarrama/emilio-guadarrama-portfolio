@@ -13,6 +13,7 @@
     "role": "Vicepresidente y Líder de Electrónica y Aviónica en Ignitia Rocket Lab · Tec de Monterrey",
     "description": "Diseñador principal de IGNIS, una computadora de vuelo de código abierto para cohetes que voló en LASC 2026, con experiencia práctica en captura de esquemáticos, layout multicapa, puesta en marcha, análisis de datos de vuelo y diseño para manufactura.",
     "viewProjects": "Ver Proyectos",
+    "ignis": "Ver IGNIS",
     "downloadCV": "Descargar CV"
   },
   "stats": [
@@ -111,11 +112,11 @@
     "viewProject": "Ver Proyecto →",
     "items": [
       { "key": "ignis", "name": "IGNIS Flight Computer", "tags": ["LASC 2026", "Volado"], "desc": "Computadora de vuelo de código abierto para cohetes, de v1 a v5. ESP32-S3, telemetría LoRa, GNSS, IMU, barómetro y dos canales pirotécnicos optoaislados. La v2.2 voló en LASC 2026 como computadora de vuelo principal.", "link": "/projects/ignis", "amber": true },
-      { "key": "satellite", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "9.º de 50"], "desc": "Líder de misión. CanSat derivado de IGNIS con medición de vibraciones, telemetría LoRa y recuperación independiente con paracaídas.", "link": "/projects/satellite", "amber": true },
-      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Cohetería"], "desc": "Equipo de cohetería estudiantil del Tec de Monterrey. Vicepresidente y líder del área de electrónica de 9 personas.", "link": "/projects/ignitia", "amber": false },
-      { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robótica"], "desc": "3 años de trayectoria como técnico y Líder Mecánico. Ganó Regional Hermosillo 2024, clasificó al Campeonato Mundial.", "link": "/projects/frc", "amber": false },
+      { "key": "satellite", "image": "/photos/lasc/patch-cansat.png", "imageFit": "contain", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "9.º de 50"], "desc": "Líder de misión. CanSat derivado de IGNIS con medición de vibraciones, telemetría LoRa y recuperación independiente con paracaídas.", "link": "/projects/satellite", "amber": true },
+      { "key": "ignitia", "image": "/photos/ignis/v2-silkscreen.jpg", "name": "Ignitia Rocket Lab", "tags": ["Cohetería"], "desc": "Equipo de cohetería estudiantil del Tec de Monterrey. Vicepresidente y líder del área de electrónica de 9 personas.", "link": "/projects/ignitia", "amber": false },
+      { "key": "frc", "image": "/photos/frc/2024-robot.jpg", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robótica"], "desc": "3 años de trayectoria como técnico y Líder Mecánico. Ganó Regional Hermosillo 2024, clasificó al Campeonato Mundial.", "link": "/projects/frc", "amber": false },
       { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sostenibilidad"], "desc": "Riego vertical automatizado con Arduino, sensores, bombas y energía solar. Electrónica, firmware e interfaz web.", "link": "/projects/wgs", "amber": false },
-      { "key": "techo", "name": "TECHO México", "tags": ["Voluntariado"], "desc": "Construcción de viviendas de emergencia en Jalisco. Voluntario → Co-Líder → Líder de Cuadrilla → Monitor de Zona.", "link": "/volunteering/techo", "amber": false }
+      { "key": "techo", "image": "/photos/techo/2026-handover.jpg", "name": "TECHO México", "tags": ["Voluntariado"], "desc": "Construcción de viviendas de emergencia en Jalisco. Voluntario → Co-Líder → Líder de Cuadrilla → Monitor de Zona.", "link": "/volunteering/techo", "amber": false }
     ]
   },
   "achievements": {

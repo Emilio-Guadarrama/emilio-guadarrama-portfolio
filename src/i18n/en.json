@@ -13,6 +13,7 @@
     "role": "Vice President & Electronics & Avionics Lead at Ignitia Rocket Lab · Tec de Monterrey",
     "description": "Lead designer of IGNIS, an open-source rocket flight computer flown at LASC 2026, with hands-on work in schematic capture, multilayer layout, bring-up, flight-data analysis and design for manufacturing.",
     "viewProjects": "View Projects",
+    "ignis": "See IGNIS",
     "downloadCV": "Download CV"
   },
   "stats": [
@@ -111,11 +112,11 @@
     "viewProject": "View Project →",
     "items": [
       { "key": "ignis", "name": "IGNIS Flight Computer", "tags": ["LASC 2026", "Flown"], "desc": "Open-source rocket flight computer, v1 to v5. ESP32-S3, LoRa telemetry, GNSS, IMU, barometer and two opto-isolated pyro channels. v2.2 flew at LASC 2026 as the primary flight computer.", "link": "/projects/ignis", "amber": true },
-      { "key": "satellite", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "9th of 50"], "desc": "Mission Leader. IGNIS-derived CanSat with vibration sensing, LoRa telemetry and independent parachute recovery.", "link": "/projects/satellite", "amber": true },
-      { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Vice President and lead of the 9-member electronics area.", "link": "/projects/ignitia", "amber": false },
-      { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robotics"], "desc": "3-year journey from technician to Mechanical Lead. Won Regional Hermosillo 2024, qualified World Championship.", "link": "/projects/frc", "amber": false },
+      { "key": "satellite", "image": "/photos/lasc/patch-cansat.png", "imageFit": "contain", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "9th of 50"], "desc": "Mission Leader. IGNIS-derived CanSat with vibration sensing, LoRa telemetry and independent parachute recovery.", "link": "/projects/satellite", "amber": true },
+      { "key": "ignitia", "image": "/photos/ignis/v2-silkscreen.jpg", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Vice President and lead of the 9-member electronics area.", "link": "/projects/ignitia", "amber": false },
+      { "key": "frc", "image": "/photos/frc/2024-robot.jpg", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robotics"], "desc": "3-year journey from technician to Mechanical Lead. Won Regional Hermosillo 2024, qualified World Championship.", "link": "/projects/frc", "amber": false },
       { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sustainability"], "desc": "Automated vertical irrigation with Arduino, sensors, pumps and solar power. Electronics, firmware and web interface.", "link": "/projects/wgs", "amber": false },
-      { "key": "techo", "name": "TECHO México", "tags": ["Volunteering"], "desc": "Emergency housing builds in Jalisco. Volunteer → Crew Co-Leader → Crew Leader → Area Monitor.", "link": "/volunteering/techo", "amber": false }
+      { "key": "techo", "image": "/photos/techo/2026-handover.jpg", "name": "TECHO México", "tags": ["Volunteering"], "desc": "Emergency housing builds in Jalisco. Volunteer → Crew Co-Leader → Crew Leader → Area Monitor.", "link": "/volunteering/techo", "amber": false }
     ]
   },
   "achievements": {
