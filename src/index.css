@@ -745,3 +745,25 @@ section[id] { scroll-margin-top: 60px; }
   border-radius: var(--radius-sm);
 }
 .project-thumb.is-contain { object-fit: contain; border: 0; }
+
+/* ── MobileCollapse ────────────────────────────────────────────────── */
+.m-collapse > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  list-style: none;
+}
+.m-collapse > summary::-webkit-details-marker { display: none; }
+.m-collapse-chevron { color: var(--text-muted); transition: transform 0.18s ease; flex-shrink: 0; }
+.m-collapse[open] > summary .m-collapse-chevron { transform: rotate(180deg); }
+@media (min-width: 761px) {
+  .m-collapse > summary { pointer-events: none; }
+  .m-collapse-chevron { display: none; }
+}
+@media (max-width: 760px) {
+  .m-collapse > summary { cursor: pointer; }
+  .m-collapse > summary:focus-visible { outline: 2px solid var(--accent-white); outline-offset: 2px; }
+  .m-collapse:not(.failure-collapse) > summary {
+    padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--card); margin-bottom: 0 !important;
+  }
+  .m-collapse:not(.failure-collapse)[open] > summary { margin-bottom: 12px !important; }
+}

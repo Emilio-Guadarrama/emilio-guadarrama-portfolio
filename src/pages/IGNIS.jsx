@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Tag, SectionLabel } from '../components/ui'
 import Gallery from '../components/Gallery'
+import MobileCollapse from '../components/MobileCollapse'
 import { GitHubIcon } from '../components/icons'
 import { usePageTitle } from '../hooks/usePageTitle'
 
@@ -204,10 +205,9 @@ export default function IGNIS() {
           </div>
 
           <div className="split-2" style={{ marginBottom: 64 }}>
-            <div>
-              <h3 style={h3}>{t('ignis.v2.hardware')}</h3>
+            <MobileCollapse summary={t('ignis.v2.hardware')} summaryStyle={h3}>
               <HardwareTable rows={v2Hardware} />
-            </div>
+            </MobileCollapse>
             <div>
               <h3 style={h3}>{t('ignis.v2.changesTitle')}</h3>
               <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 20 }}>
@@ -260,8 +260,12 @@ export default function IGNIS() {
           <div className="failure-grid">
             {failures.map((f) => (
               <article key={f.title} style={{ border: '1px solid var(--border)', background: 'var(--card)', borderRadius: 'var(--radius-sm)' }}>
-                <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', padding: '18px 20px', borderBottom: '1px solid var(--border)' }}>{f.title}</h3>
-                <dl style={{ padding: '4px 20px 18px' }}>
+                <MobileCollapse
+                  className="failure-collapse"
+                  summary={f.title}
+                  summaryStyle={{ fontSize: 15, fontWeight: 600, color: 'var(--text-primary)', padding: '18px 20px' }}
+                >
+                <dl style={{ padding: '4px 20px 18px', borderTop: '1px solid var(--border)' }}>
                   {[
                     [t('ignis.failures.symptom'), f.symptom],
                     [t('ignis.failures.cause'), f.cause],
@@ -273,6 +277,7 @@ export default function IGNIS() {
                     </div>
                   ))}
                 </dl>
+                </MobileCollapse>
               </article>
             ))}
           </div>
@@ -295,10 +300,9 @@ export default function IGNIS() {
           </div>
 
           <div className="split-2">
-            <div>
-              <h3 style={h3}>{t('ignis.v5.hardware')}</h3>
+            <MobileCollapse summary={t('ignis.v5.hardware')} summaryStyle={h3}>
               <HardwareTable rows={v5Hardware} />
-            </div>
+            </MobileCollapse>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 14, paddingTop: 36 }}>
               {v5Points.map((p, i) => (
                 <li key={i} style={{ display: 'grid', gridTemplateColumns: '20px 1fr', fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.65 }}>
