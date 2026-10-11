@@ -8,10 +8,10 @@
     "downloadCV": "Descargar CV"
   },
   "hero": {
-    "title": "Estudiante de Ingeniería Mecatrónica",
+    "title": "Estudiante de Ingeniería en Electrónica y Semiconductores",
     "subtitle": "Electrónica y Sistemas Embebidos",
     "role": "VP y Líder de Electrónica en Ignitia Rocket Lab · Tec de Monterrey",
-    "description": "Estudiante de Ingeniería Mecatrónica en el Tecnológico de Monterrey enfocado en electrónica, sistemas embebidos y diseño de PCB. Liderando la división de aviónica de Ignitia Rocket Lab para LASC 2026.",
+    "description": "Estudiante de Ingeniería en Electrónica y Semiconductores en el Tecnológico de Monterrey enfocado en electrónica, sistemas embebidos y diseño de PCB. Liderando la división de aviónica de Ignitia Rocket Lab para LASC 2026.",
     "viewProjects": "Ver Proyectos",
     "downloadCV": "Descargar CV"
   },
@@ -23,9 +23,9 @@
   ],
   "about": {
     "title": "Sobre mí",
-    "bio": "Soy estudiante de Ingeniería Mecatrónica en el Tecnológico de Monterrey con enfoque en electrónica, sistemas embebidos y diseño de PCB. Mi experiencia en robótica, cohetería y roles de liderazgo me ha ayudado a desarrollar pensamiento analítico, trabajo en equipo e innovación. Aspiro a contribuir en proyectos multidisciplinarios que integren tecnología, automatización y diseño.",
+    "bio": "Soy estudiante de Ingeniería en Electrónica y Semiconductores en el Tecnológico de Monterrey con enfoque en electrónica, sistemas embebidos y diseño de PCB. Mi experiencia en robótica, cohetería y roles de liderazgo me ha ayudado a desarrollar pensamiento analítico, trabajo en equipo e innovación. Aspiro a contribuir en proyectos multidisciplinarios que integren tecnología, automatización y diseño.",
     "educationLabel": "Educación",
-    "degree": "Ing. Mecatrónica",
+    "degree": "Ing. en Electrónica y Semiconductores",
     "institution": "Tecnológico de Monterrey",
     "period": "2025 – 2029",
     "languagesLabel": "Idiomas",
@@ -82,7 +82,7 @@
     "getInTouch": "Contáctame"
   },
   "footer": {
-    "role": "Estudiante de Ingeniería Mecatrónica",
+    "role": "Estudiante de Ingeniería en Electrónica y Semiconductores",
     "copyright": "© 2025 Emilio Guadarrama Gutiérrez. Todos los derechos reservados."
   },
   "fc2026": {
