@@ -32,22 +32,25 @@
 
 ## Brand Assets
 - `brand_assets/colors.md` — design system (colors, fonts, rules) — always use these exact values
-- `brand_assets/photo.png` — Emilio's headshot (used in hero section)
-- `brand_assets/pcb_3d_top.png` — FC-2026 PCB render (top view)
-- `brand_assets/pcb_3d_angle.png` — FC-2026 PCB render (angled)
-- `brand_assets/pcb_3d_bottom.png` — FC-2026 PCB render (bottom view)
-- `brand_assets/pcb_layout.png` — FC-2026 PCB layout (Altium 2D)
-- `brand_assets/resume.pdf` — downloadable CV (link in navbar)
+- `brand_assets/Resume_English.pdf` — CV and source of truth for degree, experience, projects, skills and awards
+- `brand_assets/photos/hero/photo.png` — Emilio's headshot (used in hero section)
+- `brand_assets/photos/fc2026/` — IGNIS flight computer: `V1/` renders, `V2 and 2V2/` board photos, renders, layers and notes, `V4/`, `V5/` BOM
+- `brand_assets/photos/LASC 2026/`, `ENMICE 2025/`, `Ignitia General/` — rocketry photos
+- `brand_assets/photos/FRC/` — one folder per season (1 = 2023, 2 championship = 2024, 3 = 2025)
+- `brand_assets/photos/volunteering/` — TECHO (one folder per build) and FIFA World Cup 2026
+- Served copies: `public/brand_assets/` (CV PDFs, hero, v1 renders) and `public/photos/` (resized gallery photos)
 
 ## Site Structure
 ```
 /                       → Home (single-page scroll)
-/projects/fc-2026       → FC-2026 Flight Computer (flagship)
-/projects/satellite     → LASC 2026 Satellite Challenge
+/projects/ignis         → IGNIS Flight Computer (flagship)
+/projects/fc-2026       → redirects to /projects/ignis
+/projects/satellite     → LASC 2026 CanSat — Satellite Challenge
 /projects/ignitia       → Ignitia Rocket Lab hub
 /projects/frc           → FIRST Robotics Competition
 /projects/wgs           → Water Growth Solutions
 /volunteering/techo     → TECHO México
+/volunteering/fifa-wc   → FIFA World Cup 2026™ volunteer
 ```
 
 ## Design Rules
@@ -55,7 +58,7 @@
 - Background: flat #070707 — no grid, no texture, no noise
 - No glow, no blur, no gradients anywhere
 - Borders: 1px solid #242424 at rest — hard edges only
-- Amber (#b89060) used ONLY on Ignitia/competition tags (FC-2026, LASC 2026) — nowhere else
+- Amber (#b89060) used ONLY on Ignitia/competition tags (IGNIS, LASC 2026) — nowhere else
 - Monospace font (JetBrains Mono) ONLY on: badges, labels, GPIO tables, code snippets, technical details
 - Body copy uses Inter
 - Every clickable element must have hover, focus-visible, and active states
@@ -65,13 +68,13 @@
 - All content has EN and ES translations
 - Technical terms stay in English in both languages: ESP32-S3, LoRa, MOSFET, UART, etc.
 - Competition names stay in English: LASC, ENMICE, FIRST
-- Tagged labels stay in English: FC-2026, LASC 2026
+- Tagged labels stay in English: IGNIS, LASC 2026
 
 ## Build Order (follow this sequence)
 1. Project setup (already done) + routing skeleton
 2. Navbar + Footer (shared layout)
 3. Home page — all sections
-4. FC-2026 subpage (flagship — most important)
+4. IGNIS subpage (flagship — most important)
 5. Ignitia Rocket Lab subpage
 6. Satellite subpage
 7. FRC subpage
