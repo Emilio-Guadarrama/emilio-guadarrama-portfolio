@@ -244,6 +244,26 @@ export default function Navbar() {
   const openCvDrop   = () => { clearTimeout(cvDropTimer.current);  setCvDropOpen(true) }
   const closeCvDrop  = () => { cvDropTimer.current  = setTimeout(() => setCvDropOpen(false), 140) }
 
+  // Keyboard support for the hover menus: focusing the trigger opens the
+  // menu, Tab walks into its links, and leaving the group or Escape closes it
+  const escClosed = useRef(false) // focus returned by Escape must not reopen the menu
+  const kbdMenu = (open, close, setOpen) => ({
+    onFocus: () => { if (!escClosed.current) open() },
+    onBlur: (e) => {
+      if (!e.currentTarget.contains(e.relatedTarget)) {
+        escClosed.current = false
+        setOpen(false)
+      }
+    },
+    onKeyDown: (e) => {
+      if (e.key === 'Escape') {
+        escClosed.current = true
+        setOpen(false)
+        e.currentTarget.querySelector('button')?.focus()
+      }
+    },
+  })
+
   const simpleLinks = [
     { label: t('nav.about'),      id: 'about'      },
     { label: t('nav.experience'), id: 'experience' },
@@ -299,10 +319,12 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openDrop}
               onMouseLeave={closeDrop}
+              {...kbdMenu(openDrop, closeDrop, setDropOpen)}
             >
               <NavPill
-                as="button"
                 active={dropOpen}
+                aria-haspopup="true"
+                aria-expanded={dropOpen}
                 trailingIcon={
                   <ChevronDown
                     size={13}
@@ -378,9 +400,12 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openVolDrop}
               onMouseLeave={closeVolDrop}
+              {...kbdMenu(openVolDrop, closeVolDrop, setVolDropOpen)}
             >
               <NavPill
                 active={volDropOpen}
+                aria-haspopup="true"
+                aria-expanded={volDropOpen}
                 trailingIcon={
                   <ChevronDown
                     size={13}
@@ -391,7 +416,7 @@ export default function Navbar() {
                     }}
                   />
                 }
-                onClick={() => {}}
+                onClick={openVolDrop}
               >
                 {t('nav.volunteering')}
               </NavPill>
@@ -476,8 +501,13 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openCvDrop}
               onMouseLeave={closeCvDrop}
+              {...kbdMenu(openCvDrop, closeCvDrop, setCvDropOpen)}
             >
               <button
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={cvDropOpen}
+                onClick={openCvDrop}
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 6,
                   border: '1px solid #d8d8d8',
@@ -740,11 +770,13 @@ function MobileAccordion({ label, open, onToggle, children }) {
 }
 
 /* ── Nav pill button / link ────────────────────────────────────────── */
-function NavPill({ children, onClick, active, trailingIcon }) {
+function NavPill({ children, onClick, active, trailingIcon, ...aria }) {
   const [hovered, setHovered] = useState(false)
   const lit = active || hovered
   return (
     <button
+      type="button"
+      {...aria}
       onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
