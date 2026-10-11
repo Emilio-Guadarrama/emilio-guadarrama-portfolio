@@ -106,17 +106,19 @@ export default function IGNIS() {
     { src: `${P}/ignis/v2-assembled.jpg`, caption: c('ignis.assembled') },
     { src: `${P}/ignis/v2-silkscreen.jpg`, caption: c('ignis.silkscreen') },
   ]
+  // PCB viewer: one view at a time, chosen from the labelled thumbnails
   const designFiles = [
-    { src: `${P}/ignis/v2-schematic.jpg`, caption: c('ignis.schematic') },
-    { src: `${P}/ignis/v2-3d-top.jpg`, caption: c('ignis.top3d') },
-    { src: `${P}/ignis/v2-3d-side.jpg`, caption: c('ignis.side3d') },
-    { src: `${P}/ignis/v2-3d-bottom.jpg`, caption: c('ignis.bottom3d') },
-    { src: `${P}/ignis/v2-layer-top.jpg`, caption: c('ignis.layerTop') },
-    { src: `${P}/ignis/v2-layer-gnd.jpg`, caption: c('ignis.layerGnd') },
-    { src: `${P}/ignis/v2-layer-pwr.jpg`, caption: c('ignis.layerPwr') },
-    { src: `${P}/ignis/v2-layer-bottom.jpg`, caption: c('ignis.layerBottom') },
+    { src: `${P}/ignis/v2-3d-top.jpg`, caption: c('ignis.top3d'), label: '3D · top' },
+    { src: `${P}/ignis/v2-3d-side.jpg`, caption: c('ignis.side3d'), label: '3D · angled' },
+    { src: `${P}/ignis/v2-3d-bottom.jpg`, caption: c('ignis.bottom3d'), label: '3D · bottom' },
+    { src: `${P}/ignis/v2-layer-top.jpg`, caption: c('ignis.layerTop'), label: 'Top copper' },
+    { src: `${P}/ignis/v2-layer-gnd.jpg`, caption: c('ignis.layerGnd'), label: 'GND plane' },
+    { src: `${P}/ignis/v2-layer-pwr.jpg`, caption: c('ignis.layerPwr'), label: 'PWR plane' },
+    { src: `${P}/ignis/v2-layer-bottom.jpg`, caption: c('ignis.layerBottom'), label: 'Bottom copper' },
+    { src: `${P}/ignis/v2-schematic.jpg`, caption: c('ignis.schematic'), label: 'Schematic' },
   ]
   const flightPhotos = [
+    { video: `${P}/lasc/ignition-launch.mp4`, poster: `${P}/lasc/ignition-launch-poster.jpg`, caption: c('lasc.ignition') },
     { src: `${P}/lasc/avionics-bay.jpg`, caption: c('lasc.avionicsBay') },
     { src: `${P}/lasc/ignis1-on-rail.jpg`, caption: c('lasc.onRail') },
     { video: `${P}/lasc/remove-before-flight.mp4`, poster: `${P}/lasc/remove-before-flight-poster.jpg`, caption: c('lasc.rbf') },
@@ -223,11 +225,11 @@ export default function IGNIS() {
           <h3 style={h3}>{t('ignis.v2.buildTitle')}</h3>
           <p style={{ ...lead, fontSize: 14, marginBottom: 24 }}>{t('ignis.v2.buildLead')}</p>
           <div style={{ marginBottom: 64 }}>
-            <Gallery items={buildPhotos} columns={3} />
+            <Gallery items={buildPhotos} variant="carousel" />
           </div>
 
           <h3 style={h3}>{t('ignis.v2.designTitle')}</h3>
-          <Gallery items={designFiles} columns={4} aspect="16 / 10" />
+          <Gallery items={designFiles} variant="carousel" stageAspect="16 / 8" />
         </div>
       </section>
 
@@ -250,7 +252,7 @@ export default function IGNIS() {
             ))}
           </div>
 
-          <Gallery items={flightPhotos} columns={3} />
+          <Gallery items={flightPhotos} variant="carousel" />
         </div>
       </section>
 
