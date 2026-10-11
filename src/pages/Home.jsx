@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section style={{ paddingTop: 'calc(60px + 80px)', paddingBottom: 80, borderBottom: '1px solid #1a1a1a' }}>
+      <section className="hero-section" style={{ paddingTop: 'calc(60px + 80px)', paddingBottom: 80, borderBottom: '1px solid #1a1a1a' }}>
         <div
           style={{
             maxWidth: 1100, margin: '0 auto', padding: '0 24px',
@@ -44,38 +44,40 @@ export default function Home() {
           className="hero-grid"
         >
           <div>
-            {/* Mobile only: the large photo column is hidden below 768px */}
-            <img src="/photos/hero.jpg" alt="Emilio Guadarrama" className="hero-avatar" width={88} height={88} />
-            <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0}
+            {/* Phones: small photo next to the name (the photo column is hidden below 768px) */}
+            <div className="hero-id">
+            <img src="/photos/hero.jpg" alt="Emilio Guadarrama" className="hero-avatar" width={72} height={72} />
+            <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0} className="hero-name"
               style={{ fontSize: 'clamp(42px, 6.4vw, 76px)', fontWeight: 700, color: '#f0f0f0',
                 letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 20 }}>
               Emilio Guadarrama
             </motion.h1>
+            </div>
 
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1}
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1} className="hero-degree"
               style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', fontWeight: 500, color: '#f0f0f0',
                 letterSpacing: '-0.015em', lineHeight: 1.3, marginBottom: 6 }}>
               {t('hero.title')}
             </motion.div>
 
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={2}
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={2} className="hero-focus"
               style={{ fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 400, color: '#c8c8c8',
                 letterSpacing: '-0.01em', marginBottom: 24 }}>
               {t('hero.subtitle')}
             </motion.div>
 
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3}
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={3} className="hero-role"
               style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: '#b89060',
                 borderLeft: '2px solid #b89060', paddingLeft: 12, marginBottom: 28, lineHeight: 1.5 }}>
               {t('hero.role')}
             </motion.div>
 
-            <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={4}
+            <motion.p initial="hidden" animate="visible" variants={fadeUp} custom={4} className="hero-desc"
               style={{ fontSize: 15, color: '#c8c8c8', lineHeight: 1.7, maxWidth: 520, marginBottom: 36 }}>
               {t('hero.description')}
             </motion.p>
 
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={5}
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={5} className="hero-actions"
               style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'center' }}>
               <Link to="#projects"
                 onClick={() => { const el = document.getElementById('projects'); if (el) el.scrollIntoView({ behavior: 'smooth' }) }}

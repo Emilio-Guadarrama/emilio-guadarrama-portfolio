@@ -710,18 +710,29 @@ section[id] { scroll-margin-top: 60px; }
   .sat-hero > figure { max-width: 260px; margin: 0 auto !important; }
 }
 
-/* ── Home — mobile avatar (the desktop photo column is hidden on phones) */
+/* ── Home — mobile hero: photo beside the name, tighter spacing so the
+   buttons show on the first screen (desktop layout is unchanged) ───── */
 .hero-avatar { display: none; }
 @media (max-width: 768px) {
+  .hero-section { padding-top: calc(60px + 32px) !important; padding-bottom: 48px !important; }
+  .hero-id { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
   .hero-avatar {
-    display: block;
-    width: 88px; height: 88px;
-    border-radius: 50%;
-    object-fit: cover; object-position: center 12%;
+    display: block; flex-shrink: 0;
+    width: 72px; height: 72px; border-radius: 50%;
+    object-fit: cover; object-position: center 15%;
     border: 1px solid var(--border);
-    margin-bottom: 20px;
   }
+  .hero-name { font-size: clamp(34px, 10vw, 44px) !important; margin-bottom: 0 !important; }
+  .hero-degree { font-size: 18px !important; margin-bottom: 4px !important; }
+  .hero-focus { font-size: 16px !important; margin-bottom: 16px !important; }
+  .hero-role { margin-bottom: 16px !important; }
+  .hero-desc { margin-bottom: 24px !important; }
+  .hero-actions { display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px !important; }
+  .hero-actions > * { justify-content: center; padding-left: 12px !important; padding-right: 12px !important; }
+  .hero-actions > :last-child { grid-column: 1 / -1; padding: 0 !important; }
+  .hero-actions > div > button { width: 100% !important; justify-content: center; }
 }
+
 
 /* ── Home hero: direct link to the flagship project ────────────────── */
 .hero-btn-ignis {
