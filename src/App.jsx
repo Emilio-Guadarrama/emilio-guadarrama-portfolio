@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -6,14 +6,15 @@ import BootScreen from './components/BootScreen'
 import Cursor from './components/Cursor'
 import ScrollManager from './components/ScrollManager'
 import Home from './pages/Home'
-import IGNIS from './pages/IGNIS'
-import Satellite from './pages/Satellite'
-import Ignitia from './pages/Ignitia'
-import FRC from './pages/FRC'
-import WGS from './pages/WGS'
-import TECHO from './pages/TECHO'
-import FIFAWC from './pages/FIFAWC'
-import NotFound from './pages/NotFound'
+// Subpages load on demand so the first visit only downloads Home
+const IGNIS     = lazy(() => import('./pages/IGNIS'))
+const Satellite = lazy(() => import('./pages/Satellite'))
+const Ignitia   = lazy(() => import('./pages/Ignitia'))
+const FRC       = lazy(() => import('./pages/FRC'))
+const WGS       = lazy(() => import('./pages/WGS'))
+const TECHO     = lazy(() => import('./pages/TECHO'))
+const FIFAWC    = lazy(() => import('./pages/FIFAWC'))
+const NotFound  = lazy(() => import('./pages/NotFound'))
 import './App.css'
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
       }}>
         <Navbar />
         <main style={{ flex: 1 }}>
+          <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
           <Routes>
             <Route path="/"                    element={<Home />} />
             <Route path="/projects/ignis"      element={<IGNIS />} />
@@ -57,6 +59,7 @@ export default function App() {
             <Route path="/volunteering/fifa-wc"  element={<FIFAWC />} />
             <Route path="*"                      element={<NotFound />} />
           </Routes>
+          </Suspense>
         </main>
         <Footer />
       </div>
