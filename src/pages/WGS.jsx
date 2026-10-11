@@ -27,7 +27,7 @@ export default function WGS() {
                   fontSize: 11,
                   padding: '3px 8px',
                   border: '1px solid #242424',
-                  color: '#424242',
+                  color: '#8a8a8a',
                 }}
               >
                 {tag}
@@ -46,14 +46,14 @@ export default function WGS() {
           >
             {t('wgs.hero.title')}
           </h1>
-          <div style={{ fontSize: 20, color: '#424242', marginBottom: 8, fontWeight: 400 }}>
+          <div style={{ fontSize: 20, color: '#8a8a8a', marginBottom: 8, fontWeight: 400 }}>
             {t('wgs.hero.subtitle')}
           </div>
           <div
             style={{
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 12,
-              color: '#424242',
+              color: '#8a8a8a',
             }}
           >
             {t('wgs.hero.context')}
@@ -70,7 +70,7 @@ export default function WGS() {
               fontSize: 11,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: '#424242',
+              color: '#8a8a8a',
               marginBottom: 24,
             }}
           >
@@ -103,7 +103,7 @@ export default function WGS() {
                       fontSize: 10,
                       letterSpacing: '0.1em',
                       textTransform: 'uppercase',
-                      color: '#424242',
+                      color: '#8a8a8a',
                       paddingTop: 2,
                     }}
                   >
@@ -122,7 +122,7 @@ export default function WGS() {
                   fontSize: 10,
                   letterSpacing: '0.12em',
                   textTransform: 'uppercase',
-                  color: '#424242',
+                  color: '#8a8a8a',
                   marginBottom: 16,
                 }}
               >
@@ -158,7 +158,7 @@ export default function WGS() {
               fontSize: 11,
               letterSpacing: '0.12em',
               textTransform: 'uppercase',
-              color: '#424242',
+              color: '#8a8a8a',
               marginBottom: 24,
             }}
           >
@@ -184,7 +184,7 @@ export default function WGS() {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: 12, color: '#424242', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
+          <p style={{ fontSize: 12, color: '#8a8a8a', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
             {t('wgs.mediaSoon')}
           </p>
         </div>

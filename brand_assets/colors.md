@@ -10,7 +10,7 @@
 | Divider | `#1a1a1a` | Section dividers, subtle lines |
 | Text primary | `#f0f0f0` | Headings, main content |
 | Text secondary | `#c8c8c8` | Subheadings, descriptions |
-| Text muted | `#424242` | Labels, metadata, inactive |
+| Text muted | `#8a8a8a` | Labels, metadata, inactive (was #424242; raised to meet 4.5:1 contrast) |
 | Accent white | `#d8d8d8` | CTAs, primary interactive elements |
 | **Accent amber** | `#b89060` | **ONLY: FC-2026, LASC 2026, Ignitia tags** |
 | Amber bg | `#120e06` | Background behind amber elements |

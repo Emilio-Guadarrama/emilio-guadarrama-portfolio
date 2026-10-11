@@ -112,7 +112,7 @@ export default function ContactForm() {
           <div style={{
             fontFamily: "'JetBrains Mono', monospace",
             fontSize: 11, letterSpacing: '0.12em',
-            textTransform: 'uppercase', color: '#424242', marginBottom: 12,
+            textTransform: 'uppercase', color: '#8a8a8a', marginBottom: 12,
           }}>
             // Open Channel
           </div>
@@ -159,7 +159,7 @@ export default function ContactForm() {
                 ))}
                 <span style={{
                   fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 10, color: '#2a2a2a',
+                  fontSize: 10, color: '#8a8a8a',
                   letterSpacing: '0.1em', marginLeft: 8,
                 }}>
                   // MESSAGE TERMINAL — OPEN
@@ -180,7 +180,7 @@ export default function ContactForm() {
                       fontFamily: "'JetBrains Mono', monospace",
                       fontSize: 12, color: '#d8d8d8', lineHeight: 2,
                     }}>
-                      <div style={{ color: '#424242' }}>$ transmit --status</div>
+                      <div style={{ color: '#8a8a8a' }}>$ transmit --status</div>
                       <div>› Packet received</div>
                       <div>› Routing to emilio.guadarrama@outlook.com</div>
                       <div style={{ marginTop: 16, color: '#d8d8d8' }}>
@@ -193,13 +193,13 @@ export default function ContactForm() {
                           background: 'none', border: '1px solid #242424',
                           padding: '6px 14px',
                           fontFamily: "'JetBrains Mono', monospace",
-                          fontSize: 11, color: '#424242', cursor: 'pointer',
+                          fontSize: 11, color: '#8a8a8a', cursor: 'pointer',
                           letterSpacing: '0.08em',
                           transition: 'color 0.15s ease, border-color 0.15s ease',
                           borderRadius: 'var(--radius-sm)',
                         }}
                         onMouseEnter={(e) => { e.currentTarget.style.color = '#d8d8d8'; e.currentTarget.style.borderColor = '#3a3a3a' }}
-                        onMouseLeave={(e) => { e.currentTarget.style.color = '#424242'; e.currentTarget.style.borderColor = '#242424' }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = '#8a8a8a'; e.currentTarget.style.borderColor = '#242424' }}
                       >
                         › New message
                       </button>
@@ -231,7 +231,7 @@ export default function ContactForm() {
                           <div style={{
                             fontFamily: "'JetBrains Mono', monospace",
                             fontSize: 11,
-                            color: isFocused || hasVal ? '#d8d8d8' : '#2a2a2a',
+                            color: isFocused || hasVal ? '#d8d8d8' : '#8a8a8a',
                             letterSpacing: '0.06em',
                             marginBottom: 6,
                             display: 'flex', alignItems: 'center', gap: 6,
@@ -342,7 +342,7 @@ function ContactInfoRow({ Icon, label, href, isLast }) {
         transition: 'border-color 0.15s ease',
         borderRadius: 'var(--radius-sm)',
       }}>
-        <Icon size={15} color={hovered ? '#c8c8c8' : '#424242'} strokeWidth={1.75} />
+        <Icon size={15} color={hovered ? '#c8c8c8' : '#8a8a8a'} strokeWidth={1.75} />
       </div>
       <span style={{
         fontFamily: "'JetBrains Mono', monospace",
@@ -389,7 +389,7 @@ function SubmitButton({ sending }) {
         padding: '12px 20px',
         fontFamily: "'JetBrains Mono', monospace",
         fontSize: 12, fontWeight: 500,
-        color: sending ? '#424242' : hovered ? '#f0f0f0' : '#d8d8d8',
+        color: sending ? '#8a8a8a' : hovered ? '#f0f0f0' : '#d8d8d8',
         letterSpacing: '0.1em',
         cursor: sending ? 'not-allowed' : 'pointer',
         transition: 'background 0.12s ease, border-color 0.12s ease, color 0.12s ease',
