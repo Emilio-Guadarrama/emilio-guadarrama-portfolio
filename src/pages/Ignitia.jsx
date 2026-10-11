@@ -312,7 +312,7 @@ export default function Ignitia() {
           <SectionLabel>{t('ignitia.subprojects.title')}</SectionLabel>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {[
-              { name: 'FC-2026 Flight Computer', link: '/projects/fc-2026', amber: true },
+              { name: 'IGNIS Flight Computer', link: '/projects/ignis', amber: true },
               { name: 'LASC 2026 Satellite Challenge', link: '/projects/satellite', amber: true },
             ].map((sub) => (
               <Link

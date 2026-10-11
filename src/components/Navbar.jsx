@@ -11,15 +11,15 @@ import {
 /* ── Project links with icons ──────────────────────────────────────── */
 const projectLinks = [
   {
-    name: 'FC-2026 Flight Computer',
-    desc: 'Custom SRAD avionics · ESP32-S3 · LoRa',
-    link: '/projects/fc-2026',
+    name: 'IGNIS Flight Computer',
+    desc: 'Open-source avionics · flown at LASC 2026',
+    link: '/projects/ignis',
     amber: true,
     Icon: Cpu,
   },
   {
-    name: 'LASC 2026 Satellite Challenge',
-    desc: 'CanSat / PocketQube design · LASC 2026',
+    name: 'LASC 2026 CanSat',
+    desc: 'Mission Leader · 10th of 100 teams',
     link: '/projects/satellite',
     amber: true,
     Icon: Radio,
@@ -40,7 +40,7 @@ const projectLinks = [
   },
   {
     name: 'Water Growth Solutions',
-    desc: 'Smart irrigation · Arduino · React IoT',
+    desc: 'Smart irrigation · Arduino · solar power',
     link: '/projects/wgs',
     amber: false,
     Icon: Droplets,
@@ -51,7 +51,7 @@ const projectLinks = [
 const volunteeringLinks = [
   {
     name: 'TECHO México',
-    desc: 'Emergency housing · Crew Leader · Jalisco',
+    desc: 'Emergency housing · Area Monitor · Jalisco',
     link: '/volunteering/techo',
     amber: false,
     Icon: Home,

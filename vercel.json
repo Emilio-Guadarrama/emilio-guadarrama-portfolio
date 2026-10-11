@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/projects/fc-2026", "destination": "/projects/ignis", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

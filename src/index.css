@@ -116,6 +116,9 @@ textarea::placeholder {
 /* ── Home — Stats ──────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-grid > :nth-child(odd)  { padding-left: 0 !important; }
+  .stats-grid > :nth-child(even) { border-right: none !important; }
+  .stats-grid > :nth-child(-n+2) { border-bottom: 1px solid var(--divider); }
 }
 
 /* ── Home — About ──────────────────────────────────────────────────── */

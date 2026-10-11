@@ -243,7 +243,7 @@ export default function Home() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel animate mb={48}>{t('skills.title')}</SectionLabel>
           <Stagger
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}
+            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}
             className="skills-grid"
             stagger={0.08}
           >
@@ -284,6 +284,9 @@ export default function Home() {
                 <div>
                   <div style={{ fontSize: 16, fontWeight: 600, color: '#f0f0f0', marginBottom: 4 }}>{item.role}</div>
                   <div style={{ fontSize: 14, color: '#c8c8c8' }}>{item.org}</div>
+                  {item.desc && (
+                    <p style={{ fontSize: 14, color: '#c8c8c8', lineHeight: 1.7, maxWidth: 640, marginTop: 10 }}>{item.desc}</p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -320,7 +323,7 @@ export default function Home() {
                       <p style={{ fontSize: 14, color: '#c8c8c8', lineHeight: 1.7, maxWidth: 560 }}>{projects[0].desc}</p>
                     </div>
                     <div style={{ border: '1px solid #242424', overflow: 'hidden', flexShrink: 0, borderRadius: 'var(--radius-sm)' }} className="featured-pcb">
-                      <img src="/brand_assets/photos/fc2026/pcb_3d_top.png" alt="FC-2026 PCB"
+                      <img src="/brand_assets/photos/fc2026/pcb_3d_top.png" alt="IGNIS v2 flight computer board"
                         style={{ width: 200, height: 140, objectFit: 'cover', display: 'block' }} />
                     </div>
                   </div>
