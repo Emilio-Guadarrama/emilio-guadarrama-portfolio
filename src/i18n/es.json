@@ -197,6 +197,19 @@
     "video": "Video"
   },
   "captions": {
+    "techo": {
+      "hero": "Construyendo con TECHO.",
+      "group2024": "Voluntarios y familias en la primera construcción.",
+      "welcome2024": "Dando la bienvenida a una familia a su nuevo hogar.",
+      "floor2024": "Trazando la estructura del piso.",
+      "walls2025": "Levantando los paneles de muro.",
+      "handover2025": "Entrega con la familia.",
+      "crewDec2025": "La cuadrilla sobre Lomas del Refugio.",
+      "houseDec2025": "Terminando el techo.",
+      "framing2026": "Armando el marco de una ventana.",
+      "handover2026": "La casa terminada con la familia y la cuadrilla.",
+      "walls2026": "Trabajando en los muros."
+    },
     "frc": {
       "team2023": "Team Daedalus con el robot 7102, temporada 2023.",
       "intel": "Plática en Intel con el equipo.",
@@ -384,13 +397,49 @@
   "techo": {
     "hero": {
       "title": "TECHO México",
-      "role": "Voluntario → Co-Líder → Líder de Brigada",
-      "period": "Oct 2024 – Presente",
+      "role": "Voluntario → Co-Líder de Cuadrilla → Líder de Cuadrilla → Monitor de Zona",
+      "roleLabel": "Rol",
+      "period": "Ago 2024 – Presente",
+      "periodLabel": "Periodo",
       "location": "Jalisco, México",
+      "locationLabel": "Ubicación",
       "back": "← Inicio"
     },
-    "history": "Historial de Construcciones",
-    "description": "Participé en la construcción de viviendas de emergencia para familias en comunidades vulnerables. Fortalecí el trabajo en equipo, la comunicación y el liderazgo colaborando con comunidades de Jalisco."
+    "description": "Construyendo viviendas de emergencia junto con familias en comunidades vulnerables de Jalisco, primero como voluntario y después liderando cuadrillas y monitoreando las cuadrillas de toda una zona.",
+    "photosSoon": "Fotos próximamente.",
+    "builds": [
+      {
+        "num": "01",
+        "date": "Ago 2024",
+        "role": "Voluntario",
+        "place": "Comunidad Indígena Sergio Barrios, Tlajomulco"
+      },
+      {
+        "num": "02",
+        "date": "Sep 2025",
+        "role": "Co-Líder de Cuadrilla",
+        "place": "Comunidad Indígena Sergio Barrios, Tlajomulco"
+      },
+      {
+        "num": "03",
+        "date": "",
+        "role": "Líder de Cuadrilla",
+        "place": "Comunidad de Jauja, Tonalá"
+      },
+      {
+        "num": "04",
+        "date": "Dic 2025",
+        "role": "",
+        "place": "Lomas del Refugio"
+      },
+      {
+        "num": "05",
+        "date": "Sep 2026",
+        "role": "Monitor de Zona",
+        "place": "Lomas del Refugio",
+        "note": "Monitoreé las distintas cuadrillas que trabajaban en la zona."
+      }
+    ]
   },
   "fifawc": {
     "hero": {

@@ -197,6 +197,19 @@
     "video": "Video"
   },
   "captions": {
+    "techo": {
+      "hero": "Building with TECHO.",
+      "group2024": "Volunteers and families at the first build.",
+      "welcome2024": "Welcoming a family to their new home.",
+      "floor2024": "Laying out the floor frame.",
+      "walls2025": "Wall panels going up.",
+      "handover2025": "Handover with the family.",
+      "crewDec2025": "The crew above Lomas del Refugio.",
+      "houseDec2025": "Finishing the roof.",
+      "framing2026": "Framing a window.",
+      "handover2026": "The finished house with the family and crew.",
+      "walls2026": "Working on the walls."
+    },
     "frc": {
       "team2023": "Team Daedalus with robot 7102, 2023 season.",
       "intel": "Talk at Intel with the team.",
@@ -384,13 +397,49 @@
   "techo": {
     "hero": {
       "title": "TECHO México",
-      "role": "Volunteer → Crew Co-Leader → Crew Leader",
-      "period": "Oct 2024 – Present",
+      "role": "Volunteer → Crew Co-Leader → Crew Leader → Area Monitor",
+      "roleLabel": "Role",
+      "period": "Aug 2024 – Present",
+      "periodLabel": "Period",
       "location": "Jalisco, Mexico",
+      "locationLabel": "Location",
       "back": "← Home"
     },
-    "history": "Construction History",
-    "description": "Participated in the construction of emergency housing for families in vulnerable communities. Strengthened teamwork, communication, and leadership skills while collaborating with local communities across Jalisco."
+    "description": "Building emergency housing alongside families in vulnerable communities across Jalisco, first as a volunteer and later leading crews and monitoring the crews of a whole area.",
+    "photosSoon": "Photos coming soon.",
+    "builds": [
+      {
+        "num": "01",
+        "date": "Aug 2024",
+        "role": "Volunteer",
+        "place": "Comunidad Indígena Sergio Barrios, Tlajomulco"
+      },
+      {
+        "num": "02",
+        "date": "Sep 2025",
+        "role": "Crew Co-Leader",
+        "place": "Comunidad Indígena Sergio Barrios, Tlajomulco"
+      },
+      {
+        "num": "03",
+        "date": "",
+        "role": "Crew Leader",
+        "place": "Comunidad de Jauja, Tonalá"
+      },
+      {
+        "num": "04",
+        "date": "Dec 2025",
+        "role": "",
+        "place": "Lomas del Refugio"
+      },
+      {
+        "num": "05",
+        "date": "Sep 2026",
+        "role": "Area Monitor",
+        "place": "Lomas del Refugio",
+        "note": "Monitored the different crews working in the area."
+      }
+    ]
   },
   "fifawc": {
     "hero": {
