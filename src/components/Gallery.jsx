@@ -27,7 +27,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3' }) {
 
   return (
     <>
-      <div className={`gallery gallery-cols-${columns}`}>
+      <div className={`cgrid gallery gallery-cols-${columns}`}>
         {items.map((item, i) => (
           <figure key={item.video || item.src} style={{ margin: 0 }}>
             <button

@@ -107,6 +107,26 @@ textarea::placeholder {
   }
 }
 
+/* ── Centered card grid ────────────────────────────────────────────
+ * Flex grid whose last, incomplete row is centered. Set --cols per
+ * grid (and in media queries); --gap / --row-gap control spacing.
+ * ─────────────────────────────────────────────────────────────────── */
+.cgrid {
+  --cols: 3;
+  --gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--gap);
+  row-gap: var(--row-gap, var(--gap));
+}
+.cgrid > * {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+  min-width: 0;
+}
+.skills-grid, .projects-grid, .wgs-gallery { --cols: 3; }
+.ach-grid { --cols: 2; }
+
 /* ── Home — Hero ───────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .hero-grid       { grid-template-columns: 1fr !important; }
@@ -128,10 +148,10 @@ textarea::placeholder {
 
 /* ── Home — Skills ─────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .skills-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .skills-grid { --cols: 2; }
 }
 @media (max-width: 480px) {
-  .skills-grid { grid-template-columns: 1fr !important; }
+  .skills-grid { --cols: 1; }
 }
 
 /* ── Home — Experience ─────────────────────────────────────────────── */
@@ -141,16 +161,16 @@ textarea::placeholder {
 
 /* ── Home — Projects ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .projects-grid { --cols: 2; }
   .featured-pcb  { display: none !important; }
 }
 @media (max-width: 500px) {
-  .projects-grid { grid-template-columns: 1fr !important; }
+  .projects-grid { --cols: 1; }
 }
 
 /* ── Home — Achievements ───────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .ach-grid { grid-template-columns: 1fr !important; }
+  .ach-grid { --cols: 1; }
 }
 
 /* ── IGNIS tables ──────────────────────────────────────────────────── */
@@ -197,7 +217,7 @@ textarea::placeholder {
   .wgs-overview-grid { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 600px) {
-  .wgs-gallery { grid-template-columns: 1fr !important; }
+  .wgs-gallery { --cols: 1; }
 }
 
 /* ── TECHO ─────────────────────────────────────────────────────────── */
@@ -223,13 +243,11 @@ textarea::placeholder {
 }
 
 /* ── Gallery + lightbox ────────────────────────────────────────────── */
-.gallery {
-  display: grid;
-  gap: 24px 8px;
-}
-.gallery-cols-2 { grid-template-columns: repeat(2, 1fr); }
-.gallery-cols-3 { grid-template-columns: repeat(3, 1fr); }
-.gallery-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.gallery { --row-gap: 24px; }
+.gallery-cols-1 { --cols: 1; }
+.gallery-cols-2 { --cols: 2; }
+.gallery-cols-3 { --cols: 3; }
+.gallery-cols-4 { --cols: 4; }
 
 .gallery-thumb {
   position: relative;
@@ -347,14 +365,14 @@ textarea::placeholder {
 .lightbox-next { right: 16px; }
 
 @media (max-width: 768px) {
-  .gallery-cols-3, .gallery-cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .gallery-cols-3, .gallery-cols-4 { --cols: 2; }
   .lightbox { padding: 56px 16px 72px; }
   .lightbox-prev, .lightbox-next { top: auto; bottom: 16px; transform: none; }
   .lightbox-prev { left: calc(50% - 48px); }
   .lightbox-next { right: calc(50% - 48px); }
 }
 @media (max-width: 480px) {
-  .gallery-cols-2, .gallery-cols-3, .gallery-cols-4 { grid-template-columns: 1fr; }
+  .gallery-cols-2, .gallery-cols-3, .gallery-cols-4 { --cols: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .gallery-thumb img { transition: none; }
