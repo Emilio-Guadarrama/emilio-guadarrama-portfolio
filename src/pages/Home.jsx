@@ -240,17 +240,17 @@ export default function Home() {
       </section>
 
       {/* ── EXPERIENCE ───────────────────────────────────────────────── */}
-      <section id="experience" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
+      <section id="experience" style={{ padding: '80px 0 64px', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel animate mb={48}>{t('experience.title')}</SectionLabel>
+          <SectionLabel animate mb={32}>{t('experience.title')}</SectionLabel>
           <Experience items={expItems} />
         </div>
       </section>
 
       {/* ── TECHNICAL SKILLS ─────────────────────────────────────────── */}
-      <section id="skills" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
+      <section id="skills" style={{ padding: '48px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel animate mb={48}>{t('skills.title')}</SectionLabel>
+          <SectionLabel animate mb={20}>{t('skills.title')}</SectionLabel>
           <Reveal>
             <dl className="skills-list">
               {Array.isArray(skillGroups) && skillGroups.map((group) => (
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* ── PROJECTS ─────────────────────────────────────────────────── */}
-      <section id="projects" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
+      <section id="projects" style={{ padding: '72px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel animate mb={48}>{t('projects.title')}</SectionLabel>
 

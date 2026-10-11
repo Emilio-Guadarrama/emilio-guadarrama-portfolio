@@ -10,7 +10,7 @@
   "hero": {
     "title": "Estudiante de Ingeniería en Electrónica y Semiconductores",
     "subtitle": "Hardware Embebido y Diseño de PCB",
-    "role": "Vicepresidente y Líder de Aviónica/Electrónica en Ignitia Rocket Lab · Tec de Monterrey",
+    "role": "Vicepresidente y Líder de Electrónica y Aviónica en Ignitia Rocket Lab · Tec de Monterrey",
     "description": "Diseñador principal de IGNIS, una computadora de vuelo de código abierto para cohetes que voló en LASC 2026, con experiencia práctica en captura de esquemáticos, layout multicapa, puesta en marcha, análisis de datos de vuelo y diseño para manufactura.",
     "viewProjects": "Ver Proyectos",
     "downloadCV": "Descargar CV"
@@ -56,7 +56,7 @@
         "location": "Zapopan, Jalisco",
         "roles": [
           {
-            "title": "Vicepresidente y Líder de Electrónica/Aviónica",
+            "title": "Vicepresidente y Líder de Electrónica y Aviónica",
             "period": "Ene 2026 – Feb 2027",
             "bullets": [
               "Vicepresidente de un equipo de 30 integrantes; lidero el área de electrónica de 9 personas y capacito a nuevos integrantes en diseño y ensamble de computadoras de vuelo.",
@@ -89,30 +89,19 @@
         "roles": [
           {
             "title": "Líder Mecánico y Mentor",
-            "period": "2025 · Reefscape",
-            "bullets": [
-              "Dirigí la manufactura del equipo y fui mentor de nuevos integrantes en los regionales de Monterrey y León."
-            ],
-            "image": "/photos/frc/2025-pits.jpg",
-            "imageAlt": "Trabajando en pits, 2025"
+            "period": "2025"
           },
           {
             "title": "Líder Mecánico",
-            "period": "2024 · Crescendo",
-            "bullets": [
-              "Dirigí la manufactura y formé parte del drive team. Ganamos el Regional Hermosillo y clasificamos al FIRST World Championship en Houston."
-            ],
-            "image": "/photos/frc/2024-hermosillo-winners.jpg",
-            "imageAlt": "Ganadores del Regional Hermosillo 2024"
+            "period": "2024"
           },
           {
             "title": "Técnico de Robótica",
-            "period": "2023 · Charged Up",
-            "bullets": [
-              "Drive team, scouting y mantenimiento mecánico."
-            ]
+            "period": "2023"
           }
-        ]
+        ],
+        "compact": true,
+        "summary": "Tres temporadas en la preparatoria, de técnico a Líder Mecánico. Ganamos el Regional Hermosillo 2024 y clasificamos al FIRST World Championship en Houston."
       }
     ]
   },
@@ -379,7 +368,7 @@
       "back": "← Inicio"
     },
     "roleLabel": "Rol de Emilio",
-    "role": "Vicepresidente y Líder de Aviónica/Electrónica · equipo de 30 integrantes · lidera el área de electrónica de 9 personas y capacita a nuevos integrantes en diseño y ensamble de computadoras de vuelo",
+    "role": "Vicepresidente y Líder de Electrónica y Aviónica · equipo de 30 integrantes · lidera el área de electrónica de 9 personas y capacita a nuevos integrantes en diseño y ensamble de computadoras de vuelo",
     "sectionsLabel": "Secciones",
     "lasc": {
       "title": "LASC 2026 · Brasil",
