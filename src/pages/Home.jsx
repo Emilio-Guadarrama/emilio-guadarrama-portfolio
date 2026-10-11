@@ -323,7 +323,7 @@ export default function Home() {
                       <p style={{ fontSize: 14, color: '#c8c8c8', lineHeight: 1.7, maxWidth: 560 }}>{projects[0].desc}</p>
                     </div>
                     <div style={{ border: '1px solid #242424', overflow: 'hidden', flexShrink: 0, borderRadius: 'var(--radius-sm)' }} className="featured-pcb">
-                      <img src="/brand_assets/photos/fc2026/pcb_3d_top.png" alt="IGNIS v2 flight computer board"
+                      <img src="/photos/ignis/v2-board.jpg" alt="IGNIS v2 flight computer board"
                         style={{ width: 200, height: 140, objectFit: 'cover', display: 'block' }} />
                     </div>
                   </div>
