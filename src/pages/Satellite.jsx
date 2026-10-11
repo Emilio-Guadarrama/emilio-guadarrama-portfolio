@@ -25,6 +25,8 @@ export default function Satellite() {
       <section style={{ padding: '64px 0', borderBottom: '1px solid var(--divider)' }}>
         <div style={wrap}>
           <Link to="/" className="back-link">{t('satellite.hero.back')}</Link>
+          <div className="sat-hero">
+          <div>
           <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
             <Tag amber>LASC 2026</Tag>
             <Tag>Ignitia Rocket Lab</Tag>
@@ -39,6 +41,12 @@ export default function Satellite() {
               9<span style={{ fontSize: '0.45em', letterSpacing: 0 }}>{t('satellite.hero.ordinal')}</span>
             </div>
             <div style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '32ch' }}>{t('satellite.hero.result')}</div>
+          </div>
+          </div>
+          <figure style={{ margin: 0 }}>
+            <img src="/photos/lasc/patch-cansat.png" alt={t('ignitia.lasc.patchCansat')} className="sat-patch" />
+            <figcaption className="gallery-caption" style={{ textAlign: 'center', margin: '12px auto 0' }}>{t('ignitia.lasc.patchCansat')}</figcaption>
+          </figure>
           </div>
         </div>
       </section>

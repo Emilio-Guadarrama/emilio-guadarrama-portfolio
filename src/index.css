@@ -701,3 +701,11 @@ section[id] { scroll-margin-top: 60px; }
 @media (max-width: 600px) {
   .skills-row { grid-template-columns: 1fr; gap: 10px; }
 }
+
+/* ── Satellite hero: text left, mission patch right ────────────────── */
+.sat-hero { display: grid; grid-template-columns: 1fr 300px; gap: 56px; align-items: center; }
+.sat-patch { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; }
+@media (max-width: 900px) {
+  .sat-hero { grid-template-columns: 1fr; gap: 40px; }
+  .sat-hero > figure { max-width: 260px; margin: 0 auto !important; }
+}

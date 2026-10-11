@@ -75,6 +75,8 @@ export default function Ignitia() {
       <section style={{ padding: '64px 0', borderBottom: '1px solid var(--divider)' }}>
         <div style={wrap}>
           <Link to="/" className="back-link">{t('ignitia.hero.back')}</Link>
+          <div className="techo-hero">
+          <div>
           <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
             <Tag amber>LASC 2026</Tag>
             <Tag>Rocketry</Tag>
@@ -94,6 +96,9 @@ export default function Ignitia() {
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <a href={LINKS.website} target="_blank" rel="noopener noreferrer" className="ext-link">ignitia.space ↗</a>
             <a href={LINKS.instagram} target="_blank" rel="noopener noreferrer" className="ext-link">Instagram · @ignitia.rocketlab ↗</a>
+          </div>
+          </div>
+          <Gallery items={[{ src: `${P}/ignis/v2-silkscreen.jpg`, caption: c('ignis.silkscreen') }]} columns={1} aspect="1 / 1" />
           </div>
         </div>
       </section>

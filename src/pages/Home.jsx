@@ -43,21 +43,21 @@ export default function Home() {
           className="hero-grid"
         >
           <div>
-            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}
-              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 500,
-                letterSpacing: '0.12em', textTransform: 'uppercase', color: '#424242', marginBottom: 20 }}>
-              Emilio Guadarrama Gutiérrez
-            </motion.div>
-
-            <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1}
-              style={{ fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 700, color: '#f0f0f0',
-                letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: 8 }}>
-              {t('hero.title')}
+            <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0}
+              style={{ fontSize: 'clamp(42px, 6.4vw, 76px)', fontWeight: 700, color: '#f0f0f0',
+                letterSpacing: '-0.04em', lineHeight: 1, marginBottom: 20 }}>
+              Emilio Guadarrama<br />Gutiérrez
             </motion.h1>
 
+            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={1}
+              style={{ fontSize: 'clamp(19px, 2.4vw, 24px)', fontWeight: 500, color: '#f0f0f0',
+                letterSpacing: '-0.015em', lineHeight: 1.3, marginBottom: 6 }}>
+              {t('hero.title')}
+            </motion.div>
+
             <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={2}
-              style={{ fontSize: 'clamp(20px, 3vw, 28px)', fontWeight: 400, color: '#c8c8c8',
-                letterSpacing: '-0.02em', marginBottom: 24 }}>
+              style={{ fontSize: 'clamp(16px, 2vw, 19px)', fontWeight: 400, color: '#c8c8c8',
+                letterSpacing: '-0.01em', marginBottom: 24 }}>
               {t('hero.subtitle')}
             </motion.div>
 
