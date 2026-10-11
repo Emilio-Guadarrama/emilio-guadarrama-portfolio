@@ -40,15 +40,3 @@ export function Stagger({ children, stagger = 0.07, delayChildren = 0, className
     </motion.div>
   )
 }
-
-/** Variant object for direct children of <Stagger> */
-export const staggerItem = {
-  hidden:  { opacity: 0, y: 18 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
-}
-
-/** Variant for horizontal slide (e.g. experience rows from left) */
-export const slideItem = {
-  hidden:  { opacity: 0, x: -16 },
-  visible: { opacity: 1, x: 0,  transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
-}

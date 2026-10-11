@@ -216,14 +216,17 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  // Close everything on route change
-  useEffect(() => {
+  // Close everything on route change (reset during render, as React recommends
+  // for state derived from a changing value, instead of in an effect)
+  const [lastPath, setLastPath] = useState(location.pathname)
+  if (lastPath !== location.pathname) {
+    setLastPath(location.pathname)
     setMenuOpen(false)
     setDropOpen(false)
     setVolDropOpen(false)
     setMobileProjects(false)
     setMobileVolunteering(false)
-  }, [location.pathname])
+  }
 
   const toggleLang = () =>
     i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')
@@ -246,18 +249,18 @@ export default function Navbar() {
 
   // Keyboard support for the hover menus: focusing the trigger opens the
   // menu, Tab walks into its links, and leaving the group or Escape closes it
-  const escClosed = useRef(false) // focus returned by Escape must not reopen the menu
-  const kbdMenu = (open, close, setOpen) => ({
-    onFocus: () => { if (!escClosed.current) open() },
+  // data-esc-closed: focus returned by Escape must not reopen the menu
+  const kbdMenu = (setOpen) => ({
+    onFocus: (e) => { if (!e.currentTarget.dataset.escClosed) setOpen(true) },
     onBlur: (e) => {
       if (!e.currentTarget.contains(e.relatedTarget)) {
-        escClosed.current = false
+        delete e.currentTarget.dataset.escClosed
         setOpen(false)
       }
     },
     onKeyDown: (e) => {
       if (e.key === 'Escape') {
-        escClosed.current = true
+        e.currentTarget.dataset.escClosed = '1'
         setOpen(false)
         e.currentTarget.querySelector('button')?.focus()
       }
@@ -319,7 +322,7 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openDrop}
               onMouseLeave={closeDrop}
-              {...kbdMenu(openDrop, closeDrop, setDropOpen)}
+              {...kbdMenu(setDropOpen)}
             >
               <NavPill
                 active={dropOpen}
@@ -400,7 +403,7 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openVolDrop}
               onMouseLeave={closeVolDrop}
-              {...kbdMenu(openVolDrop, closeVolDrop, setVolDropOpen)}
+              {...kbdMenu(setVolDropOpen)}
             >
               <NavPill
                 active={volDropOpen}
@@ -501,7 +504,7 @@ export default function Navbar() {
               style={{ position: 'relative' }}
               onMouseEnter={openCvDrop}
               onMouseLeave={closeCvDrop}
-              {...kbdMenu(openCvDrop, closeCvDrop, setCvDropOpen)}
+              {...kbdMenu(setCvDropOpen)}
             >
               <button
                 type="button"

@@ -7,7 +7,8 @@
  * ─────────────────────────────────────────────────────────────────── */
 
 import { motion } from 'framer-motion'
-import { Stagger, staggerItem } from './Reveal'
+import { Stagger } from './Reveal'
+import { staggerItem } from './variants'
 
 const mono = { fontFamily: 'var(--font-mono)' }
 

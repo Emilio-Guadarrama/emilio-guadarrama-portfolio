@@ -19,13 +19,10 @@ export default function Cursor() {
 
   const [hovering, setHovering] = useState(false)
   const [visible,  setVisible]  = useState(false)
-  const [isTouch,  setIsTouch]  = useState(false)
+  const [isTouch] = useState(() => window.matchMedia('(pointer: coarse)').matches)
 
   useEffect(() => {
-    if (window.matchMedia('(pointer: coarse)').matches) {
-      setIsTouch(true)
-      return
-    }
+    if (isTouch) return
 
     const el = crossRef.current
 
@@ -57,7 +54,7 @@ export default function Cursor() {
       document.documentElement.removeEventListener('mouseleave', onLeave)
       document.documentElement.removeEventListener('mouseenter', onEnter)
     }
-  }, [])
+  }, [isTouch, mouseX, mouseY])
 
   if (isTouch) return null
 
