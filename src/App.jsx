@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import BootScreen from './components/BootScreen'
 import Cursor from './components/Cursor'
+import ScrollManager from './components/ScrollManager'
 import Home from './pages/Home'
 import IGNIS from './pages/IGNIS'
 import Satellite from './pages/Satellite'
@@ -28,6 +29,7 @@ export default function App() {
 
   return (
     <>
+      <ScrollManager />
       <Cursor />
       {!booted && <BootScreen onDone={handleBootDone} />}
 

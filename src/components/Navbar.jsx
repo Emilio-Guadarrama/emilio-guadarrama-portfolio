@@ -268,13 +268,19 @@ export default function Navbar() {
         }}>
 
           {/* ── Logo */}
-          <Link to="/" style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            fontWeight: 700, fontSize: 16, color: '#f0f0f0',
-            letterSpacing: '0.06em', textDecoration: 'none',
-            flexShrink: 0,
-          }}>
-            EG
+          <Link
+            to="/"
+            className="nav-logo"
+            aria-label="Emilio Guadarrama — Home"
+            onClick={(e) => {
+              if (isHome) {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+                if (window.location.hash) window.history.replaceState(null, '', '/')
+              }
+            }}
+          >
+            <img src="/logo.png" alt="" width={32} height={32} />
           </Link>
 
           {/* ── Desktop nav */}
