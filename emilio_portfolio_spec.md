@@ -39,7 +39,7 @@ Text secondary:   #c8c8c8
 Text muted:       #424242
 
 Accent white:     #d8d8d8   (headings, CTAs, primary interactive elements)
-Accent amber:     #b89060   (ONLY for Ignitia / competition tags: FC-2026, LASC 2026)
+Accent amber:     #b89060   (ONLY for Ignitia / competition tags: IGNIS, LASC 2026)
 Amber tint bg:    #120e06   (background behind amber-tagged elements)
 Amber tint border:#28200e
 ```
@@ -64,9 +64,9 @@ Technical font:   JetBrains Mono
 
 ### Navbar
 - Logo: `EG` — links to `/`
-- Nav links: About · Projects · Experience · Contact
+- Nav links: About · Experience · Contact · Projects (dropdown) · Volunteering (dropdown)
 - Language toggle: `EN / ES` — remembers preference in localStorage
-- CTA button: `Download CV` — links to PDF (placeholder until PDF is added)
+- CTA button: `Download CV` — dropdown with English and Spanish PDFs
 
 ### Footer
 - Name + role
@@ -79,17 +79,22 @@ Technical font:   JetBrains Mono
 
 ```
 / ................................ Home (single-page scroll)
-/projects/fc-2026 ............... FC-2026 Flight Computer (flagship)
-/projects/satellite ............. LASC 2026 Satellite Challenge
+/projects/ignis ................. IGNIS Flight Computer (flagship)
+/projects/fc-2026 ............... redirects to /projects/ignis (old URL)
+/projects/satellite ............. LASC 2026 CanSat — Satellite Challenge
 /projects/ignitia ............... Ignitia Rocket Lab hub
 /projects/frc ................... FIRST Robotics Competition
 /projects/wgs ................... Water Growth Solutions
 /volunteering/techo ............. TECHO México
+/volunteering/fifa-wc ........... FIFA World Cup 2026™ volunteer
 ```
 
 ---
 
 ## 6. Page Content
+
+> Source of truth for degree, experience, projects, skills and awards: Emilio's CV
+> (`brand_assets/Resume_English.pdf`). Hardware tables come from the public IGNIS repos.
 
 ---
 
@@ -97,205 +102,181 @@ Technical font:   JetBrains Mono
 
 #### Hero
 - **Name:** Emilio Guadarrama Gutiérrez
-- **Title:** Electronics and Semiconductor Engineering Student — Electronics & Embedded Systems
-- **Subtitle:** VP & Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey
-- **Description:** "Electronics and Semiconductor Engineering student at Tecnológico de Monterrey focused on electronics, embedded systems, and PCB design. Leading the avionics division of Ignitia Rocket Lab for LASC 2026."
-- **Photo:** `Foto_ID_-_copia.png` (high-res formal headshot)
+- **Title:** Electronics and Semiconductor Engineering Student
+- **Subtitle:** Embedded Hardware & PCB Design
+- **Role line:** Vice President & Avionics/Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey
+- **Description:** "Lead designer of IGNIS, an open-source rocket flight computer flown at LASC 2026, with hands-on work in schematic capture, multilayer layout, bring-up, flight-data analysis and design for manufacturing."
+- **Photo:** `brand_assets/photos/hero/photo.png`
 - **Buttons:** View Projects · GitHub · LinkedIn · Download CV
 
 #### Stats Bar
 | Value | Label |
 |---|---|
-| FC-2026 | Flight computer in development |
-| 1 km | LASC 2026 target apogee |
-| 4+ | Competition achievements |
-| 3 yr | Robotics competition experience |
+| IGNIS | Flight computer flown at LASC 2026 (amber) |
+| 10th / 100 | LASC 2026 Satellite Challenge |
+| v1 → v5 | IGNIS hardware revisions |
+| 3 yr | FIRST Robotics experience |
 
 #### About
-- **Bio:** "I am a Electronics and Semiconductor Engineering student at Tecnológico de Monterrey with a strong focus on electronics, embedded systems, and PCB design. My experience in robotics, rocketry, and leadership roles has helped me develop analytical thinking, teamwork, and innovation skills. I aim to contribute to multidisciplinary projects that merge technology, automation, and design."
-- **Education:** Tecnológico de Monterrey · B.S. Electronics and Semiconductor Engineering · Aug 2025 – Jun 2029 (expected)
-- **Languages:** Spanish (Native) · English (C1 — TOEFL iBT 98) · German (Elementary)
+- **Bio:** "I'm an Electronics and Semiconductor Engineering student at Tecnológico de Monterrey. I design, build and fly rocket flight computers, from multilayer PCB design to lab bring-up, flight testing and failure analysis. Before university I spent three seasons in FIRST Robotics, going from technician to Mechanical Lead."
+- **Education:** Tecnológico de Monterrey, Campus Guadalajara · B.S. Electronics and Semiconductor Engineering · Aug 2025 – Jun 2029 (expected)
+- **Languages:** Spanish (Native) · English (C1 — TOEFL iBT 99) · German (Elementary)
 
 #### Technical Skills
 | Group | Skills |
 |---|---|
-| Hardware | PCB Design · Altium Designer · Embedded Systems · ESP32 / ESP32-S3 |
-| Firmware | C · C++ · Arduino · UART / SPI / I2C · IoT Systems |
-| Software | Python · React · Git |
-| Tools | Altium Designer · JLCPCB / PCBWay workflow · Reflow soldering |
+| Hardware & PCB | Altium Designer · Schematic capture · 4-layer PCB layout · RF layout · Power distribution · BOM management |
+| Embedded | ESP32-S3 · C/C++ · Arduino · SPI · I2C · UART · USB · LoRa (RFM95W/SX1276) · GNSS · Sensor integration |
+| Lab & Test | Oscilloscope · Signal generator · Bench power supply · Multimeter · Board bring-up · Failure analysis |
+| Assembly & Manufacturing | DFM for turnkey SMT (JLCPCB/LCSC) · Stencil printing · Reflow oven · Soldering & hot-air rework |
+| Software & Tools | KiCad · LTspice · NI Multisim · Verilog · Python (pandas, PySide6) · Git / GitHub |
 
 #### Experience Timeline
 | Period | Role | Organization |
 |---|---|---|
-| Aug 2025 – Present | VP & Electronics Lead | Ignitia Rocket Lab |
+| Aug 2025 – Present | Vice President & Avionics/Electronics Lead | Ignitia Rocket Lab — 30-member team, leads the 9-member electronics area |
 | Jan 2023 – May 2025 | Mechanical Lead & Mentor | FIRST Robotics — Team Daedalus |
 | Aug 2024 – Jun 2025 | Under-Secretary-General | TECMUN GDL |
 
 #### Featured Projects Grid
 | Project | Tag | Link |
 |---|---|---|
-| FC-2026 Flight Computer | LASC 2026 · Active | `/projects/fc-2026` |
-| LASC 2026 Satellite Challenge | LASC 2026 · Upcoming | `/projects/satellite` |
+| IGNIS Flight Computer | LASC 2026 · Flown | `/projects/ignis` |
+| LASC 2026 CanSat | LASC 2026 · 10th of 100 | `/projects/satellite` |
 | Ignitia Rocket Lab | Rocketry | `/projects/ignitia` |
 | FIRST Robotics — Team Daedalus | Robotics | `/projects/frc` |
 | Water Growth Solutions | IoT · Sustainability | `/projects/wgs` |
 | TECHO México | Volunteering | `/volunteering/techo` |
 
-> FC-2026 is the featured/large card. All others are standard size.
+> IGNIS is the featured/large card. All others are standard size.
 
-#### Achievements
-- ENMICE 2025 — 2nd place project presentation (WIRIKUTA 1.1) + Honorific conduct award
-- Engineering Expo TEC 2025 — 1st place Physical Prototype category
-- ENMICE 2023–2024 — Technical Excellence Award (WATAKAME IA)
-- Spaceport America Cup 2023 — First Mexican team to complete full mission profile (rank 79)
-- TOEFL iBT — Score 98 · C1 CEFR · ETS · April 2025
-- Honorific Mention — Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025
+#### Achievements (Emilio's own — team awards from before Aug 2025 live only on the Ignitia timeline)
+- LASC 2026 — 10th of 100 teams, Satellite Challenge (CanSat Mission Leader)
+- FIRST World Championship qualifier — Hermosillo Regional winner, 2024
+- ENMICE 2025 — 2nd place, project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct
+- Tec de Monterrey Engineering Expo 2025 — 1st place, Physical Prototype (Ignitia Rocket Lab)
+- TOEFL iBT — Score 99 · C1 CEFR · ETS · April 2025
+- Advanced Robotics Course — Asociación de Robótica Aplicada y Ciencias de la Tecnología (UNAM) · July 2024 · 45 h · Final grade 10/10
+- Honorable Mention — Bicultural High School · GPA 96/100 · Tec de Monterrey · May 2025
 
 #### Contact
 - Email: emilio.guadarrama@outlook.com
 - GitHub: https://github.com/Emilio-Guadarrama
 - LinkedIn: https://www.linkedin.com/in/emilioguadarrama/
-- Location: Zapopan, Jalisco, Mexico
+- Location: Monterrey, Nuevo León, Mexico
 
 ---
 
-### 6.2 FC-2026 Flight Computer `/projects/fc-2026`
+### 6.2 IGNIS Flight Computer `/projects/ignis`
 
-#### Hero Banner
-- **Title:** FC-2026 Flight Computer
-- **Subtitle:** Ignitia Rocket Lab · LASC 2026 · Avionics
-- **Status badge:** Schematic Design In Progress
-- **Images:** 4 PCB renders (3D top, 3D angle, 3D bottom, 2D layout)
-
-#### Project Overview
-- **What:** Custom SRAD flight computer for LASC 2026 Rocket Challenge (1 km apogee, solid propulsion)
-- **Role:** Project lead (electronics) — full schematic design and PCB layout in Altium Designer
-- **Partner:** Aristoteles Prieto (pyro circuit sheet)
-- **PCB manufacturer:** JLCPCB or PCBWay — team solders components
-- **Reflow oven:** LPKF ZelFlow R04 · SAC305 lead-free solder
-- **Board:** Rectangular · fits 76mm inner diameter airframe
-
-#### System Architecture
-```
-Battery (2S3P LiPo — 7.4V nominal / 8.4V max / 6,600mAh)
-  └─► Power System (Dual AMS1117 series)
-        ├─► VCC_5V ──► WS2812B RGB LEDs (x3) · Buzzer CMI-1275C
-        └─► VCC_3V3 ──► MCU (ESP32-S3-WROOM-1-N8R8)
-                          ├─► Sensors (I2C)
-                          │     ├─ MPU6050 — IMU 6-DOF — 0x68
-                          │     ├─ BMP180 — Barometer — 0x77
-                          │     └─ SHT40-AD1B-R2 — Temp/Humidity — 0x44
-                          ├─► Telemetry (SPI)
-                          │     └─ RFM95W-915S2 — LoRa 915MHz — SMA antenna
-                          ├─► Navigation (UART)
-                          │     └─ PA1616S GPS — 9600 baud — NMEA
-                          ├─► Storage (SPI)
-                          │     └─ MicroSD (MSD-11-A)
-                          ├─► Recovery (Pyro)
-                          │     ├─ CH1 — Drogue — IRLML2502 MOSFET — fires at apogee
-                          │     └─ CH2 — Main — IRLML2502 MOSFET — fires at ~300m AGL
-                          ├─► Indicators
-                          │     ├─ WS2812B RGB LEDs (IO6)
-                          │     └─ Buzzer (IO14 PWM)
-                          └─► Interface
-                                └─ USB-C (native USB 1.1 OTG — IO19/IO20)
-
-Redundancy (independent):
-  └─► RRC3 Altimeter (Missile Works COTS) — MS5607 — up to 15 flights at 20Hz
-```
-
-#### Subsystems Detail
-
-**Power System**
-- Battery: 2S3P LiPo — 7.4V nominal / 8.4V max / 6.0V cutoff / 6,600mAh
-- Connector: XT30 or JST-PH
-- Stage 1: AMS1117-5.0 LDO (SOT-223) — VBAT → VCC_5V — 10µF + 100nF in/out
-- Stage 2: AMS1117-3.3 LDO (SOT-223) — VCC_5V → VCC_3V3 — 10µF + 100nF in/out
-- Battery monitor: 100kΩ / 47kΩ voltage divider → IO3 (ADC) — max 2.69V at 8.4V
-- Pyro rail: direct VBAT via arm switch (hardware disconnect)
-
-**Sensors — I2C Bus (IO21 SDA / IO38 SCL)**
-- Pull-ups: 4.7kΩ on SCL and SDA — on MCU sheet only
-- MPU6050: 6-DOF IMU · address 0x68 · AD0 pull-down 10kΩ · INT → IO46
-- BMP180: Barometer · address 0x77 · CSB pull-up to VCC_3V3 · near pressure vent
-- SHT40-AD1B-R2: Temp & Humidity · address 0x44 · 100nF decoupling
-
-**Telemetry**
-- RFM95W-915S2: LoRa 915MHz
-- Interface: SPI (shared bus with SD)
-- CS: IO10 · INT DIO0: IO7 · RESET: IO8
-- Antenna: SMA connector (BWSMA-KE-Z001) — 50Ω impedance
-- Decoupling: 10µF + 100nF on 3.3V pin
-
-**Recovery (Pyro — Aristoteles Prieto)**
-- CH1: Drogue parachute — fires at apogee — gate IO4 — continuity IO1
-- CH2: Main parachute — fires at ~300m AGL — gate IO5 — continuity IO2
-- MOSFET: IRLML2502 (SOT-23, logic-level, 20V/4.2A) — 100Ω gate resistor
-- Continuity sensing: 10kΩ pull-up + BZX84C3V3 Zener protection
-- Pyro rail cap: 470µF/16V electrolytic
-- Arm switch: IO47 — hardware disconnect in series with VBAT → pyro rail
-- Connectors: JST-XH 2-pin locking per channel
-
-**Navigation & Logging**
-- GPS: PA1616S — UART 9600 baud — NMEA — IO17 TX / IO18 RX
-- GPS EN: pulled HIGH via 10kΩ (always on)
-- MicroSD: MSD-11-A — SPI — CS: IO9 — Detect: IO42
-- SD pull-ups: 10kΩ on MOSI/MISO/CLK
-
-**Redundancy**
-- RRC3 (Missile Works) — barometric dual-deploy altimeter
-- Operates fully independently from FC-2026
-- MS5607 pressure sensor — records up to 15 flights at 20Hz altitude/velocity
-
-#### Key Design Decisions
-| Decision | Reason |
-|---|---|
-| ESP32-S3 as MCU | Native USB 1.1 OTG (no CH340C), dual-core LX7 240MHz, 8MB Octal PSRAM for flight logging |
-| Dual AMS1117 instead of XL4005 buck | XL4005 not available in Mexico; thermal analysis: 0.95W on 5V stage, 0.68W on 3.3V — acceptable for short flight duration |
-| LoRa 915MHz | Long range, low power, license-free band in Latin America |
-| Rectangular PCB | Changed from circular — better component placement, easier manufacturing |
-| I2C pull-ups on MCU sheet only | Prevents conflicts in hierarchical Altium schematic |
-
-#### PCB Gallery
-- `Screenshot_2026-04-10_075237.png` — 3D top view (front face, Ignitia branding)
-- `Screenshot_2026-04-11_112025.png` — 3D angled view (full board perspective)
-- `Screenshot_2026-04-11_112053.png` — 3D bottom view (back face)
-- `Screenshot_2026-04-11_112114.png` — PCB layout (Altium 2D)
-- Placeholder slots for future renders when design is complete
-
-#### Status Tracker
-```
-[●] Schematic Design    ← current
-[ ] PCB Layout
-[ ] Gerber Review
-[ ] Manufacturing
-[ ] Assembly & Testing
-[ ] LASC 2026 — September 2026 · Iacanga, São Paulo, Brazil
-```
-
-#### Documents & Resources
-- Download Technical Report — placeholder, PDF when ready
-- GitHub Repository — link when ready (to be created by Emilio)
-- LASC 2026 — external competition link
-
----
-
-### 6.3 Satellite Challenge `/projects/satellite`
+Structured like the CV's technical portfolio: one revision timeline for v1–v5, with
+**v2 / v2.2** (the flight hardware) and **v5** (the manufacturing redesign) as the two main sections.
 
 #### Hero
-- **Title:** LASC 2026 Satellite Challenge
-- **Status:** In Development
+- **Title:** IGNIS Flight Computer
+- **Subtitle:** Open-source rocket flight computer · Ignitia Rocket Lab · 2025 – Present
+- **Tags:** IGNIS · LASC 2026 (amber) · Avionics · Open source
+- **Status:** v2.2 flown at LASC 2026 · v5 redesigned for turnkey assembly
+- **Intro:** "Custom flight computer for student rocketry: it senses the flight, detects apogee in real time, fires the recovery charges, streams LoRa telemetry and logs every sample. Each revision was driven by findings from the one before it."
+- **Role:** Lead hardware designer — architecture, schematics, 4-layer PCB layout in Altium Designer, RF and power design, sourcing, bring-up and lab debugging.
+- **Pyro circuit / co-developer:** Javier Aristóteles Prieto Flores
+
+#### Revision Timeline
+| Rev | Status |
+|---|---|
+| v1 | Fabricated; too large for the rocket, redesigned before assembly |
+| v2 | First assembled; bring-up found schematic errors |
+| v2.2 | Corrected revision; primary flight computer at LASC 2026 |
+| v3 | Incremental update; never fabricated |
+| v4 | Two units built; halted by part availability and a USB-C net error |
+| v5 | Sourcing-first, all-SMD, turnkey; Ø75 mm board (2027) |
+
+#### v2 / v2.2 — Flight hardware
+Hardware (from the IGNIS v2 repo):
+| Block | Component |
+|---|---|
+| MCU | ESP32-S3-WROOM-1-N8R8 |
+| RF telemetry | RFM95W — 915 MHz LoRa — SMA antenna |
+| Barometer | BMP180 |
+| IMU | MPU-6050 (6-DOF) |
+| GPS | Adafruit Ultimate GPS breakout |
+| Storage | MicroSD — SPI |
+| Power | Dual AMS1117 · VBAT → 5 V → 3.3 V |
+| Pyro | 2-channel MOSFET deployment |
+| PCB | 4-layer · Altium Designer · JLCPCB fab · assembled in-house |
+
+v2 → v2.2 changes (from Emilio's notes):
+- Removed the SHT40 — humidity wasn't useful for avionics; temperature already comes from the barometer.
+- Corrected the barometer configuration on the I²C bus after finding how one of its interface pins had been handled in v2.
+- Fixed the footprint of the addressable RGB LEDs, which didn't match the real part.
+- Added hardware continuity LEDs to both recovery channels for an immediate visual check on the board.
+
+Build & test: assembled in-house (laser-cut stencil, reflow, rework); bench-tested the pyro channels with the IMU and barometer; command-tested the pyro system.
+
+Flight at LASC 2026 (Brazil): primary flight computer. Flight logs analyzed with Python/pandas:
+- 188 ms barometric apogee-detection latency measured
+- 40.2% telemetry packet loss traced, which led to a dual-antenna ground station
+
+#### Failure analysis (from bench and flight logs)
+| Symptom | Root cause | Fix |
+|---|---|---|
+| Barometer read 497 hPa instead of ~830 hPa | Floating chip-select pin | Fixed in v2.2; v5 defines every strap pin |
+| IMU invalid for 12,970 log rows while the barometer on the same I²C bus kept working | Floating address pin, after impact | Address pin defined in the v5 design |
+| False liftoff in testing — hand movement triggered "boost" | 40 ms debounce | 250 ms debounce plus a 30 m minimum-altitude interlock before any deployment |
+
+#### v5 — Designed for manufacturing
+Hardware (from the IGNIS v5 repo):
+| Block | Component |
+|---|---|
+| MCU | ESP32-S3-WROOM-1-N16R8 · 16 MB flash / 8 MB PSRAM |
+| RF telemetry | RFM95W · 915 MHz LoRa · SMA antenna port |
+| GNSS | u-blox SAM-M10Q · integrated patch antenna |
+| IMU | LSM6DSV32X · 6-DOF · ±32 g / ±4000 dps |
+| Barometer | Infineon DPS368 (BMP280 drop-in compatible) |
+| Storage | MicroSD · SPI · card detect |
+| Power | Dual AMS1117 · VBAT → 5 V → 3.3 V · battery voltage monitoring |
+| USB | USB-C 2.0 · ESD protected · native USB programming |
+| Pyro | 2 channels, optically isolated MOSFET deployment with continuity sensing |
+| PCB | 4-layer · Ø75 mm circular · JLCPCB fabrication and assembly |
+
+- Redesigned for turnkey SMT assembly at JLCPCB (109 placements, 40 BOM lines) after component-availability problems on v4.
+- Stock and lifecycle checked before layout; standardized 0603/0805 passives; alternate parts for the IMU and barometer.
+- 37 of 40 BOM lines also stocked by a Mexican distributor for local repair.
+- Mounted across the airframe instead of along it, shortening the avionics bay to fit the team's smallest rocket.
+- Manufacturing package for repeatable production independent of the original designer.
+
+#### Platform hardware (all revisions)
+4-layer stackup with a dedicated ground reference for the RF microstrip · via-fenced RF keepout · via-in-pad MCU thermal pad · opto-isolated MOSFET pyro drivers with continuity sensing · USB-C with ESD protection.
+
+#### Firmware & ground segment
+- Firmware requirements defined by Emilio (C++), validated through bench and flight testing: 8-state flight state machine, barometric apogee detection, safety interlocks, LoRa telemetry, SD logging.
+- Ground station: Python/PySide6 with live charts, CSV logging and dual-antenna diversity receivers.
+
+#### Tools
+Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · JLCPCB / LCSC
+
+#### Links
+- github.com/IgnitiaRocketLab/IGNIS-v2-FlightComputer
+- github.com/Emilio-Guadarrama/IGNIS-v5-FlightComputer
+- LASC 2026 — latinamericanspacechallenge.com
+
+---
+
+### 6.3 LASC 2026 CanSat `/projects/satellite`
+
+#### Hero
+- **Title:** LASC 2026 CanSat — Satellite Challenge
+- **Role:** Mission Leader · Ignitia Rocket Lab · 2026
+- **Result:** 10th of 100 teams
 - **Tag:** LASC 2026
 
 #### Overview
-- **Competition:** LASC 2026 — Latin American Space Challenge · Iacanga, São Paulo, Brazil · September 2026
-- **Type:** CanSat / PocketQube / CubeSat (TBD)
-- **Constraints:** No propulsion · Budget ≤ $1,000 USD · Operation ≥ 4 hours
-- **Scoring:** Readiness/TORL 55% · Mission report 20% · Team effort 10% · Design 10% · Bonus 5%
-
-#### Placeholder
-- "Design and development in progress. This page will be updated as the project evolves."
-- Link back to: `/projects/ignitia`
+- Led the team's CanSat mission, providing technical direction and supervision.
+- The avionics are a simplified derivative of IGNIS, with added sensors that measure the vibration environment affecting the rocket's flight, LoRa telemetry and independent parachute recovery.
+- Mass ~300 g · budget ~$800 USD
+- **Competition:** LASC 2026 — Latin American Space Challenge · Brazil · September 2026
+- **Tools:** ESP32 · RFM95W LoRa · Environmental and vibration sensors · Python
+- Links: `/projects/ignis` · `/projects/ignitia`
 
 ---
 
@@ -305,13 +286,8 @@ Redundancy (independent):
 - **Title:** Ignitia Rocket Lab
 - **Subtitle:** Tecnológico de Monterrey · Campus Guadalajara
 - **Tagline:** Pasión con Impacto
-- **Emilio's role:** Vice President & Electronics / Avionics Lead
+- **Emilio's role:** Vice President & Avionics/Electronics Lead — 30-member team; leads the 9-member electronics area and trains new members on flight-computer design and assembly
 - **Contact:** ignitia.rocketlab@gmail.com · @ignitia.rocketlab
-
-#### Team Overview
-- Mission: Design, development, and testing of experimental rocket systems
-- Competing at LASC 2026 (Rocket Challenge + Satellite Challenge)
-- Links: Ignitia LinkedIn (URL to be added) · Instagram: @ignitia.rocketlab
 
 #### Mission Timeline
 | Year | Event | Details |
@@ -321,38 +297,27 @@ Redundancy (independent):
 | 2023 | Spaceport America Cup | WATAKAME I · First Mexican team to complete full mission profile · Rank 79 |
 | 2023–2024 | ENMICE | WATAKAME IA · 5,000m apogee design · Technical Excellence Award |
 | Oct 2025 | WATI I Qualification Mission | First successful launch · 124m apogee · avionics, ignition, recovery validated |
-| 2025 | ENMICE 2025 | WATI I launch (129m) · WIRIKUTA 1.1 test bench · 2nd place presentation · Honorific conduct award |
+| 2025 | ENMICE 2025 | WATI I launch (129m) · WIRIKUTA 1.1 test bench · 2nd place presentation · Honorary Recognition for Team Conduct |
 | 2025 | Engineering Expo TEC | 1st place Physical Prototype |
 | 2025 | FIL Guadalajara | Scientific outreach exhibition |
-| Sep 2026 | LASC 2026 | Upcoming · Iacanga, São Paulo, Brazil |
+| Sep 2026 | LASC 2026 · Brazil | IGNIS v2.2 flown as primary flight computer · Satellite Challenge: 10th of 100 |
 
 #### Achievements Cards
-- ENMICE 2025: 2nd place presentation (WIRIKUTA 1.1) + Honorific conduct award
+- LASC 2026: 10th of 100 teams, Satellite Challenge
+- ENMICE 2025: 2nd place presentation (WIRIKUTA 1.1) + Honorary Recognition for Team Conduct
 - Engineering Expo TEC 2025: 1st place Physical Prototype
 - ENMICE 2023–2024: Technical Excellence Award (WATAKAME IA)
 - Spaceport America Cup 2023: First Mexican team to complete full mission
 
-#### Image Carousel
-> Photos to be provided by Emilio — placeholders for now
-- Team photos from ENMICE 2025
-- WATI I launch (Oct 2025)
-- WIRIKUTA 1.1 test bench
-- FIL Guadalajara exhibition
-- Spaceport America Cup 2023
-
-#### LinkedIn Posts Section
-- Link cards to Emilio's relevant LinkedIn posts:
-  - Post 1: WATI I first successful launch (Oct 5, 2025 · apogee 124m)
-  - Post 2: ENMICE 2025 results (2nd place + honorific award · WATI I 129m)
-- External link to Ignitia Rocket Lab LinkedIn page (URL to be added)
+#### Photo gallery
+LASC 2026, ENMICE 2025 and team launch-day photos (see §8).
 
 #### Team Composition
 | Role | Name |
 |---|---|
 | President | Maximiliano Funoy Serrano |
-| Vice President | Emilio Guadarrama Gutiérrez |
-| Avionics Lead | Braulio García Rayas |
-| Avionics Sub-Lead | Julia Blanco Sánchez |
+| Vice President · Avionics Lead | Emilio Guadarrama Gutiérrez |
+| Avionics Sub-Lead | Damaris Mariscal |
 | Physical Modelling Lead | Fernanda Ivet Acevedo Ávalos |
 | Structural Lead | Luis Humberto Mota Reyes |
 | Propulsion Lead | José David Lagunes Higareda |
@@ -360,8 +325,8 @@ Redundancy (independent):
 | Faculty Advisor | Luis Manuel Rico Gutiérrez |
 
 #### Subproject Links
-- → FC-2026 Flight Computer (`/projects/fc-2026`)
-- → LASC 2026 Satellite Challenge (`/projects/satellite`)
+- → IGNIS Flight Computer (`/projects/ignis`)
+- → LASC 2026 CanSat (`/projects/satellite`)
 
 ---
 
@@ -369,22 +334,22 @@ Redundancy (independent):
 
 #### Hero
 - **Title:** FIRST Robotics Competition
-- **Team:** Team Daedalus
+- **Team:** Team Daedalus (7102)
 - **Period:** Jan 2023 – May 2025
 - **Location:** Zapopan, Jalisco
 
 #### Season Timeline
 | Season | Role | Highlights |
 |---|---|---|
-| 2023 | Robotics Technician | Scouting, drive team, mechanical systems |
-| 2024 | Mechanical Lead | Led mechanical area and drive team · Won Regional Hermosillo · Qualified FIRST World Championship Houston |
-| 2025 | Mechanical Lead & Mentor | Guided team's final high-school season · Mentored new members · Participated Monterrey and León Regionals |
+| 2023 | Robotics Technician | Drive team, scouting and mechanical maintenance |
+| 2024 | Mechanical Lead | Led manufacturing and was on the drive team · Won the Hermosillo Regional · Qualified for the FIRST World Championship in Houston |
+| 2025 | Mechanical Lead & Mentor | Led the team's manufacturing and mentored new members through the Monterrey and León Regionals |
 
 #### Key Achievement Callout
-- FIRST World Championship Houston 2024 — qualified by winning Regional Hermosillo
+- FIRST World Championship Houston 2024 — qualified by winning the Hermosillo Regional
 
-#### Image Carousel
-> Photos to be provided by Emilio — placeholders for now
+#### Photo gallery
+One group per season (see §8).
 
 ---
 
@@ -392,19 +357,14 @@ Redundancy (independent):
 
 #### Hero
 - **Title:** Smart Irrigation System — Water Growth Solutions (WGS)
-- **Context:** Sustainable Technology & Renewable Energy Initiative
+- **Context:** Team project · Sustainable Technology & Renewable Energy
 
 #### Overview
-- **What:** Sustainable irrigation and vertical garden system for rural communities
-- **Goal:** Improve irrigation efficiency and food security through sustainable automation
-- **Emilio's role:** Arduino code · Electronic control system · Web interface (React) · Real-time monitoring and automation
+- **What:** Automated vertical irrigation system with Arduino, sensors, pumps and solar power, aligned with six UN Sustainable Development Goals
+- **Emilio's role:** Arduino code · Electronic control system · Web interface · Real-time monitoring and automation
 
 #### Technologies
-Arduino · React · IoT · Bluetooth/Wi-Fi Communication · Solar Energy · Web Interface
-
-#### Team
-- Emilio: electronics, firmware, web interface
-- Other teammates: mobile app, sustainability framework (UN SDGs), documentation
+Arduino · Sensors · Bluetooth/Wi-Fi · Web interface · Solar power
 
 #### Media
 > Demo screenshots / photos to be provided by Emilio — placeholders for now
@@ -415,22 +375,34 @@ Arduino · React · IoT · Bluetooth/Wi-Fi Communication · Solar Energy · Web 
 
 #### Hero
 - **Title:** TECHO México
-- **Role progression:** Volunteer → Crew Co-Leader → Crew Leader
-- **Period:** Oct 2024 – Present
+- **Role progression:** Volunteer → Crew Co-Leader → Crew Leader → Area Monitor
+- **Period:** Aug 2024 – Present
 - **Location:** Jalisco, Mexico
 
 #### Construction History
-| # | Role | Location |
+| Date | Role | Location |
 |---|---|---|
-| 1st | Volunteer | Comunidad Indígena Sergio Barrios, Tlajomulco, Jalisco |
-| 2nd | Crew Co-Leader | Comunidad Indígena Sergio Barrios, Tlajomulco, Jalisco |
-| 3rd | Crew Leader | Comunidad de Jauja, Tonalá, Jalisco |
+| Aug 2024 | Volunteer | Comunidad Indígena Sergio Barrios, Tlajomulco |
+| Sep 2025 | Crew Co-Leader | Comunidad Indígena Sergio Barrios, Tlajomulco |
+| — | Crew Leader | Comunidad de Jauja, Tonalá (photos pending) |
+| Dec 2025 | — | Lomas del Refugio |
+| Sep 2026 | Area Monitor — supervised the crews in the area | Lomas del Refugio |
 
 #### Description
-"Participated in the construction of emergency housing for families in vulnerable communities. Strengthened teamwork, communication, and leadership skills while collaborating with local communities across Jalisco."
+"Built emergency housing alongside families in vulnerable communities across Jalisco, first as a volunteer and later leading crews and monitoring the crews of a whole area."
 
-#### Image Carousel
-> Photos to be provided by Emilio — placeholders for now
+#### Photo gallery
+One group per build (see §8).
+
+---
+
+### 6.8 FIFA World Cup 2026™ `/volunteering/fifa-wc`
+
+- **Role:** Pre-Match Ceremony Cast Volunteer
+- **Functional area:** Ceremonies
+- **Venue:** Guadalajara Stadium (Estadio Akron), Guadalajara
+- **Dates:** June 11 – July 19, 2026 — the first 48-team FIFA World Cup™
+- **Source:** FIFA Volunteer Certificate and Letter of Recommendation (not published on the site)
 
 ---
 
@@ -440,34 +412,39 @@ Arduino · React · IoT · Bluetooth/Wi-Fi Communication · Solar Energy · Web 
 - All page content needs EN and ES versions
 - Technical terms (ESP32-S3, LoRa, MOSFET, etc.) stay in English in both languages
 - Competition names (LASC, ENMICE, FIRST) stay in English in both languages
-- Amber-tagged labels (FC-2026, LASC 2026) stay in English in both languages
+- Amber-tagged labels (IGNIS, LASC 2026) stay in English in both languages
+- Spanish degree name: Ingeniería en Electrónica y Semiconductores
 
 ---
 
 ## 8. Assets Reference
 
-| File | Used In |
+Originals live in `brand_assets/photos/`. The site serves resized copies from
+`public/photos/<section>/` (long edge ≤ 1600 px, EXIF stripped).
+
+| Folder | Used In |
 |---|---|
-| `Foto_ID_-_copia.png` | Hero photo (all pages — navbar avatar + hero section) |
-| `Screenshot_2026-04-10_075237.png` | FC-2026 gallery — 3D top view |
-| `Screenshot_2026-04-11_112025.png` | FC-2026 gallery — 3D angled view |
-| `Screenshot_2026-04-11_112053.png` | FC-2026 gallery — 3D bottom view |
-| `Screenshot_2026-04-11_112114.png` | FC-2026 gallery — PCB 2D layout |
-| `Emilio_Guadarrama_ResumeCV.pdf` | Download CV button |
+| `photos/hero/photo.png` | Home hero |
+| `photos/fc2026/V1/` | IGNIS timeline — v1 |
+| `photos/fc2026/V2 and 2V2/` | IGNIS v2 / v2.2 section — board, renders, layers, reflow, bench videos |
+| `photos/fc2026/V4/` | IGNIS timeline — v4 |
+| `photos/fc2026/WhatsApp … 8.14.03 PM.jpeg` | IGNIS — silkscreen detail |
+| `photos/LASC 2026/` | IGNIS flight section, Satellite page, Ignitia gallery |
+| `photos/ENMICE 2025/`, `photos/Ignitia General/` | Ignitia gallery |
+| `photos/FRC/1`, `2 championship`, `3` | FRC gallery — 2023, 2024, 2025 seasons |
+| `photos/volunteering/Techo/*` | TECHO gallery, one group per build |
+| `photos/volunteering/FIFA World Cup 2026/` | FIFA page |
+| `Resume_English.pdf`, `Resume_Spanish.pdf` | Download CV dropdown (served from `public/brand_assets/`) |
 
 ---
 
-## 9. Pending Assets (placeholders until provided)
+## 9. Pending Assets
 
-- [ ] Ignitia launch photos (WATI I, WATAKAME, ENMICE)
-- [ ] FRC competition photos (Team Daedalus)
-- [ ] TECHO México construction photos
+- [ ] Spanish CV with the new degree (Emilio will replace it manually)
+- [ ] IGNIS v5 render or photo
+- [ ] TECHO Jauja build photos
 - [ ] WGS project photos / demo
-- [ ] FC-2026 GitHub repository URL
 - [ ] Ignitia Rocket Lab LinkedIn URL
-- [ ] LinkedIn post URLs (WATI I launch, ENMICE 2025)
-- [ ] Satellite project details (development not started)
-- [ ] CV PDF final version
 
 ---
 
@@ -478,5 +455,5 @@ Arduino · React · IoT · Bluetooth/Wi-Fi Communication · Solar Energy · Web 
 | Email | emilio.guadarrama@outlook.com |
 | GitHub | https://github.com/Emilio-Guadarrama |
 | LinkedIn | https://www.linkedin.com/in/emilioguadarrama/ |
-| Location | Zapopan, Jalisco, Mexico |
+| Location | Monterrey, Nuevo León, Mexico |
 | Phone | +52 (477) 873 2813 |
