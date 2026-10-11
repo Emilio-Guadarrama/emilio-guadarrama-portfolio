@@ -224,7 +224,10 @@ export default function IGNIS() {
             </div>
           </div>
 
-          <h3 style={h3}>{t('ignis.v2.designTitle')}</h3>
+          <div className="section-head">
+            <h3 style={{ ...h3, marginBottom: 0 }}>{t('ignis.v2.designTitle')}</h3>
+            <ExternalLink href="https://github.com/IgnitiaRocketLab/IGNIS-v2-FlightComputer"><GitHubIcon /> {t('ignis.docs.v2')} ↗</ExternalLink>
+          </div>
           <Gallery items={designFiles} variant="carousel" stageAspect="16 / 8" mobileAspect="16 / 9" />
         </div>
       </section>
@@ -234,7 +237,10 @@ export default function IGNIS() {
         <div style={wrap}>
           <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}><Tag amber>LASC 2026</Tag></div>
           <h2 style={h2}>{t('ignis.flight.title')}</h2>
-          <p style={lead}>{t('ignis.flight.lead')}</p>
+          <p style={{ ...lead, marginBottom: 20 }}>{t('ignis.flight.lead')}</p>
+          <div style={{ marginBottom: 40 }}>
+            <ExternalLink href="https://www.lasc.space/">{t('ignis.docs.lasc')} ↗</ExternalLink>
+          </div>
 
           <div className="big-stats" style={{ marginBottom: 48 }}>
             {[
@@ -310,6 +316,9 @@ export default function IGNIS() {
                   <span>{p}</span>
                 </li>
               ))}
+              <li style={{ marginTop: 8 }}>
+                <ExternalLink href="https://github.com/Emilio-Guadarrama/IGNIS-v5-FlightComputer"><GitHubIcon /> {t('ignis.docs.v5')} ↗</ExternalLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -363,15 +372,10 @@ export default function IGNIS() {
         </div>
       </section>
 
-      {/* ── SOURCE FILES ── */}
-      <section style={{ padding: '80px 0' }}>
+      {/* ── TOOLS ── */}
+      <section style={{ padding: '64px 0' }}>
         <div style={wrap}>
           <SectionLabel>{t('ignis.docs.title')}</SectionLabel>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 32 }}>
-            <ExternalLink href="https://github.com/IgnitiaRocketLab/IGNIS-v2-FlightComputer"><GitHubIcon /> {t('ignis.docs.v2')} ↗</ExternalLink>
-            <ExternalLink href="https://github.com/Emilio-Guadarrama/IGNIS-v5-FlightComputer"><GitHubIcon /> {t('ignis.docs.v5')} ↗</ExternalLink>
-            <ExternalLink href="https://www.lasc.space/">{t('ignis.docs.lasc')} ↗</ExternalLink>
-          </div>
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
             {['Altium Designer', 'ESP32-S3', 'RFM95W LoRa', 'u-blox GNSS', 'C/C++', 'Python', 'JLCPCB / LCSC'].map((tool) => (
               <Tag key={tool}>{tool}</Tag>

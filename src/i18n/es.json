@@ -60,24 +60,46 @@
             "title": "Vicepresidente y Líder de Electrónica y Aviónica",
             "period": "Ene 2026 – Feb 2027",
             "bullets": [
-              "Vicepresidente de un equipo de 30 integrantes; lidero el área de electrónica de 9 personas y capacito a nuevos integrantes en diseño y ensamble de computadoras de vuelo.",
-              "Diseñador principal de hardware de IGNIS, una computadora de vuelo de código abierto: arquitectura, esquemáticos, layout de PCB de 4 capas en Altium Designer, diseño de RF y potencia, abastecimiento, puesta en marcha y depuración en laboratorio.",
-              "IGNIS v2.2 voló como computadora de vuelo principal en LASC 2026 en Brasil: 9.º de 25 en la categoría de 1 km del Rocket Challenge.",
+              "**Diseñador principal de hardware** de IGNIS, una **computadora de vuelo de código abierto para cohetes** (ESP32-S3, telemetría LoRa, GNSS, IMU, barómetro, dos canales pirotécnicos optoaislados). Responsable de arquitectura, esquemáticos, layout de PCB de 4 capas, diseño de RF y potencia, abastecimiento, puesta en marcha y depuración en laboratorio.",
+              "Desarrollé **revisiones sucesivas de IGNIS (v1 a v5)** a partir de problemas encontrados en puesta en marcha, banco y vuelo, incluyendo pines de sensores flotantes, inicialización del SPI compartido, errores de red en USB-C, cableado de canales pirotécnicos y reinicios por watchdog.",
+              "IGNIS v2.2 voló como computadora de vuelo principal en **LASC 2026 (Brasil)**, con el 9.º de 25 en la categoría de 1 km del Rocket Challenge. Analicé los **registros de vuelo en Python** de pruebas y competencia; medí una latencia de 188 ms en la detección barométrica de apogeo.",
               "Líder de misión del CanSat del equipo: 9.º de 50 en el Satellite Challenge.",
-              "Rediseñé la v5 para ensamble SMT llave en mano en JLCPCB (109 colocaciones, 40 líneas de BOM)."
+              "Rediseñé la v5 para **ensamble SMT llave en mano** en JLCPCB (109 colocaciones, 40 líneas de BOM) tras problemas de disponibilidad de componentes en la v4. Revisé existencias y ciclo de vida antes del layout y preparé un paquete de manufactura para **producción repetible** sin depender del diseñador original.",
+              "Definí los **requisitos del firmware** y validé los cambios sucesivos del software de vuelo con pruebas en banco y en vuelo: máquina de estados de 8 estados, detección barométrica de apogeo, bloqueos de seguridad, telemetría LoRa y registro en SD.",
+              "**Vicepresidente** de un equipo de 30 integrantes; lidero el área de aviónica y electrónica de 9 personas y capacito a nuevos integrantes en diseño y ensamble de computadoras de vuelo."
             ],
             "image": "/photos/lasc/avionics-bay.jpg",
-            "imageAlt": "Integración final de la bahía de aviónica en LASC 2026"
+            "imageAlt": "Integración final de la bahía de aviónica en LASC 2026",
+            "links": [
+              {
+                "label": "IGNIS Flight Computer",
+                "to": "/projects/ignis"
+              },
+              {
+                "label": "LASC 2026 CanSat",
+                "to": "/projects/satellite"
+              },
+              {
+                "label": "Ignitia Rocket Lab",
+                "to": "/projects/ignitia"
+              }
+            ]
           },
           {
             "title": "Integrante de la División de Electrónica y Aviónica",
             "period": "Ago 2025 – Dic 2025",
             "bullets": [
               "Colaboré en la división de electrónica y aviónica del equipo.",
-              "Competimos en ENMICE 2025: 2.º lugar en presentación de proyecto y Reconocimiento Honorífico por Conducta del Equipo."
+              "Competimos en **ENMICE 2025**: 2.º lugar en presentación de proyecto y Reconocimiento Honorífico por Conducta del Equipo."
             ],
             "image": "/photos/ignitia/enmice-booth.jpg",
-            "imageAlt": "Nuestro stand en ENMICE 2025"
+            "imageAlt": "Nuestro stand en ENMICE 2025",
+            "links": [
+              {
+                "label": "ENMICE 2025",
+                "to": "/projects/ignitia#enmice"
+              }
+            ]
           }
         ]
       },
@@ -102,7 +124,13 @@
           }
         ],
         "compact": true,
-        "summary": "Tres temporadas en la preparatoria, de técnico a Líder Mecánico. Ganamos el Regional Hermosillo 2024 y clasificamos al FIRST World Championship en Houston."
+        "summary": "Tres temporadas en la preparatoria, de técnico a Líder Mecánico. Ganamos el Regional Hermosillo 2024 y clasificamos al FIRST World Championship en Houston.",
+        "links": [
+          {
+            "label": "FIRST Robotics",
+            "to": "/projects/frc"
+          }
+        ]
       }
     ]
   },
@@ -238,7 +266,7 @@
       "headers": ["Decisión", "Motivo"]
     },
     "docs": {
-      "title": "Archivos fuente",
+      "title": "Herramientas",
       "v2": "IGNIS v2 en GitHub",
       "v5": "IGNIS v5 en GitHub",
       "lasc": "LASC 2026"

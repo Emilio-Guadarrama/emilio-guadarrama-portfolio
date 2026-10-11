@@ -767,3 +767,6 @@ section[id] { scroll-margin-top: 60px; }
   }
   .m-collapse:not(.failure-collapse)[open] > summary { margin-bottom: 12px !important; }
 }
+
+/* Heading with an action on the right (e.g. PCB viewer + GitHub) */
+.section-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }

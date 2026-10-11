@@ -60,24 +60,46 @@
             "title": "Vice President & Electronics & Avionics Lead",
             "period": "Jan 2026 – Feb 2027",
             "bullets": [
-              "Vice President of a 30-member team; lead the 9-member electronics area and train new members on flight-computer design and assembly.",
-              "Lead hardware designer of IGNIS, an open-source rocket flight computer: architecture, schematics, 4-layer PCB layout in Altium Designer, RF and power design, sourcing, bring-up and lab debugging.",
-              "Flew IGNIS v2.2 as the primary flight computer at LASC 2026 in Brazil: 9th of 25 in the Rocket Challenge 1 km category.",
+              "**Lead hardware designer** of IGNIS, an **open-source rocket flight computer** (ESP32-S3, LoRa telemetry, GNSS, IMU, barometer, two opto-isolated pyro channels). Responsible for architecture, schematics, 4-layer PCB layout, RF and power design, sourcing, bring-up and lab debugging.",
+              "Developed **successive IGNIS revisions (v1 to v5)** based on issues found during bring-up, bench and flight testing, including floating sensor pins, shared-SPI initialization, USB-C net errors, pyro-channel wiring and watchdog resets.",
+              "Flew IGNIS v2.2 as the primary flight computer at **LASC 2026 (Brazil)**, placing 9th of 25 in the Rocket Challenge 1 km category. Analyzed test and competition **flight logs in Python**; measured 188 ms barometric apogee-detection latency.",
               "Mission Leader of the team's CanSat: 9th of 50 in the Satellite Challenge.",
-              "Redesigned v5 for turnkey SMT assembly at JLCPCB (109 placements, 40 BOM lines)."
+              "Redesigned v5 for **turnkey SMT assembly** at JLCPCB (109 placements, 40 BOM lines) after component availability problems on v4. Checked stock and lifecycle before layout and prepared a manufacturing package for **repeatable production** independent of the original designer.",
+              "Defined **firmware requirements** and validated successive flight-software changes through bench and flight testing: 8-state flight state machine, barometric apogee detection, safety interlocks, LoRa telemetry and SD logging.",
+              "**Vice President** of a 30-member team; lead the 9-member avionics & electronics area and train new members on flight-computer design and assembly."
             ],
             "image": "/photos/lasc/avionics-bay.jpg",
-            "imageAlt": "Final integration of the avionics bay at LASC 2026"
+            "imageAlt": "Final integration of the avionics bay at LASC 2026",
+            "links": [
+              {
+                "label": "IGNIS Flight Computer",
+                "to": "/projects/ignis"
+              },
+              {
+                "label": "LASC 2026 CanSat",
+                "to": "/projects/satellite"
+              },
+              {
+                "label": "Ignitia Rocket Lab",
+                "to": "/projects/ignitia"
+              }
+            ]
           },
           {
             "title": "Electronics & Avionics Division Member",
             "period": "Aug 2025 – Dec 2025",
             "bullets": [
               "Contributed to the electronics and avionics division of the team.",
-              "Competed at ENMICE 2025: 2nd place project presentation and Honorary Recognition for Team Conduct."
+              "Competed at **ENMICE 2025**: 2nd place project presentation and Honorary Recognition for Team Conduct."
             ],
             "image": "/photos/ignitia/enmice-booth.jpg",
-            "imageAlt": "Our booth at ENMICE 2025"
+            "imageAlt": "Our booth at ENMICE 2025",
+            "links": [
+              {
+                "label": "ENMICE 2025",
+                "to": "/projects/ignitia#enmice"
+              }
+            ]
           }
         ]
       },
@@ -102,7 +124,13 @@
           }
         ],
         "compact": true,
-        "summary": "Three high-school seasons from technician to Mechanical Lead. Won the 2024 Hermosillo Regional and qualified for the FIRST World Championship in Houston."
+        "summary": "Three high-school seasons from technician to Mechanical Lead. Won the 2024 Hermosillo Regional and qualified for the FIRST World Championship in Houston.",
+        "links": [
+          {
+            "label": "FIRST Robotics",
+            "to": "/projects/frc"
+          }
+        ]
       }
     ]
   },
@@ -238,7 +266,7 @@
       "headers": ["Decision", "Reason"]
     },
     "docs": {
-      "title": "Source files",
+      "title": "Tools",
       "v2": "IGNIS v2 on GitHub",
       "v5": "IGNIS v5 on GitHub",
       "lasc": "LASC 2026"
