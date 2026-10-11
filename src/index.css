@@ -621,3 +621,11 @@ textarea::placeholder {
 
 /* Keep anchored sections clear of the fixed 60px navbar */
 section[id] { scroll-margin-top: 60px; }
+
+/* ── Achievement cards: text left, institution logo right ──────────── */
+.ach-card { display: flex; align-items: center; gap: 20px; }
+.ach-card > :first-child { flex: 1; }
+.ach-logo { width: 56px; height: 56px; object-fit: contain; flex-shrink: 0; }
+@media (max-width: 480px) {
+  .ach-logo { width: 44px; height: 44px; }
+}
