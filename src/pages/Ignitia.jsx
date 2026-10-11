@@ -179,7 +179,7 @@ export default function Ignitia() {
       <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>{t('ignitia.achievements.title')}</SectionLabel>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }} className="ach-grid">
+          <div className="cgrid ach-grid">
             {achievements.map((ach, i) => (
               <div
                 key={i}

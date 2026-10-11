@@ -243,8 +243,7 @@ export default function Home() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel animate mb={48}>{t('skills.title')}</SectionLabel>
           <Stagger
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}
-            className="skills-grid"
+            className="cgrid skills-grid"
             stagger={0.08}
           >
             {Array.isArray(skillGroups) && skillGroups.map((group, i) => (
@@ -336,8 +335,7 @@ export default function Home() {
 
               {/* Regular cards grid */}
               <Stagger
-                style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}
-                className="projects-grid"
+                className="cgrid projects-grid"
                 stagger={0.07}
               >
                 {projects.slice(1).map((project) => (
@@ -376,8 +374,7 @@ export default function Home() {
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel animate mb={48}>{t('achievements.title')}</SectionLabel>
           <Stagger
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 8 }}
-            className="ach-grid"
+            className="cgrid ach-grid"
             stagger={0.08}
           >
             {Array.isArray(achievements) && achievements.map((ach, i) => (

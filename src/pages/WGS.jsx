@@ -164,7 +164,7 @@ export default function WGS() {
           >
             {t('wgs.media')}
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }} className="wgs-gallery">
+          <div className="cgrid wgs-gallery">
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
