@@ -24,8 +24,10 @@ const LINES = [
   { text: 'FLIGHT COMPUTER READY',              suffix: null,   color: '#b89060', sufColor: null,     delay: 2340 },
 ]
 
-const TOTAL_MS    = 2340  // last line delay
-const AUTO_EXIT   = TOTAL_MS + 900   // dismiss this many ms after mount
+// The line delays above are authored on a 2.34 s timeline; SPEED compresses it to ~0.7 s, ~1 s with the fade
+const SPEED       = 0.3
+const TOTAL_MS    = Math.round(2340 * SPEED)  // last line delay
+const AUTO_EXIT   = TOTAL_MS + 250            // dismiss this many ms after mount
 
 export default function BootScreen({ onDone }) {
   const [visible, setVisible]       = useState([])   // indices of rendered lines
@@ -35,7 +37,7 @@ export default function BootScreen({ onDone }) {
   /* Show lines at scheduled times */
   useEffect(() => {
     const timers = LINES.map((line, i) =>
-      setTimeout(() => setVisible((v) => [...v, i]), line.delay)
+      setTimeout(() => setVisible((v) => [...v, i]), line.delay * SPEED)
     )
     return () => timers.forEach(clearTimeout)
   }, [])
@@ -62,7 +64,7 @@ export default function BootScreen({ onDone }) {
   function dismiss() {
     if (exiting) return
     setExiting(true)
-    setTimeout(onDone, 600)
+    setTimeout(onDone, 300)
   }
 
   return (
