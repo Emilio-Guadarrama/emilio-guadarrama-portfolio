@@ -95,6 +95,8 @@ Technical font:   JetBrains Mono
 
 > Source of truth for degree, experience, projects, skills and awards: Emilio's CV
 > (`brand_assets/Resume_English.pdf`). Hardware tables come from the public IGNIS repos.
+> Exception: LASC 2026 results were corrected by Emilio (Oct 2026) — Rocket Challenge 1 km: 9th of 25;
+> Satellite Challenge CanSat: 9th of 50. The CV still says 10th of 100 and is out of date on this point.
 
 ---
 
@@ -113,9 +115,9 @@ Technical font:   JetBrains Mono
 | Value | Label |
 |---|---|
 | IGNIS | Flight computer flown at LASC 2026 (amber) |
-| 10th / 100 | LASC 2026 Satellite Challenge |
+| 9th / 25 | LASC 2026 Rocket Challenge · 1 km |
+| 9th / 50 | LASC 2026 Satellite Challenge |
 | v1 → v5 | IGNIS hardware revisions |
-| 3 yr | FIRST Robotics experience |
 
 #### About
 - **Bio:** "I'm an Electronics and Semiconductor Engineering student at Tecnológico de Monterrey. I design, build and fly rocket flight computers, from multilayer PCB design to lab bring-up, flight testing and failure analysis. Before university I spent three seasons in FIRST Robotics, going from technician to Mechanical Lead."
@@ -142,7 +144,7 @@ Technical font:   JetBrains Mono
 | Project | Tag | Link |
 |---|---|---|
 | IGNIS Flight Computer | LASC 2026 · Flown | `/projects/ignis` |
-| LASC 2026 CanSat | LASC 2026 · 10th of 100 | `/projects/satellite` |
+| LASC 2026 CanSat | LASC 2026 · 9th of 50 | `/projects/satellite` |
 | Ignitia Rocket Lab | Rocketry | `/projects/ignitia` |
 | FIRST Robotics — Team Daedalus | Robotics | `/projects/frc` |
 | Water Growth Solutions | IoT · Sustainability | `/projects/wgs` |
@@ -151,7 +153,7 @@ Technical font:   JetBrains Mono
 > IGNIS is the featured/large card. All others are standard size.
 
 #### Achievements (Emilio's own — team awards from before Aug 2025 live only on the Ignitia timeline)
-- LASC 2026 — 10th of 100 teams, Satellite Challenge (CanSat Mission Leader)
+- LASC 2026 — 9th of 25, Rocket Challenge (1 km category) · 9th of 50, Satellite Challenge (CanSat Mission Leader)
 - FIRST World Championship qualifier — Hermosillo Regional winner, 2024
 - ENMICE 2025 — 2nd place, project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct
 - Tec de Monterrey Engineering Expo 2025 — 1st place, Physical Prototype (Ignitia Rocket Lab)
@@ -274,7 +276,7 @@ Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · 
 #### Hero
 - **Title:** LASC 2026 CanSat — Satellite Challenge
 - **Role:** Mission Leader · Ignitia Rocket Lab · 2026
-- **Result:** 10th of 100 teams
+- **Result:** 9th of 50 teams (CanSat category)
 - **Tag:** LASC 2026
 
 #### Overview
@@ -307,10 +309,10 @@ Altium Designer · ESP32-S3 · RFM95W LoRa · u-blox GNSS · C/C++ · Python · 
 | 2025 | ENMICE 2025 | WATI I launch (129m) · WIRIKUTA 1.1 test bench · 2nd place presentation · Honorary Recognition for Team Conduct |
 | 2025 | Engineering Expo TEC | 1st place Physical Prototype |
 | 2025 | FIL Guadalajara | Scientific outreach exhibition |
-| Sep 2026 | LASC 2026 · Brazil | IGNIS v2.2 flown as primary flight computer · Satellite Challenge: 10th of 100 |
+| Sep 2026 | LASC 2026 · Brazil | IGNIS v2.2 flown as primary flight computer · Rocket Challenge 1 km: 9th of 25 · Satellite Challenge CanSat: 9th of 50 |
 
 #### Achievements Cards
-- LASC 2026: 10th of 100 teams, Satellite Challenge
+- LASC 2026: 9th of 25, Rocket Challenge (1 km) · 9th of 50, Satellite Challenge (CanSat)
 - ENMICE 2025: 2nd place presentation (WIRIKUTA 1.1) + Honorary Recognition for Team Conduct
 - Engineering Expo TEC 2025: 1st place Physical Prototype
 - ENMICE 2023–2024: Technical Excellence Award (WATAKAME IA)

@@ -3,13 +3,23 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const ITEMS = [
   {
-    key: 'lasc26',
+    key: 'lasc26-rocket',
     source: 'LASC 2026',
     category: 'Competition',
-    highlight: '10th',
-    highlightLabel: 'of 100 teams',
+    highlight: '9th',
+    highlightLabel: 'of 25 teams',
+    title: 'Rocket Challenge — 1 km category',
+    detail: 'Placed 9th of 25 in the 1 km category at the Latin American Space Challenge 2026 in Brazil, flying IGNIS v2.2.',
+    amber: true,
+  },
+  {
+    key: 'lasc26-cansat',
+    source: 'LASC 2026',
+    category: 'Competition',
+    highlight: '9th',
+    highlightLabel: 'of 50 teams',
     title: 'Satellite Challenge — CanSat Mission Leader',
-    detail: 'Placed 10th of 100 teams at the Latin American Space Challenge 2026 in Brazil with an IGNIS-derived CanSat.',
+    detail: 'Placed 9th of 50 in the CanSat category at the Latin American Space Challenge 2026 in Brazil with an IGNIS-derived CanSat.',
     amber: true,
   },
   {

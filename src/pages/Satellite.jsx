@@ -36,7 +36,7 @@ export default function Satellite() {
 
           <div className="sat-result">
             <div style={{ ...mono, fontSize: 'clamp(56px, 9vw, 96px)', fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.04em', lineHeight: 0.95 }}>
-              10<span style={{ fontSize: '0.45em', letterSpacing: 0 }}>{t('satellite.hero.ordinal')}</span>
+              9<span style={{ fontSize: '0.45em', letterSpacing: 0 }}>{t('satellite.hero.ordinal')}</span>
             </div>
             <div style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.6, maxWidth: '32ch' }}>{t('satellite.hero.result')}</div>
           </div>

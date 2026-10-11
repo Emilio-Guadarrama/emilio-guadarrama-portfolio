@@ -17,9 +17,9 @@
   },
   "stats": [
     { "value": "IGNIS",      "label": "Flight computer flown at LASC 2026", "amber": true },
-    { "value": "10th / 100", "label": "LASC 2026 Satellite Challenge",      "amber": false },
-    { "value": "v1 → v5",    "label": "IGNIS hardware revisions",           "amber": false },
-    { "value": "3 yr",       "label": "FIRST Robotics experience",          "amber": false }
+    { "value": "9th / 25",   "label": "LASC 2026 Rocket Challenge · 1 km",  "amber": false },
+    { "value": "9th / 50",   "label": "LASC 2026 Satellite Challenge",      "amber": false },
+    { "value": "v1 → v5",    "label": "IGNIS hardware revisions",           "amber": false }
   ],
   "about": {
     "title": "About",
@@ -59,7 +59,7 @@
     "viewProject": "View Project →",
     "items": [
       { "key": "ignis", "name": "IGNIS Flight Computer", "tags": ["LASC 2026", "Flown"], "desc": "Open-source rocket flight computer, v1 to v5. ESP32-S3, LoRa telemetry, GNSS, IMU, barometer and two opto-isolated pyro channels. v2.2 flew at LASC 2026 as the primary flight computer.", "link": "/projects/ignis", "amber": true },
-      { "key": "satellite", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "10th of 100"], "desc": "Mission Leader. IGNIS-derived CanSat with vibration sensing, LoRa telemetry and independent parachute recovery.", "link": "/projects/satellite", "amber": true },
+      { "key": "satellite", "name": "LASC 2026 CanSat", "tags": ["LASC 2026", "9th of 50"], "desc": "Mission Leader. IGNIS-derived CanSat with vibration sensing, LoRa telemetry and independent parachute recovery.", "link": "/projects/satellite", "amber": true },
       { "key": "ignitia", "name": "Ignitia Rocket Lab", "tags": ["Rocketry"], "desc": "Tec de Monterrey student rocketry team. Vice President and lead of the 9-member electronics area.", "link": "/projects/ignitia", "amber": false },
       { "key": "frc", "name": "FIRST Robotics — Team Daedalus", "tags": ["Robotics"], "desc": "3-year journey from technician to Mechanical Lead. Won Regional Hermosillo 2024, qualified World Championship.", "link": "/projects/frc", "amber": false },
       { "key": "wgs", "name": "Water Growth Solutions", "tags": ["IoT", "Sustainability"], "desc": "Automated vertical irrigation with Arduino, sensors, pumps and solar power. Electronics, firmware and web interface.", "link": "/projects/wgs", "amber": false },
@@ -69,7 +69,7 @@
   "achievements": {
     "title": "Achievements",
     "items": [
-      { "title": "LASC 2026", "desc": "10th of 100 teams · Satellite Challenge (CanSat Mission Leader)" },
+      { "title": "LASC 2026", "desc": "9th of 25 · Rocket Challenge, 1 km category · 9th of 50 · Satellite Challenge (CanSat Mission Leader)" },
       { "title": "FIRST World Championship 2024", "desc": "Qualified as Hermosillo Regional winner · Team Daedalus" },
       { "title": "ENMICE 2025", "desc": "2nd place project presentation (WIRIKUTA 1.1 test bench) + Honorary Recognition for Team Conduct" },
       { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype · Ignitia Rocket Lab" },
@@ -129,7 +129,7 @@
     },
     "flight": {
       "title": "Flight at LASC 2026",
-      "lead": "IGNIS v2.2 flew as the primary flight computer at the Latin American Space Challenge 2026 in Brazil. I analyzed the test and competition flight logs with Python and pandas.",
+      "lead": "IGNIS v2.2 flew as the primary flight computer at the Latin American Space Challenge 2026 in Brazil, where the team placed 9th of 25 in the Rocket Challenge 1 km category. I analyzed the test and competition flight logs with Python and pandas.",
       "latency": "Barometric apogee-detection latency, measured from flight logs",
       "loss": "Telemetry packet loss, traced and fixed with a dual-antenna ground station"
     },
@@ -278,7 +278,7 @@
       "title": "LASC 2026 CanSat",
       "role": "Satellite Challenge · Mission Leader · Ignitia Rocket Lab",
       "ordinal": "th",
-      "result": "of 100 teams at the Latin American Space Challenge 2026 in Brazil.",
+      "result": "of 50 teams in the CanSat Satellite Challenge at the Latin American Space Challenge 2026 in Brazil.",
       "back": "← Back to Projects"
     },
     "missionTitle": "Mission",
@@ -289,7 +289,7 @@
     ],
     "facts": [
       { "k": "Competition", "v": "LASC 2026 · Latin American Space Challenge · Brazil · September 2026" },
-      { "k": "Result", "v": "10th of 100 teams" },
+      { "k": "Result", "v": "9th of 50 teams" },
       { "k": "Role", "v": "Mission Leader" },
       { "k": "Mass", "v": "~300 g" },
       { "k": "Budget", "v": "~$800 USD" },
@@ -320,13 +320,13 @@
         { "year": "2025", "event": "ENMICE 2025", "detail": "WATI I launch (129 m) · WIRIKUTA 1.1 test bench · 2nd place presentation · Honorary Recognition for Team Conduct" },
         { "year": "2025", "event": "Engineering Expo TEC", "detail": "1st place Physical Prototype" },
         { "year": "2025", "event": "FIL Guadalajara", "detail": "Scientific outreach exhibition" },
-        { "year": "Sep 2026", "event": "LASC 2026 · Brazil", "detail": "IGNIS v2.2 flown as the primary flight computer · Satellite Challenge: 10th of 100 teams", "highlight": true }
+        { "year": "Sep 2026", "event": "LASC 2026 · Brazil", "detail": "IGNIS v2.2 flown as the primary flight computer · Rocket Challenge, 1 km: 9th of 25 · Satellite Challenge, CanSat: 9th of 50", "highlight": true }
       ]
     },
     "achievements": {
       "title": "Achievements",
       "items": [
-        { "title": "LASC 2026", "desc": "10th of 100 teams · Satellite Challenge" },
+        { "title": "LASC 2026", "desc": "9th of 25 · Rocket Challenge, 1 km category · 9th of 50 · Satellite Challenge, CanSat" },
         { "title": "ENMICE 2025", "desc": "2nd place presentation (WIRIKUTA 1.1) + Honorary Recognition for Team Conduct" },
         { "title": "Engineering Expo TEC 2025", "desc": "1st place Physical Prototype" },
         { "title": "ENMICE 2023–2024", "desc": "Technical Excellence Award (WATAKAME IA)" },
