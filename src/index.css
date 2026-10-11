@@ -452,3 +452,16 @@ textarea::placeholder {
   .techo-hero { grid-template-columns: 1fr; gap: 40px; }
   .techo-hero > :last-child { max-width: 420px; }
 }
+
+/* ── Navbar logo ───────────────────────────────────────────────────── */
+.nav-logo {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.15s ease;
+}
+.nav-logo img { width: 32px; height: 32px; display: block; }
+.nav-logo:hover { opacity: 0.8; }
+.nav-logo:active { opacity: 0.6; }
+.nav-logo:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
