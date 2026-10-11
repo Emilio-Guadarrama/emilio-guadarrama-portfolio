@@ -346,11 +346,11 @@ LASC 2026, ENMICE 2025 and team launch-day photos (see §8).
 - **Location:** Zapopan, Jalisco
 
 #### Season Timeline
-| Season | Role | Highlights |
-|---|---|---|
-| 2023 | Robotics Technician | Drive team, scouting and mechanical maintenance |
-| 2024 | Mechanical Lead | Led manufacturing and was on the drive team · Won the Hermosillo Regional · Qualified for the FIRST World Championship in Houston |
-| 2025 | Mechanical Lead & Mentor | Led the team's manufacturing and mentored new members through the Monterrey and León Regionals |
+| Season | Game | Role | Highlights |
+|---|---|---|---|
+| 2023 | Charged Up | Robotics Technician | Drive team, scouting and mechanical maintenance |
+| 2024 | Crescendo | Mechanical Lead | Led manufacturing and was on the drive team · Won the Hermosillo Regional · Qualified for the FIRST World Championship in Houston |
+| 2025 | Reefscape | Mechanical Lead & Mentor | Led the team's manufacturing and mentored new members through the Monterrey and León Regionals |
 
 #### Key Achievement Callout
 - FIRST World Championship Houston 2024 — qualified by winning the Hermosillo Regional

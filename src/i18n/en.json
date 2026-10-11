@@ -197,6 +197,18 @@
     "video": "Video"
   },
   "captions": {
+    "frc": {
+      "team2023": "Team Daedalus with robot 7102, 2023 season.",
+      "intel": "Talk at Intel with the team.",
+      "winners": "Hermosillo Regional 2024 winners, qualifying for the FIRST World Championship.",
+      "robot2024": "The 2024 robot.",
+      "pits2024": "Pit work as Mechanical Lead.",
+      "houston": "FIRST World Championship in Houston, 2024.",
+      "field2025": "Bringing the robot to the field, 2025.",
+      "pits2025": "Working in the pits, 2025.",
+      "repair2025": "Repairs between matches.",
+      "inspection2025": "Talking with the referees on the field."
+    },
     "ignitia": {
       "enmiceTeam": "Ignitia at the 4th Encuentro Mexicano de Ingeniería en Cohetería Experimental (ENMICE 2025).",
       "enmiceBooth": "Our booth at ENMICE 2025.",
@@ -320,13 +332,38 @@
   "frc": {
     "hero": {
       "title": "FIRST Robotics Competition",
-      "team": "Team Daedalus",
+      "team": "Team Daedalus · 7102",
+      "teamLabel": "Team",
       "period": "Jan 2023 – May 2025",
+      "periodLabel": "Period",
       "location": "Zapopan, Jalisco",
+      "locationLabel": "Location",
       "back": "← Home"
     },
-    "timeline": "Season Timeline",
-    "achievement": "FIRST World Championship Houston 2024 — Qualified by winning Regional Hermosillo"
+    "achievementLabel": "Key achievement",
+    "achievement": "FIRST World Championship Houston 2024 — qualified by winning the Hermosillo Regional",
+    "qualifier": "World Championship qualifier",
+    "seasons": [
+      {
+        "year": "2023",
+        "game": "Charged Up",
+        "role": "Robotics Technician",
+        "highlights": "Drive team, scouting and mechanical maintenance."
+      },
+      {
+        "year": "2024",
+        "game": "Crescendo",
+        "role": "Mechanical Lead",
+        "highlights": "Led manufacturing and was a member of the drive team. Won the Hermosillo Regional and qualified for the FIRST World Championship in Houston.",
+        "featured": true
+      },
+      {
+        "year": "2025",
+        "game": "Reefscape",
+        "role": "Mechanical Lead & Mentor",
+        "highlights": "Led the team's manufacturing and mentored new members through the Monterrey and León Regionals."
+      }
+    ]
   },
   "wgs": {
     "hero": {

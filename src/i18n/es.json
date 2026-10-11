@@ -197,6 +197,18 @@
     "video": "Video"
   },
   "captions": {
+    "frc": {
+      "team2023": "Team Daedalus con el robot 7102, temporada 2023.",
+      "intel": "Plática en Intel con el equipo.",
+      "winners": "Ganadores del Regional Hermosillo 2024, clasificando al FIRST World Championship.",
+      "robot2024": "El robot de 2024.",
+      "pits2024": "Trabajo en pits como Líder Mecánico.",
+      "houston": "FIRST World Championship en Houston, 2024.",
+      "field2025": "Llevando el robot a la cancha, 2025.",
+      "pits2025": "Trabajando en pits, 2025.",
+      "repair2025": "Reparaciones entre partidos.",
+      "inspection2025": "Hablando con los árbitros en la cancha."
+    },
     "ignitia": {
       "enmiceTeam": "Ignitia en el 4.º Encuentro Mexicano de Ingeniería en Cohetería Experimental (ENMICE 2025).",
       "enmiceBooth": "Nuestro stand en ENMICE 2025.",
@@ -320,13 +332,38 @@
   "frc": {
     "hero": {
       "title": "FIRST Robotics Competition",
-      "team": "Team Daedalus",
+      "team": "Team Daedalus · 7102",
+      "teamLabel": "Equipo",
       "period": "Ene 2023 – May 2025",
+      "periodLabel": "Periodo",
       "location": "Zapopan, Jalisco",
+      "locationLabel": "Ubicación",
       "back": "← Inicio"
     },
-    "timeline": "Temporadas",
-    "achievement": "FIRST World Championship Houston 2024 — Clasificado al ganar el Regional Hermosillo"
+    "achievementLabel": "Logro principal",
+    "achievement": "FIRST World Championship Houston 2024 — clasificados al ganar el Regional Hermosillo",
+    "qualifier": "Clasificado al World Championship",
+    "seasons": [
+      {
+        "year": "2023",
+        "game": "Charged Up",
+        "role": "Técnico de Robótica",
+        "highlights": "Drive team, scouting y mantenimiento mecánico."
+      },
+      {
+        "year": "2024",
+        "game": "Crescendo",
+        "role": "Líder Mecánico",
+        "highlights": "Dirigí la manufactura y formé parte del drive team. Ganamos el Regional Hermosillo y clasificamos al FIRST World Championship en Houston.",
+        "featured": true
+      },
+      {
+        "year": "2025",
+        "game": "Reefscape",
+        "role": "Líder Mecánico y Mentor",
+        "highlights": "Dirigí la manufactura del equipo y fui mentor de nuevos integrantes en los regionales de Monterrey y León."
+      }
+    ]
   },
   "wgs": {
     "hero": {

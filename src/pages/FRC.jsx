@@ -1,280 +1,99 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { SectionLabel } from '../components/ui'
+import { Tag } from '../components/ui'
+import Gallery from '../components/Gallery'
 import { usePageTitle } from '../hooks/usePageTitle'
 
-const seasons = [
-  {
-    year: '2023',
-    role: 'Robotics Technician',
-    highlights: 'Scouting, drive team, mechanical systems',
-  },
-  {
-    year: '2024',
-    role: 'Mechanical Lead',
-    highlights: 'Led mechanical area and drive team · Won Regional Hermosillo · Qualified FIRST World Championship Houston',
-    featured: true,
-  },
-  {
-    year: '2025',
-    role: 'Mechanical Lead & Mentor',
-    highlights: "Guided team's final high-school season · Mentored new members · Participated Monterrey and León Regionals",
-  },
-]
+const P = '/photos/frc'
+const wrap = { maxWidth: 1100, margin: '0 auto', padding: '0 24px' }
+const mono = { fontFamily: 'var(--font-mono)' }
+
+// Photos per season; captions live in i18n under captions.frc
+const seasonPhotos = {
+  2023: [
+    { src: `${P}/2023-team.jpg`, key: 'team2023' },
+    { src: `${P}/2023-intel.jpg`, key: 'intel' },
+  ],
+  2024: [
+    { src: `${P}/2024-hermosillo-winners.jpg`, key: 'winners' },
+    { src: `${P}/2024-robot.jpg`, key: 'robot2024' },
+    { src: `${P}/2024-pits.jpg`, key: 'pits2024' },
+    { src: `${P}/2024-houston.jpg`, key: 'houston' },
+  ],
+  2025: [
+    { src: `${P}/2025-field.jpg`, key: 'field2025' },
+    { src: `${P}/2025-pits.jpg`, key: 'pits2025' },
+    { src: `${P}/2025-repair.jpg`, key: 'repair2025', focus: 'center 35%' },
+    { src: `${P}/2025-inspection.jpg`, key: 'inspection2025' },
+  ],
+}
 
 export default function FRC() {
   usePageTitle('FIRST Robotics — Team Daedalus — Emilio Guadarrama')
   const { t } = useTranslation()
+  const seasons = t('frc.seasons', { returnObjects: true })
 
   return (
     <div style={{ paddingTop: 60 }}>
-      {/* Hero */}
-      <section style={{ padding: '64px 0 48px', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <Link
-            to="/"
-            style={{
-              display: 'inline-flex',
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 11,
-              color: '#424242',
-              textDecoration: 'none',
-              marginBottom: 32,
-              letterSpacing: '0.06em',
-              transition: 'color 0.15s ease',
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
-          >
-            {t('frc.hero.back')}
-          </Link>
-
-          <div
-            style={{
-              display: 'flex',
-              gap: 8,
-              marginBottom: 20,
-              flexWrap: 'wrap',
-            }}
-          >
-            {['Robotics', 'FIRST', 'Team Daedalus'].map((tag) => (
-              <span
-                key={tag}
-                style={{
-                  display: 'inline-flex',
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 11,
-                  padding: '3px 8px',
-                  border: '1px solid #242424',
-                  color: '#424242',
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                {tag}
-              </span>
-            ))}
+      {/* ── HERO ── */}
+      <section style={{ padding: '64px 0 48px', borderBottom: '1px solid var(--divider)' }}>
+        <div style={wrap}>
+          <Link to="/" className="back-link">{t('frc.hero.back')}</Link>
+          <div style={{ display: 'flex', gap: 8, marginBottom: 20, flexWrap: 'wrap' }}>
+            {['Robotics', 'FIRST', 'Team Daedalus 7102'].map((tag) => <Tag key={tag}>{tag}</Tag>)}
           </div>
-
-          <h1
-            style={{
-              fontSize: 'clamp(28px, 4vw, 44px)',
-              fontWeight: 700,
-              color: '#f0f0f0',
-              letterSpacing: '-0.03em',
-              marginBottom: 8,
-            }}
-          >
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 700, color: 'var(--text-primary)', letterSpacing: '-0.03em', lineHeight: 1.05, marginBottom: 24 }}>
             {t('frc.hero.title')}
           </h1>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, auto)',
-              gap: '0 32px',
-              marginTop: 16,
-              width: 'fit-content',
-            }}
-            className="frc-meta"
-          >
+          <dl className="frc-meta" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, auto)', gap: '0 40px', width: 'fit-content', marginBottom: 40 }}>
             {[
-              { k: 'Team', v: t('frc.hero.team') },
-              { k: 'Period', v: t('frc.hero.period') },
-              { k: 'Location', v: t('frc.hero.location') },
-            ].map((item) => (
-              <div key={item.k}>
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 9,
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                    color: '#424242',
-                    marginBottom: 4,
-                  }}
-                >
-                  {item.k}
-                </div>
-                <div style={{ fontSize: 14, color: '#c8c8c8' }}>{item.v}</div>
+              [t('frc.hero.teamLabel'), t('frc.hero.team')],
+              [t('frc.hero.periodLabel'), t('frc.hero.period')],
+              [t('frc.hero.locationLabel'), t('frc.hero.location')],
+            ].map(([k, v]) => (
+              <div key={k}>
+                <dt style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', marginBottom: 4 }}>{k}</dt>
+                <dd style={{ fontSize: 15, color: 'var(--text-primary)' }}>{v}</dd>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </dl>
 
-      {/* Key Achievement */}
-      <section style={{ padding: '32px 0', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 16,
-              border: '1px solid #242424',
-              padding: '20px 24px',
-              background: '#111111',
-              borderRadius: 'var(--radius-sm)',
-            }}
-          >
-            <div
-              style={{
-                width: 4,
-                height: 40,
-                background: '#d8d8d8',
-                flexShrink: 0,
-              }}
-            />
+          <div style={{ display: 'flex', gap: 16, alignItems: 'center', border: '1px solid var(--border)', background: 'var(--card)', padding: '20px 24px', borderRadius: 'var(--radius-sm)', maxWidth: 760 }}>
+            <div style={{ width: 3, alignSelf: 'stretch', background: 'var(--accent-white)', flexShrink: 0 }} />
             <div>
-              <div
-                style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 10,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: '#424242',
-                  marginBottom: 6,
-                }}
-              >
-                Key Achievement
-              </div>
-              <div style={{ fontSize: 15, color: '#f0f0f0', fontWeight: 500 }}>
-                {t('frc.achievement')}
-              </div>
+              <div style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', marginBottom: 6 }}>{t('frc.achievementLabel')}</div>
+              <div style={{ fontSize: 16, color: 'var(--text-primary)', fontWeight: 500, lineHeight: 1.5 }}>{t('frc.achievement')}</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Season Timeline */}
-      <section style={{ padding: '64px 0', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel>{t('frc.timeline')}</SectionLabel>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {seasons.map((season, i) => (
-              <div
-                key={i}
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: '80px 1fr',
-                  gap: 24,
-                  padding: '24px 0',
-                  borderTop: '1px solid #242424',
-                  alignItems: 'start',
-                }}
-                className="season-row"
-              >
-                <div
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: season.featured ? '#f0f0f0' : '#424242',
-                    paddingTop: 2,
-                  }}
-                >
-                  {season.year}
-                </div>
-                <div>
-                  <div
-                    style={{
-                      fontSize: 15,
-                      fontWeight: 600,
-                      color: '#f0f0f0',
-                      marginBottom: 8,
-                    }}
-                  >
-                    {season.role}
-                  </div>
-                  <div style={{ fontSize: 14, color: '#c8c8c8', lineHeight: 1.6 }}>
-                    {season.highlights}
-                  </div>
-                  {season.featured && (
-                    <div
-                      style={{
-                        marginTop: 12,
-                        display: 'inline-flex',
-                        border: '1px solid #242424',
-                        padding: '4px 10px',
-                        fontFamily: "'JetBrains Mono', monospace",
-                        fontSize: 10,
-                        color: '#d8d8d8',
-                        letterSpacing: '0.06em',
-                        borderRadius: 'var(--radius-sm)',
-                      }}
-                    >
-                      ★ World Championship Qualifier
-                    </div>
-                  )}
-                </div>
+      {/* ── SEASONS ── */}
+      {seasons.map((s, i) => (
+        <section key={s.year} style={{ padding: '72px 0', borderBottom: i < seasons.length - 1 ? '1px solid var(--divider)' : 'none' }}>
+          <div style={wrap}>
+            <div className="season-head">
+              <div style={{ ...mono, fontSize: 'clamp(40px, 6vw, 64px)', fontWeight: 600, color: s.featured ? 'var(--text-primary)' : 'var(--text-secondary)', letterSpacing: '-0.03em', lineHeight: 1 }}>
+                {s.year}
               </div>
-            ))}
-            <div style={{ borderTop: '1px solid #242424' }} />
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Placeholder */}
-      <section style={{ padding: '64px 0' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel>Gallery</SectionLabel>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: 8,
-            }}
-            className="frc-gallery"
-          >
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  border: '1px solid #242424',
-                  background: '#111111',
-                  aspectRatio: '4/3',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 'var(--radius-sm)',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "'JetBrains Mono', monospace",
-                    fontSize: 10,
-                    color: '#242424',
-                  }}
-                >
-                  Photo {i + 1}
-                </span>
+              <div>
+                <div style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', marginBottom: 6 }}>{s.game}</div>
+                <h2 style={{ fontSize: 22, fontWeight: 600, color: 'var(--text-primary)', letterSpacing: '-0.01em', marginBottom: 10 }}>{s.role}</h2>
+                <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.7, maxWidth: '64ch' }}>{s.highlights}</p>
+                {s.featured && (
+                  <div style={{ marginTop: 14, display: 'inline-flex', border: '1px solid var(--border)', padding: '4px 10px', ...mono, fontSize: 11, color: 'var(--accent-white)', borderRadius: 'var(--radius-sm)' }}>
+                    ★ {t('frc.qualifier')}
+                  </div>
+                )}
               </div>
-            ))}
+            </div>
+            <Gallery
+              items={seasonPhotos[s.year].map((p) => ({ ...p, caption: t(`captions.frc.${p.key}`) }))}
+              columns={4}
+            />
           </div>
-          <p style={{ fontSize: 12, color: '#424242', marginTop: 16, fontFamily: "'JetBrains Mono', monospace" }}>
-            Competition photos coming soon.
-          </p>
-        </div>
-      </section>
+        </section>
+      ))}
     </div>
   )
 }
