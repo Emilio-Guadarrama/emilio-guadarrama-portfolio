@@ -29,8 +29,8 @@ const seasonPhotos = {
 }
 
 export default function FRC() {
-  usePageTitle('FIRST Robotics — Team Daedalus — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.frc'))
   const seasons = t('frc.seasons', { returnObjects: true })
 
   return (

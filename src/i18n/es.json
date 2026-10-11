@@ -138,7 +138,7 @@
   },
   "footer": {
     "role": "Estudiante de Ingeniería en Electrónica y Semiconductores",
-    "copyright": "© 2026 Emilio Guadarrama. Todos los derechos reservados."
+    "copyright": "© {{year}} Emilio Guadarrama. Todos los derechos reservados."
   },
   "ignis": {
     "hero": {
@@ -609,5 +609,22 @@
         "v": "11 de junio – 19 de julio de 2026 · Canadá, México y Estados Unidos"
       }
     ]
+  },
+  "titles": {
+    "home": "Emilio Guadarrama — Ingeniería en Electrónica y Semiconductores",
+    "ignis": "IGNIS Flight Computer — Emilio Guadarrama",
+    "satellite": "LASC 2026 CanSat — Emilio Guadarrama",
+    "ignitia": "Ignitia Rocket Lab — Emilio Guadarrama",
+    "frc": "FIRST Robotics — Team Daedalus — Emilio Guadarrama",
+    "wgs": "Water Growth Solutions — Emilio Guadarrama",
+    "techo": "TECHO México — Emilio Guadarrama",
+    "fifawc": "Copa Mundial de la FIFA 2026 — Emilio Guadarrama",
+    "notFound": "Página no encontrada — Emilio Guadarrama"
+  },
+  "notFound": {
+    "title": "Esta página no existe",
+    "desc": "El enlace puede ser antiguo o tener un error. Regresa al inicio o ve directo a la computadora de vuelo IGNIS.",
+    "home": "← Inicio",
+    "ignis": "IGNIS Flight Computer"
   }
 }

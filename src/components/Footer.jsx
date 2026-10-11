@@ -114,7 +114,7 @@ export default function Footer() {
             fontFamily: "'JetBrains Mono', monospace",
           }}
         >
-          {t('footer.copyright')}
+          {t('footer.copyright', { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>

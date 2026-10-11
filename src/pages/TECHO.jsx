@@ -38,8 +38,8 @@ const buildPhotos = [
 ]
 
 export default function TECHO() {
-  usePageTitle('TECHO México — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.techo'))
   const builds = t('techo.builds', { returnObjects: true })
 
   return (

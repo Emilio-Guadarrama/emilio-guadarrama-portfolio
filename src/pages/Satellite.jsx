@@ -8,8 +8,8 @@ const wrap = { maxWidth: 1100, margin: '0 auto', padding: '0 24px' }
 const mono = { fontFamily: 'var(--font-mono)' }
 
 export default function Satellite() {
-  usePageTitle('LASC 2026 CanSat — Emilio Guadarrama')
   const { t } = useTranslation()
+  usePageTitle(t('titles.satellite'))
   const facts = t('satellite.facts', { returnObjects: true })
   const points = t('satellite.points', { returnObjects: true })
 
