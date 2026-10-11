@@ -10,7 +10,7 @@
   "hero": {
     "title": "Electronics and Semiconductor Engineering Student",
     "subtitle": "Embedded Hardware & PCB Design",
-    "role": "Vice President & Avionics/Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey",
+    "role": "Vice President & Electronics & Avionics Lead at Ignitia Rocket Lab · Tec de Monterrey",
     "description": "Lead designer of IGNIS, an open-source rocket flight computer flown at LASC 2026, with hands-on work in schematic capture, multilayer layout, bring-up, flight-data analysis and design for manufacturing.",
     "viewProjects": "View Projects",
     "downloadCV": "Download CV"
@@ -56,7 +56,7 @@
         "location": "Zapopan, Jalisco",
         "roles": [
           {
-            "title": "Vice President & Electronics/Avionics Lead",
+            "title": "Vice President & Electronics & Avionics Lead",
             "period": "Jan 2026 – Feb 2027",
             "bullets": [
               "Vice President of a 30-member team; lead the 9-member electronics area and train new members on flight-computer design and assembly.",
@@ -89,30 +89,19 @@
         "roles": [
           {
             "title": "Mechanical Lead & Mentor",
-            "period": "2025 · Reefscape",
-            "bullets": [
-              "Led the team's manufacturing and mentored new members through the Monterrey and León Regionals."
-            ],
-            "image": "/photos/frc/2025-pits.jpg",
-            "imageAlt": "Working in the pits, 2025"
+            "period": "2025"
           },
           {
             "title": "Mechanical Lead",
-            "period": "2024 · Crescendo",
-            "bullets": [
-              "Led manufacturing and was a member of the drive team. Won the Hermosillo Regional and qualified for the FIRST World Championship in Houston."
-            ],
-            "image": "/photos/frc/2024-hermosillo-winners.jpg",
-            "imageAlt": "Hermosillo Regional 2024 winners"
+            "period": "2024"
           },
           {
             "title": "Robotics Technician",
-            "period": "2023 · Charged Up",
-            "bullets": [
-              "Drive team, scouting and mechanical maintenance."
-            ]
+            "period": "2023"
           }
-        ]
+        ],
+        "compact": true,
+        "summary": "Three high-school seasons from technician to Mechanical Lead. Won the 2024 Hermosillo Regional and qualified for the FIRST World Championship in Houston."
       }
     ]
   },
@@ -379,7 +368,7 @@
       "back": "← Home"
     },
     "roleLabel": "Emilio's role",
-    "role": "Vice President & Avionics/Electronics Lead · 30-member team · leads the 9-member electronics area and trains new members on flight-computer design and assembly",
+    "role": "Vice President & Electronics & Avionics Lead · 30-member team · leads the 9-member electronics area and trains new members on flight-computer design and assembly",
     "sectionsLabel": "Sections",
     "lasc": {
       "title": "LASC 2026 · Brazil",

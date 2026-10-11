@@ -3,6 +3,7 @@
  * vertical line. Each role can carry a photo, shown on desktop only.
  * Data: experience.items in i18n →
  *   { org, sub, period, location, logo, roles: [{ title, period, bullets, image, imageAlt }] }
+ *   compact: true → one summary line and the roles as single rows (no bullets or photos)
  * ─────────────────────────────────────────────────────────────────── */
 
 import { motion } from 'framer-motion'
@@ -31,6 +32,19 @@ export default function Experience({ items }) {
             </div>
           </header>
 
+          {org.compact ? (
+            <div className="exp-compact">
+              {org.summary && <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.65, maxWidth: '72ch', marginBottom: 12 }}>{org.summary}</p>}
+              <ul style={{ listStyle: 'none', display: 'flex', flexWrap: 'wrap', gap: '6px 24px' }}>
+                {org.roles.map((r) => (
+                  <li key={r.title} style={{ fontSize: 14, color: 'var(--text-primary)' }}>
+                    <span style={{ ...mono, fontSize: 11, color: 'var(--text-secondary)', marginRight: 8 }}>{r.period}</span>
+                    {r.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : (
           <ol className="exp-roles">
             {org.roles.map((r) => (
               <li key={r.title + r.period} className={`exp-role${r.image ? ' has-image' : ''}`}>
@@ -51,6 +65,7 @@ export default function Experience({ items }) {
               </li>
             ))}
           </ol>
+          )}
         </motion.article>
       ))}
     </Stagger>

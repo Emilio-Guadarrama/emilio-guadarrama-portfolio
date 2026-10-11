@@ -106,7 +106,7 @@ Technical font:   JetBrains Mono
 - **Name:** Emilio Guadarrama Gutiérrez
 - **Title:** Electronics and Semiconductor Engineering Student
 - **Subtitle:** Embedded Hardware & PCB Design
-- **Role line:** Vice President & Avionics/Electronics Lead at Ignitia Rocket Lab · Tec de Monterrey
+- **Role line:** Vice President & Electronics & Avionics Lead at Ignitia Rocket Lab · Tec de Monterrey
 - **Description:** "Lead designer of IGNIS, an open-source rocket flight computer flown at LASC 2026, with hands-on work in schematic capture, multilayer layout, bring-up, flight-data analysis and design for manufacturing."
 - **Photo:** `brand_assets/photos/hero/photo.png`
 - **Buttons:** View Projects · GitHub · LinkedIn · Download CV
@@ -137,7 +137,7 @@ Technical font:   JetBrains Mono
 **Ignitia Rocket Lab** · Tecnológico de Monterrey · Aug 2025 – Feb 2027 (Emilio leaves the team in Feb 2027) · Zapopan, Jalisco
 | Period | Role |
 |---|---|
-| Jan 2026 – Feb 2027 | Vice President & Electronics/Avionics Lead — 30-member team, leads the 9-member electronics area; IGNIS lead hardware designer; LASC 2026 (9th/25 Rocket Challenge 1 km, CanSat Mission Leader 9th/50); v5 DFM |
+| Jan 2026 – Feb 2027 | Vice President & Electronics & Avionics Lead — 30-member team, leads the 9-member electronics area; IGNIS lead hardware designer; LASC 2026 (9th/25 Rocket Challenge 1 km, CanSat Mission Leader 9th/50); v5 DFM |
 | Aug 2025 – Dec 2025 | Electronics & Avionics Division Member — ENMICE 2025 |
 
 **FIRST Robotics Competition** · Team Daedalus 7102 · Jan 2023 – May 2025 · Zapopan, Jalisco
@@ -307,7 +307,7 @@ Divided into clear sections, with jump links under the hero.
 - **Title:** Ignitia Rocket Lab
 - **Subtitle:** Tecnológico de Monterrey · Campus Guadalajara
 - **Tagline:** Pasión con Impacto
-- **Emilio's role:** Vice President & Avionics/Electronics Lead — 30-member team; leads the 9-member electronics area and trains new members on flight-computer design and assembly
+- **Emilio's role:** Vice President & Electronics & Avionics Lead — 30-member team; leads the 9-member electronics area and trains new members on flight-computer design and assembly
 - **Links:** Website https://ignitia.space · Instagram https://www.instagram.com/ignitia.rocketlab
 
 #### LASC 2026 · Brazil
