@@ -192,7 +192,7 @@ export default function AwardsCarousel() {
         <div style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: 11, letterSpacing: '0.12em',
-          textTransform: 'uppercase', color: '#424242',
+          textTransform: 'uppercase', color: '#8a8a8a',
         }}>
           // Certifications &amp; Awards
         </div>
@@ -274,7 +274,7 @@ function Card({ item, isActive, onToggle }) {
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: 9, letterSpacing: '0.1em',
           textTransform: 'uppercase',
-          color: '#424242', lineHeight: 1.4,
+          color: '#8a8a8a', lineHeight: 1.4,
           maxWidth: 120,
         }}>
           {item.source}
@@ -282,7 +282,7 @@ function Card({ item, isActive, onToggle }) {
         <span style={{
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: 9, letterSpacing: '0.06em',
-          color: item.amber ? '#b89060' : '#424242',
+          color: item.amber ? '#b89060' : '#8a8a8a',
           border: `1px solid ${item.amber ? '#28200e' : '#242424'}`,
           background: item.amber ? '#120e06' : 'transparent',
           padding: '1px 5px',
@@ -305,7 +305,7 @@ function Card({ item, isActive, onToggle }) {
         </div>
         <div style={{
           fontFamily: "'JetBrains Mono', monospace",
-          fontSize: 10, color: '#424242',
+          fontSize: 10, color: '#8a8a8a',
           marginTop: 4, letterSpacing: '0.04em',
         }}>
           {item.highlightLabel}

@@ -7,7 +7,7 @@
   --divider:        #1a1a1a;
   --text-primary:   #f0f0f0;
   --text-secondary: #c8c8c8;
-  --text-muted:     #424242;
+  --text-muted:     #8a8a8a;
   --accent-white:   #d8d8d8;
   --amber:          #b89060;
   --amber-bg:       #120e06;
@@ -62,7 +62,7 @@ button {
 
 /* ── Focus visible — keyboard only, no mouse ring ──────────────────── */
 :focus-visible {
-  outline: 1px solid var(--border-hover);
+  outline: 2px solid var(--accent-white);
   outline-offset: 2px;
 }
 
@@ -87,7 +87,7 @@ button {
 /* ── Global form styles ────────────────────────────────────────────── */
 input::placeholder,
 textarea::placeholder {
-  color: #2a2a2a;
+  color: #6e6e6e;
   font-family: var(--font-mono);
 }
 
@@ -268,7 +268,7 @@ textarea::placeholder {
 }
 .gallery-thumb:hover { border-color: var(--text-muted); }
 .gallery-thumb:hover img { transform: scale(1.02); }
-.gallery-thumb:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
+.gallery-thumb:focus-visible { outline: 2px solid var(--accent-white); outline-offset: 2px; }
 .gallery-thumb:active { border-color: var(--text-secondary); }
 
 .gallery-video-badge {
@@ -358,7 +358,7 @@ textarea::placeholder {
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .lightbox-btn:hover { color: var(--text-primary); border-color: var(--text-muted); }
-.lightbox-btn:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
+.lightbox-btn:focus-visible { outline: 2px solid var(--accent-white); outline-offset: 2px; }
 .lightbox-btn:active { border-color: var(--text-secondary); }
 .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); }
 .lightbox-prev { left: 16px; }
@@ -482,7 +482,7 @@ textarea::placeholder {
 .nav-logo img { width: 32px; height: 32px; display: block; }
 .nav-logo:hover { opacity: 0.8; }
 .nav-logo:active { opacity: 0.6; }
-.nav-logo:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
+.nav-logo:focus-visible { outline: 2px solid var(--accent-white); outline-offset: 2px; }
 
 /* ── Carousel ──────────────────────────────────────────────────────── */
 /* Slide on the left, thumbnails in a column on the right that scrolls
@@ -524,7 +524,7 @@ textarea::placeholder {
   background: none;
   cursor: zoom-in;
 }
-.carousel-open:focus-visible { outline: 1px solid var(--text-secondary); outline-offset: -3px; }
+.carousel-open:focus-visible { outline: 2px solid var(--accent-white); outline-offset: -3px; }
 .carousel-expand {
   position: absolute;
   right: 12px;
@@ -592,7 +592,7 @@ textarea::placeholder {
 .carousel-thumb.is-active { opacity: 1; }
 .carousel-thumb.is-active .carousel-thumb-img { border-color: var(--text-secondary); }
 .carousel-thumb:focus-visible { outline: none; }
-.carousel-thumb:focus-visible .carousel-thumb-img { outline: 1px solid var(--text-secondary); outline-offset: 2px; }
+.carousel-thumb:focus-visible .carousel-thumb-img { outline: 2px solid var(--accent-white); outline-offset: 2px; }
 
 @media (max-width: 760px) {
   .carousel { grid-template-columns: minmax(0, 1fr); gap: 12px; }

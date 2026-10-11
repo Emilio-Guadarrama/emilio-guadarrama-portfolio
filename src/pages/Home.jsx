@@ -137,7 +137,7 @@ export default function Home() {
                 color: stat.amber ? '#b89060' : '#f0f0f0', marginBottom: 4 }}>
                 {stat.value}
               </div>
-              <div style={{ fontSize: 12, color: '#424242', lineHeight: 1.4 }}>{stat.label}</div>
+              <div style={{ fontSize: 12, color: '#8a8a8a', lineHeight: 1.4 }}>{stat.label}</div>
             </motion.div>
           ))}
         </Stagger>
@@ -151,7 +151,7 @@ export default function Home() {
             <Reveal>
               <div>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: '0.12em',
-                  textTransform: 'uppercase', color: '#424242', marginBottom: 12 }}>
+                  textTransform: 'uppercase', color: '#8a8a8a', marginBottom: 12 }}>
                   {t('about.title')}
                 </div>
                 <p style={{ fontSize: 16, color: '#c8c8c8', lineHeight: 1.8, maxWidth: 600 }}>
@@ -164,18 +164,18 @@ export default function Home() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: '0.12em',
-                    textTransform: 'uppercase', color: '#424242', marginBottom: 12 }}>
+                    textTransform: 'uppercase', color: '#8a8a8a', marginBottom: 12 }}>
                     {t('about.educationLabel')}
                   </div>
                   <div style={{ border: '1px solid #242424', padding: '16px', borderRadius: 'var(--radius-sm)' }}>
                     <div style={{ fontSize: 14, fontWeight: 600, color: '#f0f0f0', marginBottom: 4 }}>{t('about.degree')}</div>
                     <div style={{ fontSize: 13, color: '#c8c8c8', marginBottom: 4 }}>{t('about.institution')}</div>
-                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#424242' }}>{t('about.period')}</div>
+                    <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#8a8a8a' }}>{t('about.period')}</div>
                   </div>
                 </div>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: '0.12em',
-                    textTransform: 'uppercase', color: '#424242', marginBottom: 12 }}>
+                    textTransform: 'uppercase', color: '#8a8a8a', marginBottom: 12 }}>
                     {t('about.languagesLabel')}
                   </div>
 
@@ -205,7 +205,7 @@ export default function Home() {
                           </span>
                           <span style={{
                             fontFamily: "'JetBrains Mono', monospace",
-                            fontSize: 10, color: '#424242', letterSpacing: '0.06em',
+                            fontSize: 10, color: '#8a8a8a', letterSpacing: '0.06em',
                           }}>
                             {lang.level}
                           </span>
@@ -325,7 +325,7 @@ export default function Home() {
                         {project.name}
                       </div>
                       <p style={{ fontSize: 13, color: '#c8c8c8', lineHeight: 1.65, marginBottom: 16 }}>{project.desc}</p>
-                      <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#424242', letterSpacing: '0.06em' }}>
+                      <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#8a8a8a', letterSpacing: '0.06em' }}>
                         {t('projects.viewProject')}
                       </div>
                     </Link>
@@ -464,7 +464,7 @@ function CVDropdown({ label }) {
                 {lang}
                 <span style={{
                   fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 9, color: '#424242', letterSpacing: '0.06em',
+                  fontSize: 9, color: '#8a8a8a', letterSpacing: '0.06em',
                 }}>
                   PDF ↓
                 </span>

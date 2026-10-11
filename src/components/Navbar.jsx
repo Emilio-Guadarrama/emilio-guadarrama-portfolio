@@ -153,7 +153,7 @@ function ProjectCard({ proj, onClick }) {
         </div>
         <div style={{
           fontFamily: "'JetBrains Mono', monospace",
-          fontSize: 10, color: '#424242', lineHeight: 1.5,
+          fontSize: 10, color: '#8a8a8a', lineHeight: 1.5,
         }}>
           {proj.desc}
         </div>
@@ -362,7 +362,7 @@ export default function Navbar() {
                       paddingTop: 8,
                       borderTop: '1px solid #1a1a1a',
                       fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: 10, color: '#2a2a2a',
+                      fontSize: 10, color: '#8a8a8a',
                       letterSpacing: '0.08em',
                       paddingLeft: 12,
                     }}>
@@ -436,7 +436,7 @@ export default function Navbar() {
                       paddingTop: 8,
                       borderTop: '1px solid #1a1a1a',
                       fontFamily: "'JetBrains Mono', monospace",
-                      fontSize: 10, color: '#2a2a2a',
+                      fontSize: 10, color: '#8a8a8a',
                       letterSpacing: '0.08em',
                       paddingLeft: 12,
                     }}>
@@ -461,12 +461,12 @@ export default function Navbar() {
                 padding: '5px 10px',
                 fontFamily: "'JetBrains Mono', monospace",
                 fontSize: 11, fontWeight: 500, letterSpacing: '0.08em',
-                color: '#424242', cursor: 'pointer',
+                color: '#8a8a8a', cursor: 'pointer',
                 transition: 'border-color 0.15s ease, color 0.15s ease',
                 borderRadius: 'var(--radius-sm)',
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#3a3a3a'; e.currentTarget.style.color = '#c8c8c8' }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#242424'; e.currentTarget.style.color = '#424242' }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#242424'; e.currentTarget.style.color = '#8a8a8a' }}
             >
               {i18n.language === 'en' ? 'EN' : 'ES'}
             </button>
@@ -547,7 +547,7 @@ export default function Navbar() {
                         {label}
                         <span style={{
                           fontFamily: "'JetBrains Mono', monospace",
-                          fontSize: 9, color: '#424242', letterSpacing: '0.06em',
+                          fontSize: 9, color: '#8a8a8a', letterSpacing: '0.06em',
                         }}>
                           PDF ↓
                         </span>
@@ -652,7 +652,7 @@ export default function Navbar() {
               padding: '9px 16px',
               fontFamily: "'JetBrains Mono', monospace",
               fontSize: 12, letterSpacing: '0.08em',
-              color: '#424242', cursor: 'pointer',
+              color: '#8a8a8a', cursor: 'pointer',
               borderRadius: 'var(--radius-sm)',
             }}
           >
@@ -670,7 +670,7 @@ export default function Navbar() {
               borderRadius: 'var(--radius-sm)',
             }}
           >
-            CV EN <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#424242' }}>PDF ↓</span>
+            CV EN <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#8a8a8a' }}>PDF ↓</span>
           </a>
           <a
             href="/brand_assets/Resume_Spanish.pdf"
@@ -684,7 +684,7 @@ export default function Navbar() {
               borderRadius: 'var(--radius-sm)',
             }}
           >
-            CV ES <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#424242' }}>PDF ↓</span>
+            CV ES <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 9, color: '#8a8a8a' }}>PDF ↓</span>
           </a>
         </div>
       </MobileMenu>

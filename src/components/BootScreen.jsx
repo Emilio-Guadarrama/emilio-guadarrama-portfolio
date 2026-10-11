@@ -10,8 +10,8 @@ const LINES = [
   { text: 'IGNIS v2.2 FLIGHT COMPUTER',        suffix: null,   color: '#f0f0f0', sufColor: null,     delay: 80  },
   { text: 'IGNITIA ROCKET LAB · LASC 2026',    suffix: null,   color: '#b89060', sufColor: null,     delay: 220 },
   { text: '─'.repeat(46),                       suffix: null,   color: '#1e1e1e', sufColor: null,     delay: 380 },
-  { text: 'BOOT SEQUENCE v1.0.0',               suffix: null,   color: '#424242', sufColor: null,     delay: 520 },
-  { text: 'INITIALIZING AVIONICS STACK',        suffix: null,   color: '#424242', sufColor: null,     delay: 700 },
+  { text: 'BOOT SEQUENCE v1.0.0',               suffix: null,   color: '#8a8a8a', sufColor: null,     delay: 520 },
+  { text: 'INITIALIZING AVIONICS STACK',        suffix: null,   color: '#8a8a8a', sufColor: null,     delay: 700 },
   { text: '  ESP32-S3-WROOM-1-N8R8         ',  suffix: 'OK',   color: '#c8c8c8', sufColor: '#b89060', delay: 900  },
   { text: '  MPU-6050 — IMU 6-DOF          ',  suffix: 'OK',   color: '#c8c8c8', sufColor: '#b89060', delay: 1060 },
   { text: '  BMP180 — BAROMETER            ',  suffix: 'OK',   color: '#c8c8c8', sufColor: '#b89060', delay: 1200 },
@@ -157,7 +157,7 @@ export default function BootScreen({ onDone }) {
                 transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
                 style={{
                   fontFamily: "'JetBrains Mono', monospace",
-                  fontSize: 10, color: '#424242', letterSpacing: '0.08em',
+                  fontSize: 10, color: '#8a8a8a', letterSpacing: '0.08em',
                 }}
               >
                 CLICK TO SKIP

@@ -39,7 +39,7 @@ export default function Footer() {
           <div
             style={{
               fontSize: 13,
-              color: '#424242',
+              color: '#8a8a8a',
               fontFamily: "'JetBrains Mono', monospace",
             }}
           >
@@ -55,13 +55,13 @@ export default function Footer() {
               display: 'flex',
               alignItems: 'center',
               gap: 6,
-              color: '#424242',
+              color: '#8a8a8a',
               fontSize: 13,
               transition: 'color 0.15s ease',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#8a8a8a')}
           >
             <EmailIcon />
             <span style={{ display: 'none' }}>Email</span>
@@ -75,13 +75,13 @@ export default function Footer() {
               display: 'flex',
               alignItems: 'center',
               gap: 6,
-              color: '#424242',
+              color: '#8a8a8a',
               fontSize: 13,
               transition: 'color 0.15s ease',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#8a8a8a')}
           >
             <GitHubIcon />
           </a>
@@ -94,13 +94,13 @@ export default function Footer() {
               display: 'flex',
               alignItems: 'center',
               gap: 6,
-              color: '#424242',
+              color: '#8a8a8a',
               fontSize: 13,
               transition: 'color 0.15s ease',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => (e.currentTarget.style.color = '#c8c8c8')}
-            onMouseLeave={(e) => (e.currentTarget.style.color = '#424242')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#8a8a8a')}
           >
             <LinkedInIcon />
           </a>
@@ -110,7 +110,7 @@ export default function Footer() {
         <div
           style={{
             fontSize: 12,
-            color: '#424242',
+            color: '#8a8a8a',
             fontFamily: "'JetBrains Mono', monospace",
           }}
         >
