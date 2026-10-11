@@ -48,9 +48,72 @@
   "experience": {
     "title": "Experiencia",
     "items": [
-      { "period": "Ago 2025 – Presente", "role": "Vicepresidente y Líder de Aviónica/Electrónica", "org": "Ignitia Rocket Lab", "desc": "Diseñador principal de hardware de IGNIS. Vicepresidente de un equipo de 30 integrantes; lidero el área de electrónica de 9 personas y capacito a nuevos integrantes en diseño y ensamble de computadoras de vuelo." },
-      { "period": "Ene 2023 – May 2025", "role": "Líder Mecánico y Mentor", "org": "FIRST Robotics — Team Daedalus", "desc": "Dirigí la manufactura y formé parte del drive team; ganamos el Regional Hermosillo y clasificamos al FIRST World Championship en Houston (2024)." },
-      { "period": "Ago 2024 – Jun 2025", "role": "Subsecretario General", "org": "TECMUN GDL" }
+      {
+        "org": "Ignitia Rocket Lab",
+        "sub": "Tecnológico de Monterrey · Equipo de cohetería competitiva",
+        "mark": "IRL",
+        "period": "Ago 2025 – Feb 2027",
+        "location": "Zapopan, Jalisco",
+        "roles": [
+          {
+            "title": "Vicepresidente y Líder de Electrónica/Aviónica",
+            "period": "Ene 2026 – Feb 2027",
+            "bullets": [
+              "Vicepresidente de un equipo de 30 integrantes; lidero el área de electrónica de 9 personas y capacito a nuevos integrantes en diseño y ensamble de computadoras de vuelo.",
+              "Diseñador principal de hardware de IGNIS, una computadora de vuelo de código abierto: arquitectura, esquemáticos, layout de PCB de 4 capas en Altium Designer, diseño de RF y potencia, abastecimiento, puesta en marcha y depuración en laboratorio.",
+              "IGNIS v2.2 voló como computadora de vuelo principal en LASC 2026 en Brasil: 9.º de 25 en la categoría de 1 km del Rocket Challenge.",
+              "Líder de misión del CanSat del equipo: 9.º de 50 en el Satellite Challenge.",
+              "Rediseñé la v5 para ensamble SMT llave en mano en JLCPCB (109 colocaciones, 40 líneas de BOM)."
+            ],
+            "image": "/photos/lasc/avionics-bay.jpg",
+            "imageAlt": "Integración final de la bahía de aviónica en LASC 2026"
+          },
+          {
+            "title": "Integrante de la División de Electrónica y Aviónica",
+            "period": "Ago 2025 – Dic 2025",
+            "bullets": [
+              "Colaboré en la división de electrónica y aviónica del equipo.",
+              "Competimos en ENMICE 2025: 2.º lugar en presentación de proyecto y Reconocimiento Honorífico por Conducta del Equipo."
+            ],
+            "image": "/photos/ignitia/enmice-electronics.jpg",
+            "imageAlt": "Equipo de electrónica en ENMICE 2025"
+          }
+        ]
+      },
+      {
+        "org": "FIRST Robotics Competition",
+        "sub": "Team Daedalus 7102",
+        "logo": "/logos/first.png",
+        "period": "Ene 2023 – May 2025",
+        "location": "Zapopan, Jalisco",
+        "roles": [
+          {
+            "title": "Líder Mecánico y Mentor",
+            "period": "2025 · Reefscape",
+            "bullets": [
+              "Dirigí la manufactura del equipo y fui mentor de nuevos integrantes en los regionales de Monterrey y León."
+            ],
+            "image": "/photos/frc/2025-pits.jpg",
+            "imageAlt": "Trabajando en pits, 2025"
+          },
+          {
+            "title": "Líder Mecánico",
+            "period": "2024 · Crescendo",
+            "bullets": [
+              "Dirigí la manufactura y formé parte del drive team. Ganamos el Regional Hermosillo y clasificamos al FIRST World Championship en Houston."
+            ],
+            "image": "/photos/frc/2024-hermosillo-winners.jpg",
+            "imageAlt": "Ganadores del Regional Hermosillo 2024"
+          },
+          {
+            "title": "Técnico de Robótica",
+            "period": "2023 · Charged Up",
+            "bullets": [
+              "Drive team, scouting y mantenimiento mecánico."
+            ]
+          }
+        ]
+      }
     ]
   },
   "projects": {

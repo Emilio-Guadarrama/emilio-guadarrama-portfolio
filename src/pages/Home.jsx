@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { usePageTitle } from '../hooks/usePageTitle'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Reveal, Stagger, staggerItem, slideItem } from '../components/Reveal'
+import { Reveal, Stagger, staggerItem } from '../components/Reveal'
 import { Tag, SectionLabel } from '../components/ui'
 import { GitHubIcon, LinkedInIcon } from '../components/icons'
 import ContactForm from '../components/ContactForm'
+import Experience from '../components/Experience'
 import AwardsCarousel from '../components/AwardsCarousel'
 import { ChevronDown } from 'lucide-react'
 
@@ -238,60 +239,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TECHNICAL SKILLS ─────────────────────────────────────────── */}
-      <section id="skills" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
-          <SectionLabel animate mb={48}>{t('skills.title')}</SectionLabel>
-          <Stagger
-            className="cgrid skills-grid"
-            stagger={0.08}
-          >
-            {Array.isArray(skillGroups) && skillGroups.map((group, i) => (
-              <motion.div key={i} variants={staggerItem}
-                style={{ background: '#111111', border: '1px solid #242424', padding: '24px', borderRadius: 'var(--radius-sm)' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, fontWeight: 600,
-                  letterSpacing: '0.1em', textTransform: 'uppercase', color: '#f0f0f0',
-                  marginBottom: 16, paddingBottom: 12, borderBottom: '1px solid #242424' }}>
-                  {group.name}
-                </div>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  {group.items.map((item, j) => (
-                    <li key={j} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 12, color: '#c8c8c8' }}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </Stagger>
-        </div>
-      </section>
-
       {/* ── EXPERIENCE ───────────────────────────────────────────────── */}
       <section id="experience" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel animate mb={48}>{t('experience.title')}</SectionLabel>
-          <Stagger style={{ display: 'flex', flexDirection: 'column' }} stagger={0.1}>
-            {Array.isArray(expItems) && expItems.map((item, i) => (
-              <motion.div key={i} variants={slideItem}
-                style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: 32,
-                  padding: '28px 0', borderTop: '1px solid #242424', alignItems: 'start' }}
-                className="exp-row">
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 11, color: '#424242', paddingTop: 2 }}>
-                  {item.period}
+          <Experience items={expItems} />
+        </div>
+      </section>
+
+      {/* ── TECHNICAL SKILLS ─────────────────────────────────────────── */}
+      <section id="skills" style={{ padding: '96px 0', borderBottom: '1px solid #1a1a1a' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel animate mb={48}>{t('skills.title')}</SectionLabel>
+          <Reveal>
+            <dl className="skills-list">
+              {Array.isArray(skillGroups) && skillGroups.map((group) => (
+                <div key={group.name} className="skills-row">
+                  <dt className="skills-name">{group.name}</dt>
+                  <dd className="skills-chips">
+                    {group.items.map((item) => <span key={item} className="skill-chip">{item}</span>)}
+                  </dd>
                 </div>
-                <div>
-                  <div style={{ fontSize: 16, fontWeight: 600, color: '#f0f0f0', marginBottom: 4 }}>{item.role}</div>
-                  <div style={{ fontSize: 14, color: '#c8c8c8' }}>{item.org}</div>
-                  {item.desc && (
-                    <p style={{ fontSize: 14, color: '#c8c8c8', lineHeight: 1.7, maxWidth: 640, marginTop: 10 }}>{item.desc}</p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-            <motion.div variants={{ hidden: { scaleX: 0 }, visible: { scaleX: 1, transition: { duration: 0.4 } } }}
-              style={{ borderTop: '1px solid #242424', transformOrigin: 'left' }} />
-          </Stagger>
+              ))}
+            </dl>
+          </Reveal>
         </div>
       </section>
 

@@ -133,12 +133,22 @@ Technical font:   JetBrains Mono
 | Assembly & Manufacturing | DFM for turnkey SMT (JLCPCB/LCSC) · Stencil printing · Reflow oven · Soldering & hot-air rework |
 | Software & Tools | KiCad · LTspice · NI Multisim · Verilog · Python (pandas, PySide6) · Git / GitHub |
 
-#### Experience Timeline
-| Period | Role | Organization |
-|---|---|---|
-| Aug 2025 – Present | Vice President & Avionics/Electronics Lead | Ignitia Rocket Lab — 30-member team, leads the 9-member electronics area |
-| Jan 2023 – May 2025 | Mechanical Lead & Mentor | FIRST Robotics — Team Daedalus |
-| Aug 2024 – Jun 2025 | Under-Secretary-General | TECMUN GDL |
+#### Experience (shown before Technical Skills; grouped by organization, LinkedIn-style)
+**Ignitia Rocket Lab** · Tecnológico de Monterrey · Aug 2025 – Feb 2027 (Emilio leaves the team in Feb 2027) · Zapopan, Jalisco
+| Period | Role |
+|---|---|
+| Jan 2026 – Feb 2027 | Vice President & Electronics/Avionics Lead — 30-member team, leads the 9-member electronics area; IGNIS lead hardware designer; LASC 2026 (9th/25 Rocket Challenge 1 km, CanSat Mission Leader 9th/50); v5 DFM |
+| Aug 2025 – Dec 2025 | Electronics & Avionics Division Member — ENMICE 2025 |
+
+**FIRST Robotics Competition** · Team Daedalus 7102 · Jan 2023 – May 2025 · Zapopan, Jalisco
+| Season | Role |
+|---|---|
+| 2025 | Mechanical Lead & Mentor |
+| 2024 | Mechanical Lead |
+| 2023 | Robotics Technician |
+
+> Each role may show one photo (desktop only). TECMUN was removed (not relevant to engineering).
+> Technical Skills is a compact list: one row per group with the skills as chips.
 
 #### Featured Projects Grid
 | Project | Tag | Link |
