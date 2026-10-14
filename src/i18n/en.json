@@ -278,7 +278,8 @@
     "prev": "Previous photo",
     "next": "Next photo",
     "video": "Video",
-    "all": "All photos"
+    "all": "All photos",
+    "play": "Play video"
   },
   "captions": {
     "fifa": {

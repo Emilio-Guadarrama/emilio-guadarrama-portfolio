@@ -17,6 +17,7 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { X, ChevronLeft, ChevronRight, Play, Maximize2 } from 'lucide-react'
+import VideoPlayer from './VideoPlayer'
 
 export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant = 'grid', stageAspect = '16 / 10', mobileAspect = '1 / 1' }) {
   const [open, setOpen] = useState(null)
@@ -114,7 +115,7 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, registerTrigger })
               transition={{ duration: 0.18 }}
             >
               {item.video ? (
-                <video src={item.video} poster={item.poster} controls playsInline preload="none" />
+                <VideoPlayer src={item.video} poster={item.poster} label={item.caption} />
               ) : (
                 <button
                   ref={(el) => registerTrigger(index, el)}
@@ -233,7 +234,7 @@ function Lightbox({ items, index, setIndex, onClose }) {
 
       <figure className="lightbox-figure" onClick={(e) => { if (e.target === e.currentTarget) onClose() }}>
         {item.video ? (
-          <video key={item.video} src={item.video} poster={item.poster} controls autoPlay playsInline className="lightbox-media" />
+          <VideoPlayer key={item.video} src={item.video} poster={item.poster} label={item.caption} autoPlay className="lightbox-media" />
         ) : (
           <img key={item.src} src={item.src} alt={item.caption} className="lightbox-media" />
         )}
