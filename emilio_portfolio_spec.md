@@ -403,7 +403,7 @@ Arduino · Sensors · Bluetooth/Wi-Fi · Web interface · Solar power
 | Aug 2024 | Volunteer | Comunidad Indígena Sergio Barrios, Tlajomulco |
 | Sep 2025 | Crew Co-Leader | Comunidad Indígena Sergio Barrios, Tlajomulco |
 | Oct 2025 | Crew Leader | Comunidad de Jauja, Tonalá |
-| Dec 2025 | — | Lomas del Refugio |
+| Dec 2025 | Crew Leader | Lomas del Refugio |
 | Sep 2026 | Area Monitor — supervised the crews in the area | Lomas del Refugio |
 
 #### Description
