@@ -781,3 +781,36 @@ section[id] { scroll-margin-top: 60px; }
 
 /* Heading with an action on the right (e.g. PCB viewer + GitHub) */
 .section-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+
+/* ── Video player: centre play button, click anywhere to play ──────── */
+.video-player { position: relative; width: 100%; height: 100%; }
+.video-player video { width: 100%; height: 100%; object-fit: contain; display: block; background: var(--card); }
+.video-player.is-playing video, .video-player video[controls] { cursor: pointer; }
+.video-play {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0; border: 0; background: transparent; cursor: pointer;
+}
+/* after the first play the native control bar is visible; keep it clickable */
+.video-play.leaves-controls { bottom: 56px; }
+.video-play-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 72px; height: 72px; border-radius: 50%;
+  padding-left: 4px; /* optical centre of the triangle */
+  color: var(--bg);
+  background: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.video-play:hover .video-play-icon { transform: scale(1.06); }
+.video-play:active .video-play-icon { transform: scale(0.96); }
+.video-play:focus-visible { outline: none; }
+.video-play:focus-visible .video-play-icon { outline: 2px solid var(--accent-white); outline-offset: 4px; }
+/* lightbox: the player sizes itself like the photos do */
+.lightbox-media.video-player { width: min(1200px, 100%); height: calc(100vh - 160px); border: 1px solid var(--border); }
+@media (max-width: 600px) {
+  .video-play-icon { width: 60px; height: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .video-play-icon { transition: none; }
+}
