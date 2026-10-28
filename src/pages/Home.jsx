@@ -9,6 +9,7 @@ import { Tag, SectionLabel } from '../components/ui'
 import { GitHubIcon, LinkedInIcon } from '../components/icons'
 import ContactForm from '../components/ContactForm'
 import Experience from '../components/Experience'
+import { thumb } from '../components/thumb'
 import AwardsCarousel from '../components/AwardsCarousel'
 import { ChevronDown } from 'lucide-react'
 
@@ -330,7 +331,7 @@ export default function Home() {
                           {project.tags.map((tag, j) => <Tag key={j} amber={project.amber}>{tag}</Tag>)}
                         </div>
                         {project.image && (
-                          <img src={project.image} alt="" loading="lazy" className={`project-thumb${project.imageFit === 'contain' ? ' is-contain' : ''}`} />
+                          <img src={thumb(project.image)} alt="" loading="lazy" className={`project-thumb${project.imageFit === 'contain' ? ' is-contain' : ''}`} />
                         )}
                       </div>
                       <div style={{ fontSize: 15, fontWeight: 600, color: '#f0f0f0', marginBottom: 10,

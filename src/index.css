@@ -814,3 +814,9 @@ section[id] { scroll-margin-top: 60px; }
 @media (prefers-reduced-motion: reduce) {
   .video-play-icon { transition: none; }
 }
+
+/* Images still loading show the card colour, not the browser's broken-image icon/alt text */
+.gallery-thumb img, .carousel-thumb-img img, .carousel-slide img, .project-thumb, .exp-role-img {
+  background: var(--card);
+  color: transparent;
+}

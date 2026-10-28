@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Stagger } from './Reveal'
 import { staggerItem } from './variants'
+import { thumb } from './thumb'
 
 const mono = { fontFamily: 'var(--font-mono)' }
 
@@ -85,7 +86,7 @@ export default function Experience({ items }) {
                   </ul>
                   <ProjectLinks links={r.links} />
                 </div>
-                {r.image && <img src={r.image} alt={r.imageAlt || ''} loading="lazy" className="exp-role-img" />}
+                {r.image && <img src={thumb(r.image)} alt={r.imageAlt || ''} loading="lazy" className="exp-role-img" />}
               </li>
             ))}
           </ol>

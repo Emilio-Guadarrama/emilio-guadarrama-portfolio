@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { X, ChevronLeft, ChevronRight, Play, Maximize2 } from 'lucide-react'
 import VideoPlayer from './VideoPlayer'
+import { thumb } from './thumb'
 
 export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant = 'grid', stageAspect = '16 / 10', mobileAspect = '1 / 1' }) {
   const [open, setOpen] = useState(null)
@@ -48,7 +49,7 @@ export default function Gallery({ items, columns = 3, aspect = '4 / 3', variant 
                 style={{ aspectRatio: aspect }}
               >
                 <img
-                  src={item.video ? item.poster : item.src}
+                  src={thumb(item.video ? item.poster : item.src)}
                   alt=""
                   loading="lazy"
                   style={item.focus ? { objectPosition: item.focus } : undefined}
@@ -87,6 +88,16 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, registerTrigger })
   const item = items[index]
   const many = items.length > 1
   const go = (d) => setIndex((i) => (i + d + items.length) % items.length)
+
+  // Warm the browser cache with the neighbouring slides so arrows feel instant
+  useEffect(() => {
+    if (items.length < 2) return
+    for (const d of [1, -1]) {
+      const it = items[(index + d + items.length) % items.length]
+      const src = it.video ? it.poster : it.src
+      if (src) new Image().src = src
+    }
+  }, [index, items])
 
   const onKeyDown = (e) => {
     if (e.target.tagName === 'VIDEO') return
@@ -166,9 +177,9 @@ function Carousel({ items, stageAspect, mobileAspect, onOpen, registerTrigger })
             >
               <span className="carousel-thumb-img">
                 <img
-                  src={it.video ? it.poster : it.src}
+                  src={thumb(it.video ? it.poster : it.src)}
                   alt=""
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   style={it.focus ? { objectPosition: it.focus } : undefined}
                 />
